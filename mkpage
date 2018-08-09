@@ -1,0 +1,14 @@
+#!/bin/bash
+
+DIRECTORY="$1"
+TITLE="$2"
+LEVEL="$3"
+
+./mkheader "$2" "$3" > $1/page_header.txt
+./mkfooter > $1/page_footer.txt
+
+
+
+cd $1
+cat page_header.txt content.html page_modtime.txt page_menu.txt page_footer.txt > indexm.html
+cd -

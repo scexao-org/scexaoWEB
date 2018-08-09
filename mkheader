@@ -1,0 +1,54 @@
+#!/bin/bash
+
+TITLE="$1"
+LEVEL="$2"
+
+if [ "$LEVEL" = "0" ]; then
+RELPATH="../"
+fi
+
+if [ "$LEVEL" = "1" ]; then
+RELPATH="../../"
+fi
+
+if [ "$LEVEL" = "2" ]; then
+RELPATH="../../../"
+fi
+
+if [ "$LEVEL" = "3" ]; then
+RELPATH="../../../../"
+fi
+
+if [ "$LEVEL" = "4" ]; then
+RELPATH="../../../../../"
+fi
+
+if [ "$LEVEL" = "5" ]; then
+RELPATH="../../../../../../"
+fi
+
+
+
+echo "<!DOCTYPE html>"
+echo "<html>"
+echo "<head>"
+echo "  <title>SCExAO: ${TITLE}</title>"
+echo "  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />"
+echo "  <meta name=\"apple-mobile-web-app-capable\" content=\"yes\" />"
+echo "  <meta name=\"keywords\" content=\"scexao, subaru, adaptive optics, coronagraphic, extreme, ao, high contrast, instrument\" />"
+echo "  <meta name=\"description\" content=\"Website for the Subaru Coronagraphic Extreme Adaptive Optics (SCExAO) instrument.\" />"
+echo "  <meta property=\"og:title\" content=\"SCExAO\" />"
+echo "  <meta property=\"og:type\" content=\"website\" />"
+echo "  <meta property=\"og:url\" content=\"http://www.naoj.org/Projects/SCEXAO/\" />"
+echo "  <meta property=\"og:image\" content=\"http://www.naoj.org/Projects/SCEXAO/Starbowl.jpg\" />"
+echo "  <meta property=\"og:description\" content=\"Website for the Subaru Coronagraphic Extreme Adaptive Optics (SCExAO) instrument.\" />"
+echo "  <LINK rel=\"stylesheet\" href=\"${RELPATH}style.css\" type=\"text/css\">"
+echo "</head>"
+echo "<body>"
+echo "<div id=\"wrapper\">"
+echo "<div id=\"logo\"><img border=\"0\" src=\"${RELPATH}banner.png\" width=\"1070px\" height=\"140px\"></div>"
+echo ""
+echo "<div id=\"inner\">"
+
+echo "<div id=\"maincolumn\">"
+

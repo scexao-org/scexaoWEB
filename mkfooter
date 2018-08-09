@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "</div>"
+echo "</div>"
+echo "</body>"
+echo "</html>"
