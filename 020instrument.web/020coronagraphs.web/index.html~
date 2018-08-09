@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SCExAO: Coronagraphs</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="keywords" content="scexao, subaru, adaptive optics, coronagraphic, extreme, ao, high contrast, instrument" />
+	<meta name="description" content="Website for the Subaru Coronagraphic Extreme Adaptive Optics (SCExAO) instrument." />
+
+	<meta property="og:title" content="SCExAO" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://www.naoj.org/Projects/SCEXAO/index.html" />
+	<meta property="og:image" content="http://www.naoj.org/Projects/SCEXAO/Starbowl.jpg" />
+	<meta property="og:description" content="Website for the Subaru Coronagraphic Extreme Adaptive Optics (SCExAO) instrument." />
+	<LINK rel="stylesheet" href="../../style.css" type="text/css">
+    <script src="../../javascript.js" type="text/javascript"></script>
+    <script src="../../script.js"></script>
+
+</head>
+<body>
+
+<div id="wrapper">
+
+<div id="logo"><img border="0" src="../../banner.png" width="1070px" height="140px"></div>
+
+
+<div id="inner">
+
+	<div id="maincolumn">
+
+
+
+
+<h1>Coronagraphs of SCExAO</h1>
+<p>
+This page is dedicated to the various coronagraphs SCExAO is equipped with.
+
+<h2>PIAA: designed to apodize a centrally obstructed beam</h2>
+
+<center>
+<img src='./piaa_apodize.jpg' width='650' alt='Laser beam apodization
+by PIAA'>
+<p><small>Red laser beam undergoing apodization.</small></p>
+</center>
+
+<p>
+The Phase Induced Amplitude Apodization (PIAA) uses a set of two
+tailored optics working as a pair: inserted in a collimated beam, the
+first changes the distribution of light, while the second recollimates
+the beam for an on-axis source. This concept has already been the
+subject of multiple <a href="../../04publis/02scexao/">publications</a>.
+One novelty of the Subaru PIAA Coronagraph is that its design is
+adapted to the presence of a central obscuration.
+</p>
+
+<p>
+The advantages of this approach over what is usually referred to as
+"classical" apodization is that instead of being absorbed by a mask
+with a radial transmission profile, the light gets redistributed. This preserves the throughput (which can be as low as
+0.1 for a 10<sup>-10</sup> contrast), and the angular resolution
+(indeed, a classical apodizing mask removes the light mostly at the
+edges of the pupil).
+</p>
+
+<p>
+The picture at the top of this page shows a visible collimated laser
+beam being apodized by the PIAA. The set of lenses leaves the pupil
+diameter unchanged. As the light travels from left to right in the
+picture, the beam gets apodized and the central obscuration gradually
+disappears.
+</p>
+<p>
+A low dispersion material was chosen (CaF<sub>2</sub>) to keep
+chromatic aberrations small. Unlike off-axis reflective systems, this
+refractive set of optics with circular symmetry are fairly easy to
+manufacture.
+</p>
+
+
+<center><img src='./photoPIAAlenses.png' width='450' alt='Photo of the
+actual SCExAO PIAA lenses'>
+<p><small>CaF<sub>2</sub> PIAA lenses used in SCExAO.</small></p>
+</center>
+</td>
+	</div>
+
+	<div id='cssmenu'>
+	   <ul>
+	      <li><a href="../../index.html"><span>Home</span></a></li>
+	      <li class='active has-sub'><a href='../../01project/index.html'><span>The Project</span></a>
+	         <ul>
+	         	<li><a href='../../01project/00intro/index.html'><span>About</span></a></li>
+	            <li><a href='../../01project/01srp/index.html'><span>SRP</span></a></li>
+	            <li><a href='./index.html'><span>Coronagraphs</span></a></li>
+	            <li><a href='../../01project/03hofs/index.html'><span>HOWFS</span></a></li>
+	            <li><a href='../../01project/04lofs/index.html'><span>LOWFS</span></a></li>
+	            <li><a href='../../01project/05frame/index.html'><span>Frame</span></a></li>
+	            <li class='last'><a href='../../01project/06vibrations/index.html'><span>Vibrations</span></a></li>
+	         </ul>
+	      </li>
+
+	      <li class='active has-sub'><a href='#'><span>Capabilities</span></a>
+	      	<ul>
+		      <li><a href="../../02capabilities/01current_capabilities/index.html"><span>Current capabilities</span></a></li>
+		      <li class='last'><a href="../../02capabilities/02future_capabilities/index.html"><span>Future capabilities</span> </a></li>
+		     </ul>
+	      </li>
+
+	      <li class='active has-sub'><a href="#"><span>The Team</span></a>
+	      	<ul>
+		      <li><a href="../../03team/01team/index.html"><span>The Team</span> </a></li>
+	    	  <li class='last'><a href="../../03team/02collab/index.html"><span>Collaborators</span> </a></li>
+	    	</ul>
+	      </li>
+
+	      <li class='active has-sub'><a href="#"><span>Publications</span> </a>
+	      	<ul>
+		      <li><a href="../../04publis/00policy/index.html"><span>Policies</span> </a></li>
+		      <li><a href="../../04publis/01science/index.html"><span>Science</span> </a></li>
+		      <li><a href="../../04publis/02scexao/index.html"><span>Instrument</span> </a></li>
+	    	  <li class='last'><a href="../../04publis/03related/index.html"><span>Related Papers</span> </a></li>
+
+	      	</ul>
+	      </li>
+	      <li><a href="../../05pictures/index.html"><span>Pictures</span> </a></li>
+	      <li><a href="../../06hotnews/index.html"><span>Hot News!</span> </a></li>
+
+	      <li class='last'><a href='../../07scigallery/index.html'><span>Science Gallery</span></a></li>
+
+   		</ul>
+	</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

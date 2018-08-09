@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SCExAO: Current Capabilities</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="keywords" content="scexao, subaru, adaptive optics, coronagraphic, extreme, ao, high contrast, instrument" />
+	<meta name="description" content="Website for the Subaru Coronagraphic Extreme Adaptive Optics (SCExAO) instrument." />
+
+	<meta property="og:title" content="SCExAO" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://www.naoj.org/Projects/SCEXAO/index.html" />
+	<meta property="og:image" content="http://www.naoj.org/Projects/SCEXAO/Starbowl.jpg" />
+	<meta property="og:description" content="Website for the Subaru Coronagraphic Extreme Adaptive Optics (SCExAO) instrument." />
+
+  <LINK rel="stylesheet" href="../../style.css" type="text/css">
+    <script src="../../javascript.js" type="text/javascript"></script>
+    <script src="../../script.js"></script>
+
+</head>
+<body>
+
+<div id="wrapper">
+
+<div id="logo"><img border="0" src="../../banner.png" width="1070px" height="140px"></div>
+
+
+<div id="inner">
+
+  <div id="maincolumn">
+
+  <h2>Science-ready Capabilities:</h2>
+<br>
+<center>
+“<b>Before applying to use SCExAO, please refer to the instrument use <a href="../../04publis/00policy/index.html">polices</a></b>”
+</center>
+<br>
+<br>
+
+<p>
+  The SCExAO instrument is continuously growing and is therefore being commissioned in phases. As of February 2017 phases I & II of engineering have been completed. These include the following:
+  </p>
+  <ul>
+  <li><em><b>Extreme adaptive optics:</b></em>The pyramid wavefront sensor is now capable of offering 70-85% Strehl ratio in H-band in median seeing conditions. </li>
+  <br>
+  <li><em><b>Coronagraphs:</b></em> The SCExAO instrument is equipped with several coronagraphs, which operate across the near-IR (y-K bands). Those that can be used in S17B include the Phase induced amplitude apodization (PIAA), the <a href="../../03team/02collab/"> Vector Vortex</a> and a traditional Lyot coronagraph. Currently the PIAA and vector vortex are only optimized for H-band. New, broadband coronagraphs are being developed and should be available in the not to distant future.</li>
+  <br>
+  <li><em><b>Low order control:</b></em> The low order wavefront sensor (LOWFS) is used to fine-tune the tip/tilt and other low order modes (focus, astigmatism, etc) at the coronagraphic mask to ensure optimum starlight rejection.</li>
+  <br>
+  <li><em><b>Coherent differential imaging:</b></em> The speckle nulling routine allows for bright quasi-static speckles due to diffraction from the spiders and the central obstruction, to be reduced. The performance of this mode is limited by the current generation of cameras but it allows for a dark hole to be dug on one side of the PSF and improves companion detectability (See below).</li>
+  <br>
+  <li><em><b>Astrometry and photometry:</b></em> A grid of artificial speckles can be created with a precisely calibrated amplitude that can be used to calibrate the photometry and astrometry to the companion. The speckles are created by the deformable mirror and can be placed at any location/orientation (within the control region of the DM) in the focal plane. Their brightness can also be controlled. This enables astrometry behind the coronagraph and offers a unique avenue to contrast calibration.</li>
+
+  <br>
+  <li><em><b>Integral field spectroscopy:</b></em> CHARIS offers the possibility to obtain low resolution spectra (R~20 or 80) across a 2” field behind SCExAO. All observing modes of CHARIS can be used with all other modes described above. Full details of CHARIS can be found <a href='http://scholar.princeton.edu/charis'><i>here</i></a>.</li>
+  <br>	
+  <li><em><b>VAMPIRES:</b></em> The VAMPIRES interferometric imager will enable diffraction-limited imaging in the visible with polarimetric capabilities. The performance and observational setting options are listed below.</li>
+  </ul>
+  <p>
+  Note: SCExAO is a booster stage for the initial AO correction provided by AO188. The table below summarizes the performance and key parameters required when putting together a proposal. If additional information or clarification is required, please contact:
+  <ul>
+  <li>Olivier Guyon - PI of SCExAO - guyon@naoj.org</li><br>
+  <li>Nemanja Jovanovic - Project manager/technical lead on SCExAO - nem@naoj.org</li><br>
+  <li>Peter Tuthill - PI of VAMPIRES - p.tuthill@physics.usyd.edu.au</li><br>
+  <li>Barnaby Norris - Project manager/technical lead on VAMPIRES - b.norris@physics.usyd.edu.au</li><br>
+  </ul>
+  </p>
+  <center>''Any publication using data collected by the SCExAO instrument must reference the primary instrument paper (Jovanovic, N. et al, <a href='http://adsabs.harvard.edu/abs/2015PASP..127..890J'><i>PASP</i>,<b>127</b>, 890J</a>) and any other relevant papers about the module if it exists" </center>
+
+  <h3> SCExAO capabilities and performance summary table</h3>
+  <table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
+
+  <tr>
+  <th colspan=3> Target acquisition and Image quality: AO188 </th>
+  </tr>
+  <tr>
+    <td> Strehl Ratio, FWHM</td>
+    <td> 30-40% in H-band (median seeing), See <a href="http://subarutelescope.org/Observing/Instruments/AO/parameters.html">AO188</a> performance</td>
+    <td> SCExAO phase I provides no significant <br> improvement in image quality over AO188</td>
+    </tr>
+  <tr>
+    <td> Target Acquisition and <br> setup overhead</td>
+    <td> AO188 target acquisition time + 10 mn</td>
+    <td> Does not include fine tuning of speckle control loop</td>
+    </tr>
+  <tr>
+    <td> Seeing limit</td>
+    <td> ~1.2"</td>
+    <td> See <a href="http://subarutelescope.org/Observing/Instruments/AO/parameters.html">AO188</a> performance</td>
+    </tr>
+  <tr>
+    <td> Bright limit </td>
+    <td> R=-1</td>
+    <td> Neutral Density filters can be placed in front of wavefront sensor and HiCIAO when observing bright targets but not brighter than R=-1</td>
+    </tr>
+  <tr>
+    <td> Exclusion angle around the moon </td>
+    <td> 15 degrees </td>
+    <td> </td>
+    </tr>
+
+  <tr>
+  <th colspan=3> Cameras: CHARIS</th>
+  </tr>
+  <tr>
+    <td> Detector</td>
+    <td> Hawaii 2RG</td>
+    <td> See <a href="https://scholar.princeton.edu/charis">CHARIS instrument description</a></td>
+    </tr>
+  <tr>
+    <td> Wavelength coverage</td>
+    <td> See <a href="https://scholar.princeton.edu/charis/capabilities">CHARIS instrument description</a></td>
+    <td> SCExAO feeds CHARIS with wavelengths longer than 950nm</td>
+    </tr>
+  <tr>
+    <td> Field-of-view</td>
+    <td> 2&quot;x 2&quot</td>
+    <td> </td>
+    </tr>
+  <tr>
+    <td rowspan='2'> SCExAO throughput to CHARIS</td>
+    <td> Low resolution mode: 65-70%</td>
+    <td rowspan='2' > ~15% from atmosphere to detector </td>
+    </tr>
+  <tr>
+    <td> High resolution mode: 55-60%</td>
+    </tr>
+  <tr>
+    <td rowspan='2'> Spectral resolution </td>
+    <td> Low resolution mode: R~19</td>
+    <td rowspan='2' > J, H and K bands </td>
+    </tr>
+  <tr>
+    <td> High resolution mode: R~70-90</td>
+    </tr>
+  <tr>
+    <td> Coronagraph modes</td>
+    <td> Lyot, vAPP, PIAACMC </td>
+  </tr>
+  <tr>
+    <td> Spectral Differential Imaging</td>
+    <td> YES</td>
+    <td> With spectral differential information on CHARIS</td>
+    </tr>
+  <tr>
+    <td> Angular Differential Imaging</td>
+    <td> YES</td>
+    <td> SCExAO operates in fixed pupil mode</td>
+    </tr>
+  <tr>
+    <td> Active Speckle control</td>
+    <td> YES</td>
+    <td> Speckle control performed using SCExAO <br> internal science camera</td>
+    </tr>
+  <tr>
+    <td> Tip-Tilt control</td>
+    <td> YES</td>
+    <td> Tip-Tilt control performed using SCExAO <br>Low Order Wavefront Sensor</td>
+    </tr>
+  <tr>
+    <td> Polarimetric imaging</td>
+    <td> NO</td>
+    <td> Will be offered at a later time</td>
+    </tr>
+  <tr>
+  <th colspan=3> Cameras: Internal SCExAO science camera </th>
+  </tr>
+  <tr>
+    <td> Detector</td>
+    <td> C-RED2, 640x512</td>
+    <td> First Light Imaging</td>
+    </tr>
+  <tr>
+    <td> Wavelength coverage</td>
+    <td> J, H band</td>
+    <td> 0.9-1.7 &mu;m</td>
+    </tr>
+  <tr>
+    <td> Field-of-View</td>
+    <td> 4&quot;x 5&quot;</td>
+    <td> In default configuration (adjustable with sub-window)</td>
+    </tr>
+  <tr>
+    <td> Frame rate</td>
+    <td> 1.8kHz</td>
+    <td> In default configuration (adjustable with sub-window)</td>
+    </tr>
+  <tr>
+    <td> Readout Noise</td>
+    <td> 30 e-</td>
+    <td> </td>
+    </tr>
+
+  <tr>
+  <th colspan=3> Phase I High Contrast Imaging Performance </th>
+  </tr>
+  <tr>
+    <td> Inner Working Angle</td>
+    <td> 1 to 3 l/D</td>
+    <td> Function of coronagraph configuration</td>
+    </tr>
+  <tr>
+    <td rowspan='6' > Optics throughput (in H-band)</td>
+    <td> Focal plane masks</td>
+    <td> 93-99%</td>
+  </tr>
+  <tr>
+    <td> Classic Lyot mask</td>
+    <td> 63%</td>
+  </tr>
+  <tr>
+    <td> Vortex Lyot mask</td>
+    <td> 78%</td>
+  </tr>
+  <tr>
+    <td> PIAA and inverse PIAA lenses</td>
+    <td> 96%</td>
+  </tr>
+  <tr>
+    <td> MPIAA Lyot</td>
+    <td> 86%</td>
+  </tr>
+   <tr>
+    <td> PIAACMC Lyot</td>
+    <td> 77%</td>
+  </tr>
+  <tr>
+    <td> Detection contrast threshold: <br> 1-4 &lambda;/D (40-160 mas)</td>
+    <td> 1e-4</td>
+    <td> H band, Approximate value, assumes bright star <br> and PSF post-calibration </td>
+    </tr>
+  <tr>
+    <td> Detection contrast threshold: <br> 4-20 &lambda;/D (160-350 mas)</td>
+    <td> 1e-5</td>
+    <td> H band, Approximate value, assumes bright star and PSF post-calibration </td>
+    </tr>
+  <tr>
+    <td> Detection contrast threshold: <br> 500-800 mas</td>
+    <td> 5e-6</td>
+    <td> H band, Approximate value, assumes bright star and PSF post-calibration </td>
+    </tr>
+  <tr>
+    <td> Detection contrast threshold: <br> 1000 mas</td>
+    <td> 1e-6</td>
+    <td> H band, Approximate value, assumes bright star and PSF post-calibration </td>
+    </tr>
+  <tr>
+    <td> Coronagraph setup time </td>
+    <td> PIAA (5 minutes), Vortex and shaped pupil (2 minutes)</td>
+    <td> The PIAA coronagraph uses several more optics which take longer to insert and align</td>
+    </tr>
+  <tr>
+    <td> Calibration speckle seperation </td>
+    <td> 0.05-0.9” in all directions (H-bands) </td>
+    <td> Greatest separation is limited by control region of DM </td>
+    </tr>
+  <tr>
+    <td> Calibration speckle contrast </td>
+    <td> 0.1-0.00001 </td>
+    <td> Note at low contrast the speckles may get lost in the halo. </td>
+    </tr>
+  <tr>
+    <td> Calibration grid setup time </td>
+    <td> 1 minute </td>
+    <td> The contrast and position of speckles for the grid can be setup prior to the run. The setup time listed here is for varifying the grid works and setting camera integration times accordingly. </td>
+    </tr>
+
+
+  <tr>
+  <th colspan=3> Phase II High Order Wavefront Correction and visible modules </th>
+  </tr>
+  <tr>
+    <td> Strehl </td>
+    <td> >80%  </td>
+    <td> In median seeing in the H-band</td>
+    </tr>
+  <tr>
+    <td> Wavefront sensing wavelength </td>
+    <td> 600-950 nm  </td>
+    <td> Selectable bandpass in this range. 50-150 nm bandwidth at a time which depends on magnitude of target.</td>
+    </tr>
+  <tr>
+    <td> Loop speed </td>
+    <td> 3.5 kHz  </td>
+    <td> Maximum loop speed used down to R=9 mag. For higher R-mag, the loop speed is reduced. </td>
+    </tr>
+  <tr>
+    <td> High perfromance magnitude limit</td>
+    <td> <8 mag (R-band)  </td>
+    <td> Maximum Strehl can be provided down to R=8 mag </td>
+    </tr>
+  <tr>
+    <td> Limiting magnitude </td>
+    <td> 13 mag (R-band)  </td>
+    <td> The loop has been tested down to 13th magnitude and an improvement in Strehl was observed. However, below 8th magnitude there is an associated performance drop. </td>
+    </tr>
+
+  <tr>
+    <td> Loop setup time </td>
+    <td> 3-5 minutes  </td>
+    <td> This time does not include overheads from AO188 and/or coronagraph setup times. </td>
+    </tr>
+
+  <tr>
+  <th colspan=3> VAMPIRES observational settings <br> VAMPIRES has completed commissioning and is now available for open use. Please refer to the information below when preparing proposals. Note, it can operate simultaneously with SCExAO/HiCIAO observations in the IR as a hitchhiker. A more detailed description can be found below. </th>
+  </tr>
+
+  <tr>
+    <td> Operating wavelength</td>
+    <td> 600 - 800 nm</td>
+    <td> Selectable 50 nm bandpasses using filters</td>
+  </tr>
+
+  <tr>
+    <td> Spatial resolution</td>
+    <td> <10 mas</td>
+    <td></td>
+    </tr>
+  <tr>
+
+  <tr>
+    <td> Field-of-view</td>
+    <td> ~ 500 mas</td>
+    <td> </td>
+    </tr>
+
+  <tr>
+    <td> Contrast ratio</td>
+    <td> See text below</td>
+    <td></td>
+    </tr>
+
+  <tr>
+    <td> Sub pupil configurations</td>
+    <td> 7 hole, 9 hole, 18 hole and annulus masks</td>
+    <td> Masks are selectable depending on brightness of target. Full pupil mode (speckle imaging) is also available. Please see figure below for options available. </td>
+    </tr>
+
+  <tr>
+    <td> Limiting magnitudes</td>
+    <td> 18 hole (I ~2-3 mags), 7 hole <br> (I ~ 7).</td>
+    <td> A function of the size and number of holes in the mask (i.e. Fourier coverage). However ongoing upgrades are pushing the detection limit fainter.</td>
+    </tr>
+
+  <tr>
+    <td> Conventional masking mode (non-polarised)</td>
+    <td> </td>
+    <td> Calibration is performed via the observation of a PSF calibrator star, as per the conventional sparse-aperture-masking methodology. This mode is ideal for the detection of faint companions and unpolarised circumstellar structure at very close separations (10s of mas). </td>
+    </tr>
+  <tr>
+    <td> Polarised imaging mode (full pupil)</td>
+    <td></td>
+    <td> The sparse aperture mask is removed, allowing conventional polarimetric imaging. The fast LCVR switching allows precise polarimetric differential imaging at 600-800 nm, and the EMCCD camera provides excellent sensitivity. In this mode, the field-of-view is approximately 1” by 2” with pixel scale of 6 mas / pixel.</td>
+    </tr>
+  <tr>
+    <td> Spectral differenital mode</td>
+    <td> H-alpha/Continuum SII/continuum</td>
+    <td> Non-simultaneous spectral differential imaging can be used by placing a H-alpha and then a continuum filter in the filter wheel before the polarizing beamsplitter (PBS). Since the filter is before the PBS the data from the two spectral bands is collected sequentially rather than simultaneously. However, it can be used with aperture masks or full pupil imaging and polarimetry. </td>
+    </tr>
+  <tr>
+    <td> VAMPIRES setup time</td>
+    <td> 3-5 minutes </td>
+    <td> This includes, fine adjustments to the focus, rotating between masks (if necessary) and setting up software for data collection. </td>
+    </tr>
+
+  </table>
+
+  <br>
+  <br>
+
+
+
+  <h3>Coronagraphs</h3>
+
+  <center>
+  <table width="600px" border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
+  <tr>
+    <th>Coronagraph type</th>
+    <th>PIAA</th>
+    <th>Vortex</th>
+    <th>4QPM</th>
+    <th>Shaped pupil</th>
+    </tr>
+  <tr>
+    <td>Inner working angle (&lambda;/D)</td>
+    <td>1.5</td>
+    <td>1</td>
+    <td>1</td>
+    <td>3</td>
+    </tr>
+  <tr>
+    <td>Waveband(s)</td>
+    <td>y-K</td>
+    <td>H</td>
+    <td>H</td>
+    <td>y-K</td>
+    </tr>
+
+  </table>
+  </center>
+
+  <h3>Cameras</h3>
+  <p>
+  Speckle nulling is performed with the camera used for high frame rate imaging. This camera is the same as the one used for the LOWFS. They are both Axiom Optics OWL SW1.7HS units, which have an InGaAs CMOS array with 320x256 pixels that are 30x30 &mu;m in size. These cameras can run full frame at 176 Hz and have a read noise of 115 and 140 e<sup>-</sup> respectively. The dark current is such that the maximum exposure is ~1 s. Please note that the speckle nulling routine operates on the speckles which are ~1000 x fainter than the central PSF and hence this must be taken into consideration when selecting your target, in light of the noise characteristics. A speckle nulling map can be pre-carved off sky and then applied on-sky in the case targets are too faint to operate speckle nulling on. However, this is not as accurate as performing the nulling process on the star of interest. The high frame rate/speckle nulling camera can be used with a series of bandpass filters which include: y-band, J-band, H-band and 50 nm bandwidth centered at 1650 nm.
+  </p>
+
+  <center>
+  <img border="0" src="SCICAM.jpg" alt="Pulpit rock" width="200" height="228">
+  <img border="0" src="LOWFS.jpg" alt="Pulpit rock" width="300" height="228">
+  <img border="0" src="HiCAIO.jpg" alt="Pulpit rock" width="304" height="228">
+  <p>
+  <small>
+  (Left) High frame rate science camera/speckle nulling camera. Mounted on a long translation stage to move between<br>the focal and pupil planes. (Middle) LOWFS camera. (Right) HiCIAO camera.
+  </small>
+  </p>
+  </center>
+
+  <h3>Calibration source</h3>
+  <p>
+  The internal calibration source consists of a Fianium super continuum source and 2 laser diodes centered at 650 and 1550 nm. The light from the source is delivered via an endlessely single-mode fiber to the bench ensuring a diffraction-limited calibration PSF from the visible to K-band. The brightness and spectral bands of the injected light can be easily controlled. In addition there is a turbulence simulator that can be used for realistic simulations of on-sky performance in the laboratory.
+  </p>
+
+  <center>
+  <img border="0" src="superK_1.jpg" alt="Pulpit rock" width="350" height="228">
+  <img border="0" src="superK_2.jpg" alt="Pulpit rock" width="320" height="228">
+  <img border="0" src="superK_3.jpg" alt="Pulpit rock" width="180" height="228">
+  <p>
+  <small>
+  (Left) Internal calibration source unit (a.k.a rainbow maker). (Middle) Super continuum laser source attached to source box. (Right) Internals of<br>calibration source box. There is a shutter to turn the light on/off, and three wheels to control the ND in the vis/IR and spectral content.
+  </small>
+  </p>
+  </center>
+
+
+  <h3>VAMPIRES</h3>
+  <p>
+  The Visible Aperture Masking Polarimetric Interferometer for Resolving Exoplanetary Signatures (VAMPIRES) instrument draws on the established success of sparse aperture masking interferometry (also known as non-redundant masking) and combines it with differential polarimetry, to provide diffraction limited scattered-light imaging of circumstellar environments. Primary science targets include protoplanetary disks as well as the mass-loss shells of evolved stars. It is being developed in collaboration with a team from the University of Sydney, Australia, consisting of Peter Tuthill, Barnaby Norris, Guillaume Schworer and Paul Stewart.
+  </p>
+  <p>
+  Sparse aperture masking (SAM) allows the full diffraction limit of the telescope to be recovered by using selected sub-pupils of the telescope pupil as interferometer baselines. See, for example, Tuthill, et al. (2000), PASP, 112, 555; Huelamo, et al., (2011), A&A, 528, L7; Kraus & Ireland, (2012), ApJ, 745, 5. The addition of differential polarimetry allows SAM’s differential observables to be far more precisely calibrated, while providing polarization information of the target.
+  </p>
+  <p>
+  In a technique complementary to infrared coronagraphy, VAMPIRES provides an effective inner-working-angle at 600 to 800 nm of ~10 mas, depending on the contrast ratio. A comprehensive description of the instrument is given in Norris, et al. (2015), MNRAS, 447, 3. The science potential of VAMPIRES’ core technique - differential polarimetric spare aperture masking - is demonstrated in Norris, et al., (2012), Nature, 484, 220.
+  </p>
+  <p>
+  An instrument schematic is given below. Three tiers of differential calibration allow interferometric visibilities to be calibrated to 0.1%, and closure phases to better than a degree. In its primary mode (with masks and the polarimeter), VAMPIRES offers spatial resolution at the diffraction limit (<10 mas), while having a relatively small field-of-view — around ~500 mas — as defined by the shortest baseline. The sensitivity of VAMPIRES observations in the primary mode is determined by the contrast ratio between the unresolved stellar flux and the overall scattered-light flux from the circumstellar dust. As a guide, a star:disk contrast ratio of 1000:1 provides a 1 sigma detection on a single baseline. Depending on the aperture mask employed, typically hundreds or even thousands of baselines (in the case of the annular mask) are measured.
+  </p>
+  <p>
+  In addition to the primary differential-polarized SAM mode, VAMPIRES also offers several additional modes: conventional masking mode (non-polarized) and a polarized imaging mode (full pupil, no masks).
+  <p>
+  VAMPIRES can operate simultaneously with SCExAO/HiCIAO NIR observations. While wavelengths > 1μm are sent to SCExAO’s IR channel and HiCIAO, shorter wavelengths are sent to the SCExAO visible channel (including the pyramid WFS) and VAMPIRES.
+  </p>
+  <p>
+  The data product produced by VAMPIRES is a set of differential interferometric Visibilities and Closure Phases. The team at the University of Sydney provide expertise in interpretation of these data, including model-fitting. An example data set is shown in the figure below.
+  </p>
+  <center>
+  <img border="0" src="VAMPIRES_info_pic900.jpg" alt="Pulpit rock" width="100%">
+  <p>
+  <small>
+  (Top left) Schematic diagram of the VAMPIRES instrument. (Bottom left) Aperture mask choices in VAMPIRES, with corresponding Fourier coverage. (Right) Example data set. Results from mu Cep taken in September 2014 which provided precise measurements of a circumstellar dust shell (radius 18 mas). Full analysis of this data is currently underway.
+  </small>
+  </p>
+  </center>
+
+  <p>
+  For more technical details please refer to the <a href="../../04publis/02scexao/"> publications</a> page.
+  </p>
+
+  </div>
+
+  <div id='cssmenu'>
+     <ul>
+        <li><a href='../../index.html'><span>Home</span></a></li>
+        <li class='active has-sub'><a href='../../01project/index.html'><span>The Project</span></a>
+           <ul>
+            <li><a href='../../01project/00intro/index.html'><span>About</span></a></li>
+              <li><a href='../../01project/01srp/index.html'><span>SRP</span></a></li>
+              <li><a href='../../01project/02coronographs/index.html'><span>Coronagraphs</span></a></li>
+              <li><a href='../../01project/03hofs/index.html'><span>HOWFS</span></a></li>
+              <li><a href='../../01project/04lofs/index.html'><span>LOWFS</span></a></li>
+              <li><a href='../../01project/05frame/index.html'><span>Frame</span></a></li>
+              <li class='last'><a href='../../01project/06vibrations/index.html'><span>Vibrations</span></a></li>
+           </ul>
+        </li>
+
+        <li class='active has-sub'><a href='#'><span>Capabilities</span></a>
+          <ul>
+          <li><a href='./index.html'><span>Current capabilities</span></a></li>
+          <li class='last'><a href="../../02capabilities/02future_capabilities/index.html"><span>Future capabilities</span> </a></li>
+         </ul>
+        </li>
+
+        <li class='active has-sub'><a href="#"><span>The Team</span></a>
+          <ul>
+          <li><a href="../../03team/01team/index.html"><span>The Team</span> </a></li>
+          <li class='last'><a href="../../03team/02collab/index.html"><span>Collaborators</span> </a></li>
+        </ul>
+        </li>
+
+        <li class='active has-sub'><a href="#"><span>Publications</span> </a>
+          <ul>
+          <li><a href="../../04publis/00policy/index.html"><span>Policies</span></a></li>
+	   <li><a href="./index.html"><span>Science</span> </a></li>
+          <li><a href="../../04publis/02scexao/index.html"><span>Instrument</span> </a></li>
+          <li class='last'><a href="../../04publis/03related/index.html"><span>Related Papers</span> </a></li>
+
+          </ul>
+        </li>
+        <li><a href="../../05pictures/index.html"><span>Pictures</span> </a></li>
+        <li><a href="../../06hotnews/index.html"><span>Hot News!</span> </a></li>
+
+        <li class='last'><a href='../../07scigallery/index.html'><span>Science Gallery</span></a></li>
+
+      </ul>
+  </div>
+
+</div>
+
+</div>
+
+
+
+</body>
+</html>

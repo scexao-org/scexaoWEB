@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SCExAO: Science Gallery</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="keywords" content="scexao, subaru, adaptive optics, coronagraphic, extreme, ao, high contrast, instrument" />
+	<meta name="description" content="Website for the Subaru Coronagraphic Extreme Adaptive Optics (SCExAO) instrument." />
+
+	<meta property="og:title" content="SCExAO" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://www.naoj.org/Projects/SCEXAO/index.html" />
+	<meta property="og:image" content="http://www.naoj.org/Projects/SCEXAO/Starbowl.jpg" />
+	<meta property="og:description" content="Website for the Subaru Coronagraphic Extreme Adaptive Optics (SCExAO) instrument." />
+
+	<LINK rel="stylesheet" href="../style.css" type="text/css"/>
+    <script src="../javascript.js" type="text/javascript"></script>
+    <script src="../script.js"></script>
+
+</head>
+<body>
+
+<div id="wrapper">
+
+<div id="logo"><img border="0" src="../banner.png" width="1070px" height="140px"></div>
+
+
+<div id="inner">
+
+	<div id="maincolumn">
+		<table >
+		<h1><center>Science Gallery</center></h1>
+		<p>&nbsp;</p>
+
+		<p>
+		This page shows off some of the scientific highlights from SCExAO. Some of the figures have been published and others have not. Please contact us for more information.
+		</p>
+
+		<table align="center">
+			<tr>
+				<td width="400px">
+					<p>Recently taken image of Kappa And b. SNR = 100 and the IWA is ~0.3”. Both aspects are 3x improved with respect to HiCIAO alone. </br></br><i>Image Courtesy of Thayne Currie.</i></p>
+					<p>Dec 2015</p>
+				</td>
+				<td width="400px">
+					<img src="kapand.png" width=400 alt="Kappa_and">
+				</td>
+			</tr>
+
+			<tr>
+				<td width="400px">
+					<img src="HIP79977.png" width=400 alt="Kappa_and">
+				</td>
+				<td width="400px">
+
+					<p>Recently taken image of HIP79977. SNR = 3-7 and the IWA is ~0.3”. SNR improved by 2-3x with respect to HiCIAO alone. </br></br><i>Image Courtesy of Thayne Currie.</i></p>
+					<p>Dec 2015</p>
+				</td>
+			</tr>
+			</table>
+
+		<tr>
+		<td colspan="2" style="background-color:DimGrey;text-align:center;color:DimGray;padding:10px;">
+		&nbsp;
+		</td>
+		</tr>
+		</table>
+
+	</div>
+
+	<div id='cssmenu'>
+	   <ul>
+	      <li><a href='../index.html'><span>Home</span></a></li>
+	      <li class='active has-sub'><a href='./01project/index.html'><span>The Project</span></a>
+	         <ul>
+	         	<li><a href='../01project/00intro/index.html'><span>About</span></a></li>
+	            <li><a href='../01project/01srp/index.html'><span>SRP</span></a></li>
+	            <li><a href='../01project/02coronographs/index.html'><span>Coronagraphs</span></a></li>
+	            <li><a href='../01project/03hofs/index.html'><span>HOWFS</span></a></li>
+	            <li><a href='../01project/04lofs/index.html'><span>LOWFS</span></a></li>
+	            <li><a href='../01project/05frame/index.html'><span>Frame</span></a></li>
+	            <li class='last'><a href='../01project/06vibrations/index.html'><span>Vibrations</span></a></li>
+	         </ul>
+	      </li>
+
+	      <li class='active has-sub'><a href='#'><span>Capabilities</span></a>
+	      	<ul>
+		      <li><a href='../02capabilities/01current_capabilities/index.html'><span>Current capabilities</span></a></li>
+		      <li class='last'><a href="../02capabilities/02future_capabilities/index.html"><span>Future capabilities</span> </a></li>
+		     </ul>
+	      </li>
+
+	      <li class='active has-sub'><a href="#"><span>The Team</span></a>
+	      	<ul>
+		      <li><a href="../03team/01team/index.html"><span>The Team</span> </a></li>
+	    	  <li class='last'><a href="../03team/02collab/index.html"><span>Collaborators</span> </a></li>
+	    	</ul>
+	      </li>
+
+	      <li class='active has-sub'><a href="#"><span>Publications</span> </a>
+	      	<ul>
+		      <li><a href="../04publis/00policy/index.html"><span>Policies</span> </a></li>
+		      <li><a href="../04publis/01science/index.html"><span>Science</span> </a></li>
+		      <li><a href="../04publis/02scexao/index.html"><span>Instrument</span> </a></li>
+	    	  <li class='last'><a href="../04publis/03related/index.html"><span>Related Papers</span> </a></li>
+
+	      	</ul>
+	      </li>
+	      <li><a href="../05pictures/index.html"><span>Pictures</span> </a></li>
+	      <li><a href="../06hotnews/index.html"><span>Hot News!</span> </a></li>
+
+	      <li class='last'><a href='./index.html'><span>Science Gallery</span></a></li>
+
+   		</ul>
+	</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

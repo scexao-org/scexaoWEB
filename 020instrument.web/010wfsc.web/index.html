@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SCExAO: The High-Order Wavefront Sensor</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="keywords" content="scexao, subaru, adaptive optics, coronagraphic, extreme, ao, high contrast, instrument" />
+	<meta name="description" content="Website for the Subaru Coronagraphic Extreme Adaptive Optics (SCExAO) instrument." />
+
+	<meta property="og:title" content="SCExAO" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://www.naoj.org/Projects/SCEXAO/index.html" />
+	<meta property="og:image" content="http://www.naoj.org/Projects/SCEXAO/Starbowl.jpg" />
+	<meta property="og:description" content="Website for the Subaru Coronagraphic Extreme Adaptive Optics (SCExAO) instrument." />
+	<LINK rel="stylesheet" href="../../style.css" type="text/css">
+    <script src="../../javascript.js" type="text/javascript"></script>
+    <script src="../../script.js"></script>
+
+</head>
+<body>
+
+<div id="wrapper">
+
+<div id="logo"><img border="0" src="../../banner.png" width="1070px" height="140px"></div>
+
+
+<div id="inner">
+
+	<div id="maincolumn">
+
+
+
+<h1>High-Order Wavefront Sensor: The Pyramid</h1>
+
+<center>
+<img border="0" src="./2000DM.jpg" alt='Picture of the 2000 element DM' width="650">
+<p><small>An image of the 2000 element deformable mirror used in SCExAO.</small></p>
+</center>
+
+<p>
+  High-order wavefront sensing and correction is the key
+  feature of the SCExAO Project. High order wavefront correction, or "extreme AO" requires a deformable mirror with many actuators across the pupil to correct for high spatial frequencies. In addition, it requires the control loop to run much faster than the coherence time of the atmosphere (~1 ms/1 kHz). For this reason we use the Boston MicroMachines 2000 element MEMS-based deformable mirror. For full details about the deformable mirror please see our <a href="../../04publis/02scexao/"> publications</a>.
+</p>
+
+<p>
+  One interesting feature of the DM is that it should not be operated in a high humidity environment as this causes advanced ageing. In order to accommodate this we have developed a dry air supply circuit. This circuit is interlocked such that the DM electronics are shut off if the humidity goes above 15% and or the pressure in the line deviates from the nominal setting of 0.4 psi. Please see this <a href="Instructions_for_gas_supply_unit.pdf"> document</a> for further details about the interlock system.
+</p>
+
+<p>
+  The other major aspect to high order wavefront correction is sensing. For this we utilize a pyramid wavefront sensor. This sensor operates in the visible between 600 and 900 nm. We have recently begun to use a pyramid prism which replaced the micro-lens arrays used in the past. The concept is to place the vertex of the pyramid/micro-lens array in the focal plane to create 4 distinct images of the pupil from each sector of the focal plane image. As each pupil image does not have all the Fourier information from the entire PSF, phase errors manifest as amplitude errors which are detectable by the sensor. 
+</p>
+<p>
+  Since it is quite difficult to obtain a pyramidal optic we chose a non-traditional approach to build our PyWFS. The concept we use utilizes two roof prisms oriented so that the roof vertices are orthogonal to one another (one is horizontal and the other is vertical). This concept is shown on the Figure below, on the right.
+</p>
+<center>
+  <img border="0" src="Pyramid_config.png" alt='Picture of the PyWFS images' width=650>
+  <p><small>Left: Schematic of the roof prism pyramid optic concept ; Right: Roof prism assembly diffracting a collimated beam into 4 beamlets.</small></p>
+</center>
+<p>
+  The space between the vertices is very small (20-50 &microm) and as close as possible to the focus of the beam to minimize the affect of diffraction. The assembly can be seen on the right of the above figure, before installation in SCExAO.
+</p>
+<p>
+  Images of the 4 pupils (see below)) are then acquired by a photon counting EMCCD (OCAM2k - FirstLight Imaging) with a 3.5 kHz binned frame rate, negligible latency and a 0.3e- read-out noise at a gain of 600x. 
+</p>  
+<center>
+  <img border="0" src="Pyramid_pupils.png" alt='Picture of the PyWFS images' width=250>
+  <p><small>Pyramid wavefront sensor image with the Pyramid prism. The pupil image is now very clean and sharp. Note this is with 9 &lambda;/D modulation radius.</small></p>
+</center>
+<p>
+  We also included a fast tip/tilt mount to modulate the pyramid response that can be run up to 10 kHz but amplitude of modulation drops off at higher frequency.
+</p>
+<p>
+The PyWFS works on-sky and typically corrects up to 1200 modes improving the PSF stability for science observations (see images on our internal science camear below, with and without the PyWFS loop closure).
+</p>
+<center>
+<img border="0" src="Image_openclose_loop.png" alt='PyWFS images' width=500>
+<p><small>Left: Internal science camera with the PyWFS loop open ; Right: Internal science camera with the PyWFS loop close. Full video available on this <a href=https://www.youtube.com/watch?v=csPSzkZ0vMY>link</a></small></p>
+</center>
+<p>
+Strehl measurements regarding the magnitude of the star are showed on the next graph: 
+</p>
+<center>
+<img border="0" src="Stelh_vs_Mag.png" alt='Strehl measurments' width=500>
+<p><small>Left: Internal science camera with the PyWFS loop open ; Right: Internal science camera with the PyWFS loop close.</small></p>
+</center>
+
+<br>
+<hr>
+<br>
+
+<h1>The importance of tip-tilt correction</h1>
+
+
+<center><a href='./clowfs.gif'><img src='./clowfs.gif'
+width=600 alt='Optical design of the CLOWFS'>
+</a></center>
+
+
+<p>
+Because it is optimized for the detection of companions at low angular
+separations, a high-performance coronagraph such as the PIAA is pushed
+to become highly sensitive to low-order aberrations, and especially
+pointing errors. Indeed, for angular separations close to 1
+&lambda;/D, the signal created by a small (<< &lambda;/D) pointing
+error can perfectly mimic the one of a high-contrast companion that
+would be located at a larger separation.
+Since the coronagraph is designed to transmit the signal of such
+companions, it will transmit the pointing error signal.
+The SCExAO system therefore includes a robust and accurate wavefront
+sensor to measure the tip-tilt as well as defocus, so-called
+Coronagraphic Low-Order Wavefront Sensor (CLOWFS).
+</p>
+
+<p>
+CLOWFS uses the light reflected by the focal plane mask located after
+the apodizer (c.f. Figure). However, instead of
+reflecting all the on-axis stellar light, the central part of the mask
+is opaque and only a reflective annulus around this central part sends
+light to the CLOWFS camera, which acquires a defocused image of this
+annulus.
+Discarding the central part of the light rejects a lot of flux that
+contains very little signal. In a manner that is reminiscent of
+Schlieren photography or the Foucault knife-edge, this central dark
+zone makes tiny changes in the wavefront produce macroscopic changes
+in the CLOWFS image.
+For wavefront aberrations smaller than 1 radian, the CLOWFS image is a
+linear function of the wavefront aberration modes.
+In the lab, CLOWFS has demonstrated very good performance,
+successfully helping to stabilize the tip-tilt with residuals
+approaching 10<sup>-3</sup> &lambda;/D.
+</p>
+
+<h2>The Lyot-based CLOWFS</h2>
+<p>
+For phase mask based coronagraphs like the PIAA, PIAACMC, 4QPM, 8OPM and Vortex versions, the light is not reflected but transmitted by the focal plane mask and hence the original CLOWFS concept outlined above does not apply. Instead we have adapted our CLOWFS so that light diffracted by the focal plane mask is reflected at the Lyot-stop towards the LOWFS camera. The beam is refocused onto the camera which is slightly defocused in a manner similar to the original concept.
+</p>
+
+<center><img border="0" src='lowfs_images.jpg'
+width=600 alt='LOWFS images'>
+<p>
+<small>
+The Lyot-based LOWFS concept. An image of a reflective Lyot-stop mask (chrome plated). <br>A reference image of the PSF with the 4-quadrant phase mask in the focal plane.
+</small>
+</p>
+</center>
+
+<p>
+The Lyot-based LOWFS has been tested on the first 3 modes (tip/tilt and focus) in the laboratory. Here is a <a href="vortex_focal1.mp4"> video</a> of the lowfs loop closing on the coronagraphic PSF generated by the vortex coronagraph. The video shows a constant tip/tilt modulation being applied in a circle while simultaneously the turbulence applied is varied (to simulate varying degrees of seeing). Keep an eye on the two images to the bottom right the left of which shows the image the LOWFS sees and the right the internal science camera. Also note the tip/tilt residual graph improvement when the loop is closed and tuned.
+</p>
+
+
+</td>
+</tr>
+	</div>
+
+
+	<div id='cssmenu'>
+   <ul>
+      
+      <li><a href='../../index.html'>               <span>Home</span>        </a></li>
+      
+      <li class='active has-sub'><a href='../../010usingSCExAO/index.html'>    <span>Using SCExAO</span></a>
+      <ul>
+		<li><a href='../../010usingSCExAO/010currentcap/index.html'>    <span>Current Capabilities</span>    </a></li>
+		<li><a href='../../010usingSCExAO/020openuse/index.html'>       <span>Open Use Science</span>        </a></li>
+		<li><a href='../../010usingSCExAO/030techdev/index.html'>       <span>Technology Development</span>  </a></li>
+		<li><a href='../../010usingSCExAO/040dataanalysis/index.html'>  <span>Data Analysis</span>           </a></li>
+      </ul>
+      </li>
+      
+      <li class='active has-sub'><a href="../../010instrument/index.html">  <span>SCExAO Instrument Overview      </span></a>
+      <ul>
+		<li><a href='../../020instrument/000intro/index.html'>         <span>Introduction</span>                  </a></li>
+		<li><a href='../../020instrument/010wfsc/index.html'>          <span>Wavefront Sensing and Control</span> </a></li>
+		<li><a href='../../020instrument/020coronagraphs/index.html'> <span>Coronagraphs</span>                  </a></li>
+      </ul>
+      </li>
+      
+      <li><a href="../../030charis/index.html">      <span>CHARIS                   </span></a></li>
+      <li><a href="../../040vampires/index.html">    <span>VAMPIRES                 </span></a></li>
+      <li><a href="../../050devmodules/index.html">  <span>Modules under development</span></a></li>
+      
+      <li class='active has-sub'><a href="#"><span>Team and collaborators</span></a>
+      	<ul>
+	      <li><a href="../../060team/010team/index.html"><span>The Team</span> </a></li>
+    	  <li class='last'><a href="../../060team/020collab/index.html"><span>Collaborators</span> </a></li>
+    	</ul>
+      </li>
+
+      <li class='active has-sub'><a href="#"><span>Images</span></a>
+      	<ul>
+	      <li><a href="../../080images/010people/index.html"><span>People</span> </a></li>
+	      <li><a href="../../080images/020instrument/index.html"><span>Instrument</span> </a></li>
+    	  <li class='last'><a href="../../080images/030science/index.html"><span>Science</span> </a></li>
+    	</ul>
+      </li>
+      
+    </ul>
+    <br>
+    <hr>
+    Technical Area & More Info<br><br>
+    <ul>
+
+	  <li class='active has-sub'><a href="#"><span>Publications</span> </a>
+      	<ul>
+	      <li><a href="../../110publis/00policy/index.html"><span>Policies</span> </a></li>
+	      <li><a href="../../110publis/01science/index.html"><span>Science</span> </a></li>
+	      <li><a href="../../110publis/02scexao/index.html"><span>Instrument</span> </a></li>
+    	  <li class='last'><a href="../../110publis/03related/index.html"><span>Related Papers</span> </a></li>
+		</ul>
+	  </li>
+	  
+	  <li><a href="../../120software/index.html">   <span>Data reduction</span></a></li>
+      <li><a href="../../130technotes/index.html">  <span>Tech notes</span></a></li>
+      <li><a href="../../140datasets/index.html">   <span>Data sets</span></a></li>
+
+
+    </ul>
+    <br>
+    <hr>
+    What's new ?<br><br>
+    <ul>
+	<li><a href="../../200hotnews/index.html">   <span>Hot News</span></a></li>
+	<li><a href="../../210oldnews/index.html">   <span>Archive (old news)</span></a></li>
+	
+   </ul>
+	</div>
+
+
+
+
+</div>
+
+</div>
+
+</body>
+</html>

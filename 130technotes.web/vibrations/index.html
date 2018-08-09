@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SCExAO: Vibrations</title>
+</head>
+<body>
+
+
+<h1>Dealing with vibrations</h1>
+
+
+<center>
+<img border="0" src="./SCExAO_HiCIAO.jpg" alt='Picture of SCExAO and HiCIAO on the same frame' width="550">
+<p><small>An image of SCExAO and HiCIAO on the same frame at the Nasmyth platform.</small></p>
+</center>
+
+
+<p>
+Vibrations are a key limitation to the minimum tip/tilt residual that can be achieved. This directly affects the contrast and inner working angle that can be practically achieved with coronagraphs and hence imposes and limitation on the science. The dominant source of vibrations that have been observed with SCExAO are a result of the cryo-pump on the HiCIAO camera. As can be seen in the figure above HiCIAO sits on the same <a href="../05frame/index.html"> frame</a> as SCExAO at the Nasmyth platform and hence vibrations are easily transferred between the two instruments.
+
+The Coronagraphic <a href="../04lofs/index.html">Low-Order Wavefront Sensor (CLOWFS)</a> is designed to reduce the tip/tilt error both due to atmospheric conditions as well as mechanical vibrations. However, several mechanical upgrades were made to try and minimize vibrations before relying on the CLOWFS.
+
+There are three mechanical upgrades we have thus far undertaken to eliminate/minimize the vibrations induced in the PSF of SCExAO which include: installing vibration isolation elastomers, using sturdy mechanical mounts for key optics and making a dual bellows system for HiCIAO.
+</p>
+
+<h2>Elastomeric dampers</h2>
+<p>
+Prior to the July 25<sup>th</sup> observing run in 2013, silicon elastomer based dampers were installed. We also moved from a 3 point gimbal type mounting to a 4 point mounting where the distance between each of the legs was maximized to minimize deflection in the bench. The elastomers used are the <a href="http://search.newport.com/?q=*&x2=sku&q2=M-ND20-A"> M-ND20-A units from Newport</a>. These units are most affective at suppressing vibrations in the vertical direction above 30 Hz and 8 Hz for the horizontal direction. Below these frequencies they either have no effect (at very low frequencies) or amplify the vibrations (near the resonance frequency of the damper).
+</p>
+
+<center><img border="0" src='Elastomer.jpg'
+width=600 alt='Elastomer'>
+<p>
+<small>
+An image of one of the 4 elastomeric feet used to mount SCExAO to the frame. Note the 4 bolts allow for the height of each foot to be adjusted.
+</small>
+</p>
+</center>
+
+<h2>Sturdy mechanical mounts</h2>
+<p>
+In order to minimize the affect of optical mounts flexing adding to the tip/tilt error, we designed custom mechanical mounts for all of the core relay optics. The rely optics consist of 5 off axis parabolic mirrors (OAPs) and the 2k DM. For the OAPs we chose to build a mount that helps align the OAP quickly but offers no degrees of freedom. The mount dubbed the "tombstone mount" can be seen in the figure below. It supports the OAP exactly 120 mm above the bench which is the nominal beam height, has precisely positioned holes for mounting the OAP which allow the clocking of the OAP to achieved in a simple fashion and is very stiff, not permitting the mount to flex. Tip and tilting the optic is achieved by rotating the mount and/or placing tiny shims under it. Once initially aligned it is never moved again.
+</p>
+
+<center>
+<img border="0" src='OAP.jpg' width=356 alt='OAP'>
+<img border="0" src='Tombstone.jpg' width=200 alt='Tombstone'>
+<p>
+<small>
+(Left) An OAP mounted in a tombstone mount. (Right) An tombstone mount.
+</small>
+</p>
+</center>
+
+<p>
+The 2k DM and first OAP however are mounted on two large rotation stages each. This allows the entire system to be aligned by rotating those two optics. The mounts for the 2k DM were upgraded to 12 mm thick stainless steel plates in March 2014 as the initial Aluminum ones were determined to flex and vibrate when excited by HiCIAO's cryo-pump. The new plates are considerably stiffer and will minimize vibration of the PSF induced by flexing plates.
+</p>
+
+<center>
+<img border="0" src='2K_DM_mounts_1.jpg' width=350 alt='2k DM mounts'>
+<img border="0" src='2K_DM_mounts_2.jpg' width=350 alt='2k DM mounts 2'>
+<p>
+<small>
+(Left) 2 large rotation stages used to align the 2k DM with some of the mechanical plates. (Right) The fully mounted 2k DM.
+</small>
+</p>
+</center>
+
+<h2>Dual bellows unit for HiCIAO</h2>
+<p>
+HiCIAO initially used a single bellow between the cryo-pump and the vacuum chamber. The collapse in the bellow when a vacuum was pulled, was counter balanced by 2 rings of neoprene rubber placed around the bellow. However the force of the vacuum was significant (several hundred lbs) such that the rubber was crushed and did not attenuate vibrations from the pump affectively but instead transmitted them. In March 2014 we built a unit for HiCIAO which relies on a second bellow/vacuum chamber on the other end of the cyro-pump pulling the pump in the opposite direction. In this way it is possible to balance the force between the two chambers and make it so that the only contact between the pump and the primary chamber is via the spring-like bellow. To support the bellow in the vertical and horizontal we used springs with spring constants lower than that of the bellows (22 and 10 lbs/inch respectively). Several videos of the vibration isolation unit can be found <a href="Vibration1.mov"> here</a> and <a href="Vibration2.mov"> here</a>. As the pump can move freely with every cycle, this means that energy is not directly transferred to the fewer and will be damped to some extent by the bellows and springs. How much damping we get remains to be seen and will be tested on the upcoming April observing run.
+</p>
+
+<center>
+<img border="0" src='HiCIAO_before.jpg' width=400 alt='HiCAIO before'>
+<img border="0" src='HiCIAO_after.jpg' width=400 alt='HiCAIO after'>
+<p>
+<small>
+(Left) HiCIAO cryo-pump mount before the rebuild. A ring of black neoprene is placed around the primary bellow. <br> (Right) HiCIAO after the rebuild. Springs are used to support the cryo-pump in all directions.
+</small>
+</p>
+</center>
+
+<h2>Low order wavefront sensing</h2>
+<p>
+The residual tip/tilt errors associated with vibrations will be dealt with by the CLOWFS. In addition we intend to implement a Linear-quadratic-Gaussian control system to our CLOWFS to damp any residual frequencies contributing to tip/tilt error.
+</p>
+
+
+</td>
+</tr>
+
+</body>
+</html>
