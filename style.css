@@ -10,11 +10,33 @@ body {
 }
 
 
+
+
 h1 {
-  color: #A9A9A9;
-  font-size:xx-large;
-  text-align:left;
+	color: orange;
+	font-size:xx-large;
+	overflow: hidden;
+	text-align: center;
 }
+h1:before,
+h1:after {
+ background-color: orange;
+ content: "";
+ display: inline-block;
+ height: 3px;
+ position: relative;
+ vertical-align: middle;
+ width: 50%;
+}
+h1:before {
+ right: 0.5em;
+ margin-left: -50%;
+}
+h1:after {
+ left: 0.5em;
+ margin-right: -50%;
+}
+
 
 h2 {
   color: orange;
