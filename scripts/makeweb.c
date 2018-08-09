@@ -79,16 +79,16 @@ int main(int argc, char **argv)
     int mdmode = 0; // 1 if .md file is input to webpage -> then, use md2html
 
 	
-	updatetime[0] = '\0';
-	updatetimetxt[0] = '\0';
-
+	
     if(argc==2)
     {
-        if(strcmp(argv[1],"all")==0)
+        if(strcmp(argv[1], "all")==0)
         {
             MAKEALL = 1;
         }
     }
+	
+
 
 
     // establish list of .web directories
@@ -98,6 +98,8 @@ int main(int argc, char **argv)
     system("find . -type d -name \"*.web\" | sort > listdir.txt");
 
 
+	updatetime[0] = '\0';
+	updatetimetxt[0] = '\0';
 
 
 
