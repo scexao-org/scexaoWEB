@@ -4,7 +4,7 @@
 
 To build on local machine (first time):
 
-	git clone .
+	git clone https://github.com/scexao-org/scexaoWEB
 	cd scripts
 	gcc makeweb.c -o makeweb
 	cd ..
