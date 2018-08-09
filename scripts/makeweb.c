@@ -95,6 +95,7 @@ int main(int argc, char **argv)
 
     printf("Scanning directories ...\n");
     fflush(stdout);
+    system("rm listdir.txt &> /dev/null");
     system("find . -type d -name \"*.web\" | sort > listdir.txt");
 
 
@@ -103,7 +104,6 @@ int main(int argc, char **argv)
 
 
 
-    system("rm listdir.txt &> /dev/null");
     fp = fopen("listdir.txt", "r");
     while ((fscanf(fp,"%s\n", line))!=EOF)
     {
