@@ -21,8 +21,8 @@ To change content, edit files content.html. Do not change files indexm.html, as 
 
 ## Creating a new sub-page
 
-- Create a .web directory, following this convention: <Number><name>.web. The number is used to pick the order.
-- Inside the .web directory, create a title.txt file containing the title that should appear in the menu
+- Create a .web directory, following this convention: 123name.web. The number is used to pick the order in which the page will appear in the menu.
+- Inside the .web directory, create a title.txt file containing the title that should appear in the menu. Keep it short, and a single line.
 - Place the html content in file content.html
 
 To include the new page in the repo, remember to run :
@@ -31,5 +31,12 @@ To include the new page in the repo, remember to run :
 	git commit -am 'new page'
 	git push
 
+## Deployment on Subaru website
+
+Go to SCExAO website directory, then:
+
+	cd scexaoWEB
+	git pull
+	./scripts/makeweb
 
 
