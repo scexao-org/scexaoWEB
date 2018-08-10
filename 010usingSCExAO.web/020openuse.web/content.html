@@ -2,8 +2,60 @@
 <h1>Using SCExAO for Science Observations (Open-use)</h1>
 
 
+<h2>How to apply for time ?</h2>
+
 You can apply for SCExAO use through Subaru Telescope's open use program.<br>
 
 See <a href="https://www.naoj.org/Observing/Proposals/Submit/call.html">S19A call for proposal for details</a>. Note the Sept 13 2018 (JST) deadline.
 
 <p>You can contact the SCExAO instrument team for help writing your proposal.</p>
+
+
+<h2>Observer's checklist</h2>
+
+When preparing your observations, be prepared to answer the following questions:
+
+<ul>
+
+<li><b>Is my guide star bright enough ?</b><br>
+Primary wavefront sensing is done from 600nm to 900nm. Wavefront sensing requires an on-axis natural guide star with mR<12. Optimal performance requires mR<8.
+</li><br>
+
+<li><b>What is my prime observation wavelength ?</b><br>
+Select CHARIS as your science camera for near-IR observations, VAMPIRES for visible observations. Note: you can use both VAMPIRES and CHARIS simultaneously.
+</li><br>
+
+<li><b>How do I split light between VAMPIRES and the high-order WFS ?</b><br>
+We offer multiple dichroic and beam splitter choices to support most splitting choices, such as: bluer light to WFS, bluer light to VAMPIRES, or 50% split. Contact us for details.
+</li><br>
+
+</ul>
+
+
+
+<h2>FAQs</h2>
+
+
+<ul>
+
+<li><b>Can I observe off-axis source ?</b><br>
+CHARIS FOV is 1" radius. The maximum offset between the WFS and the CHARIS pointing is an additional 1", so you can observe sources up to 2" from the guide star. Please contact SCExAO team for details.
+</li><br>
+
+<li><b>Can I observe shorward of 600nm ?</b><br>
+No: blue light ( < 600nm ) is used by AO188's wavefront sensor.
+</li><br>
+
+<li><b>What is the setup overhead per target ?</b><br>
+We recommend you allocate 15mn overhead between target to allow for telescope slew, wavefront control and coronagraph setup.
+</li><br>
+
+<li><b>How do I reduce VAMPIRES data ?</b><br>
+The VAMPIRES team will assist you. We currently do not have a good user-friendly deployable pipeline, and most VAMPIRES users work with the VAMPIRES team for data reduction (POC: Barnaby Norris).
+</li><br>
+
+<li><b>How do I reduce CHARIS data ?</b><br>
+The CHARIS team provides and maintains a data cube extraction tool. We have not yet released a user-friendly pipeline for more advanced features (SDI, ADI), so you will either have to do this yourself, or work with our data reduction team (POC: Thayne Currie).
+</li><br>
+
+</ul>

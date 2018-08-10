@@ -5,7 +5,7 @@
 body {
 	margin: 10px 0;
 	padding: 10px;
-  background-color: silver;
+	background-color: silver;
 	font-size: 14px;
 }
 
@@ -74,7 +74,7 @@ h3 {
 #maincolumn {
 	float: right;
 	width: 850px;
-  background-color: black;
+  background-color: #333333;
   padding: 25px 25px 00px 25px;
   padding-bottom: 500%;
   margin-bottom: -500%;
@@ -339,5 +339,6 @@ background-color: #606060;
 background-color: #606060;
 }
 
-
+a { color: #8888FF; }
+a:hover {  color: #2222FF; }
 
