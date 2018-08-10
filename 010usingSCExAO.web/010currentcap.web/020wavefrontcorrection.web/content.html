@@ -1,0 +1,91 @@
+<h1>Wavefront Correction</h1>
+
+<h2>Facility AO correction (AO188)</h2>
+
+<p>SCExAO is a booster stage for the initial AO correction provided by AO188. The table below summarizes the performance and key parameters required when putting together a proposal. </p>
+  
+  <table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
+
+  <tr>
+  <th colspan=3> Target acquisition and Image quality: AO188 </th>
+  </tr>
+  <tr>
+    <td> Strehl Ratio, FWHM</td>
+    <td> 30-40% in H-band (median seeing), See <a href="http://subarutelescope.org/Observing/Instruments/AO/parameters.html">AO188</a> performance</td></td>
+    </tr>
+  <tr>
+    <td> Target Acquisition and <br> setup overhead</td>
+    <td> AO188 target acquisition time + 10 mn</td>
+    <td> Does not include fine tuning of speckle control loop</td>
+    </tr>
+  <tr>
+    <td> Seeing limit</td>
+    <td> ~1.2"</td>
+    <td> See <a href="http://subarutelescope.org/Observing/Instruments/AO/parameters.html">AO188</a> performance</td>
+    </tr>
+  <tr>
+    <td> Bright limit </td>
+    <td> R=-1</td>
+    <td> Neutral Density filters can be placed in front of wavefront sensor and HiCIAO when observing bright targets but not brighter than R=-1</td>
+    </tr>
+  <tr><div w3-include-html="../../menu.html"></div>
+<script>
+w3IncludeHTML();
+</script>
+    <td> Exclusion angle around the moon </td>
+    <td> 15 degrees </td>
+    <td> </td>
+    </tr>
+</table>
+
+
+<h2>ExAO primary correction (Pyramid WFS)</h2>
+<p>SCExAO's main wavefront sensor is a pyramid wavefront sensor (pyWFS), driving a 2000-actuator deformable mirror (DM). The PyWFS control loop offers 70-90% Strehl ratio in H-band in median seeing conditions. On-sky performance varies according to seeing, wind speed, and guide star magnitude. Wavefront sensing is performed in visible-to-nearIR light (from 600nm to 900nm).</p>
+
+
+<table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
+  <tr>
+  <th colspan=3> <b>High Order Wavefront Correction</b> </th>
+  </tr>
+  <tr>
+    <td> Strehl </td>
+    <td> >80%  </td>
+    <td> In median seeing in the H-band</td>
+    </tr>
+  <tr>
+    <td> Wavefront sensing wavelength </td>
+    <td> 600-950 nm  </td>
+    <td> Selectable bandpass in this range. 50-150 nm bandwidth at a time which depends on magnitude of target.</td>
+    </tr>
+  <tr>
+    <td> Loop speed </td>
+    <td> 3.5 kHz  </td>
+    <td> Maximum loop speed used down to R=9 mag. For higher R-mag, the loop speed is reduced. </td>
+    </tr>
+  <tr>
+    <td> High perfromance magnitude limit</td>
+    <td> <8 mag (R-band)  </td>
+    <td> Maximum Strehl can be provided down to R=8 mag </td>
+    </tr>
+  <tr>
+    <td> Limiting magnitude </td>
+    <td> 13 mag (R-band)  </td>
+    <td> The loop has been tested down to 13th magnitude and an improvement in Strehl was observed. However, below 8th magnitude there is an associated performance drop. </td>
+    </tr>
+
+  <tr>
+    <td> Loop setup time </td>
+    <td> 3-5 minutes  </td>
+    <td> This time does not include overheads from AO188 and/or coronagraph setup times. </td>
+    </tr>
+</table>
+
+
+<h2>Coronagraphic Low-Order WFS</h2>
+Starlight blocked by the Coronagraph may be directed to a coronagraphic Low-Order Wavefront Sensor (CLOWFS), which keeps the star well-centered on the coronagraph mask. This mode is available with the PIAACMC and VORTEX coronagraph modes to ensure optimum starlight rejection.
+
+<h2>Speckle Control</h2>
+We offer a static speckle nulling observation mode, where a DM map is computed to create a half dark hole, and the wavefront control loop is then locking the wavefront around this new offset. This mode provides a ~2x improvement in raw contrast over one half of the field of view, but extra light (>2x) is injected on the opposite side.
+
+A speckle nulling map can be pre-carved off sky and then applied on-sky in the case targets are too faint to operate speckle nulling on. However, this is not as accurate as performing the nulling process on the star of interest
+
