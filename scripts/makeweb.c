@@ -18,6 +18,7 @@ typedef struct
     int active;   // 1 if webpage created, otherwise, menu entry only 
     int  update; // 0 if no update, 1 if update
     char title[500];
+    long index; // first 3 digits
     long level;
     long parent; // index of parent page
     long nbchild; // number of children
@@ -76,6 +77,10 @@ int main(int argc, char **argv)
     double tinterval;
     double tintervaltitle;
 
+	char indexstr[4];
+	
+	
+	
     int mdmode = 0; // 1 if .md file is input to webpage -> then, use md2html
 
 	
@@ -111,23 +116,18 @@ int main(int argc, char **argv)
         level = 0;
         strcpy(webdir[webdirnb].fulldir, line);
         token = strtok(line, sep);
-        //  printf("TOKEN = %s\n", token);
         strcpy(webdir[webdirnb].dirname[level], token);
-        //      sprintf(fulldirectory,"%s.web", token);
         while((token=strtok(NULL,sep))!=NULL)
         {
             if(strcmp(token, "web")!=0)
             {
                 level++;
-                //printf("TOKEN (l=%ld) = %s\n",level,token);
                 strcpy(webdir[webdirnb].dirname[level], token);
-                //printf("CHECK [%ld %ld]%s\n",webdirnb,level,webdir[webdirnb].dirname[level]);
             }
         }
         webdir[webdirnb].level = level;
 
-        //    printf("   %s -> level = %ld\n",webdir[webdirnb].fulldir, webdir[webdirnb].level);
-        //    fflush(stdout);
+
 
         webdir[webdirnb].update = 0;
 
@@ -148,8 +148,6 @@ int main(int argc, char **argv)
 				exit(0);
 			}
 			remove_char_from_string('\n', webdir[webdirnb].title);
-            //strftime(updatetime, 100, "%d/%m/%Y %H:%M:%S", localtime( &filestat_txt.st_mtime));
-            //printf("File %s last modified date and time = %s\n", fname, t);
         } else {
             printf("\033[31;1m ERROR [%d]: File %s: does not exist.\033[0m\n", __LINE__, fname);
             exit(0);
@@ -173,21 +171,16 @@ int main(int argc, char **argv)
         {
             sprintf(fname,"%s/indexm.html",webdir[webdirnb].fulldir);
             if (!stat(fname, &filestat_out_html)) {
-                //strftime(updatetime, 100, "%d/%m/%Y %H:%M:%S", localtime( &filestat_html.st_mtime));
-                //	printf("File %s last modified date and time = %s\n", fname, t);
             } else {
-                // printf("\033[32;1m File %s does not exist: will be created.\033[0m\n", fname);
             }
         }
 
 
         tinterval = difftime(filestat_out_html.st_mtime, filestat_in_html.st_mtime);
         tintervaltitle = difftime(filestat_out_html.st_mtime, filestat_titletxt.st_mtime);
-        // printf("  interval = %g\n",tinterval);
 
         if((tinterval < 0.0)||(tintervaltitle < 0.0))
         {
-            //printf("WILL UPDATE %s\n",webdir[webdirnb].fulldir);
             webdir[webdirnb].update = 1;
         }
 		webdir[webdirnb].update = 1;
@@ -202,10 +195,17 @@ int main(int argc, char **argv)
     printf("\n\n");
     for(wd=0; wd<webdirnb; wd++)
     {
+		indexstr[0] = webdir[wd].dirname[webdir[wd].level][0];
+		indexstr[1] = webdir[wd].dirname[webdir[wd].level][1];
+		indexstr[2] = webdir[wd].dirname[webdir[wd].level][2];
+		indexstr[3] = '\0';
+		
+		webdir[wd].index = atoi(indexstr);
+		
         if((webdir[wd].update == 1)&&(webdir[wd].active == 1))
             printf("\033[32;1m");
 
-        printf("[%3ld] [%50s] %d %d %-50s (level = %2ld): ",wd, webdir[wd].title, webdir[wd].active, webdir[wd].update, webdir[wd].fulldir, webdir[wd].level);
+        printf("[%3ld  %04ld] [%50s] %d %d %-50s (level = %2ld): ",wd, webdir[wd].index, webdir[wd].title, webdir[wd].active, webdir[wd].update, webdir[wd].fulldir, webdir[wd].level);
         for(l=0; l<webdir[wd].level+1; l++)
             printf("[%2ld %2ld](%-16s) ", wd, l, webdir[wd].dirname[l]);
 
@@ -332,7 +332,6 @@ int main(int argc, char **argv)
 
 
 
-
     // make every page
     printf("Making web pages ...\n");
     for(wd=0; wd<webdirnb; wd++)
@@ -341,10 +340,14 @@ int main(int argc, char **argv)
 			char fnamemenu[500];
 			char fname1[500];
 			
+			int toggleindex100 = 0;
+			int toggleindex200 = 0;
+			
             printf("Working on directory %s ...\n",webdir[wd].fulldir);
             // make webpage_sec2.txt
             level = webdir[wd].level+1;
             //    lastlevel = webdir[wd].level+1;
+
             
             sprintf(fnamemenu, "%s/page_menu.txt", webdir[wd].fulldir);
             printf("   Creating File %s\n", fnamemenu);
@@ -367,6 +370,26 @@ int main(int argc, char **argv)
                // if(webdir[wd1].level == 0)
                //     fprintf(fp,"");
 
+            
+            if(webdir[wd1].level==0)
+            {
+				if(webdir[wd1].index > 99)
+					toggleindex100++;
+
+				if(webdir[wd1].index > 199)
+					toggleindex200++;
+			}
+
+				if(toggleindex100==1) // first time we have index 100 or more
+				{
+					fprintf(fp, "<!--index100-->\n");
+					toggleindex100 ++;
+				}
+				if(toggleindex200==1) // first time we have index 200 or more
+				{
+					fprintf(fp, "<!--index200-->\n");
+					toggleindex200 ++;
+				}
 
                 str0[0] = '\0';
                 //  for(i=0;i<webdir[wd1].level;i++)

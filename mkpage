@@ -9,6 +9,14 @@ LEVEL="$3"
 
 
 
+
+
 cd $1
-cat page_header.txt content.html page_modtime.txt page_menu.txt page_footer.txt > indexm.html
+
+cat page_header.txt content.html page_modtime.txt page_menu.txt page_footer.txt > index0.html
+sed 's/.*index100.*/<br><hr><br><center><font size="5" color="white"><b>EXPERT AREA<\/b><\/font><\/center>/' index0.html > index1.html
+rm index0.html
+sed 's/.*index200.*/<br><hr><br><center><font size="5" color=#ff8888><b>NEWS<\/b><\/font><\/center>/' index1.html > indexm.html
+rm index1.html
+
 cd -
