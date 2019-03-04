@@ -65,9 +65,12 @@ See <a href="2018_VAMPIRES.pdf">this presentation</a> for an overview of VAMPIRE
     <td> The sparse aperture mask is removed, allowing conventional polarimetric imaging. The fast LCVR switching allows precise polarimetric differential imaging at 600-800 nm, and the EMCCD camera provides excellent sensitivity. In this mode, the field-of-view is approximately 1” by 2” with pixel scale of 6 mas / pixel.</td>
     </tr>
   <tr>
-    <td> Spectral differenital mode</td>
+    <td> Spectral differential mode</td>
     <td> H-alpha/Continuum SII/continuum</td>
-    <td> Non-simultaneous spectral differential imaging can be used by placing a H-alpha and then a continuum filter in the filter wheel before the polarizing beamsplitter (PBS). Since the filter is before the PBS the data from the two spectral bands is collected sequentially rather than simultaneously. However, it can be used with aperture masks or full pupil imaging and polarimetry. </td>
+    <td> Simultaneous spectral differential imaging using either H-alpha or SII lines can be performed. Imaging is performed simultaneously on two cameras via a non-polarising beamsplitter, with an H-alpha (or SII) filter before one camera and an adjacent continuum filter before the other. Filters can be rapidly swapped between cameras to help calibrate non common path errors. This mode may be used with both aperture-masking and full-pupil imaging.
+
+		As of Feb 2019, full-pupil H-alpha SDI contrast limits range from ~10^-3 at 50 mas separation through to ~10^-4 at 350 mas separation. Note this mode is in continuous development and contrast limits are expected to further improve.
+	</td>
     </tr>
   <tr>
     <td> VAMPIRES setup time</td>
