@@ -16,6 +16,28 @@
 
 <p>To download files, see the <a href="https://www.naoj.hawaii.edu/Projects/SCEXAO/data/20180905/aol0_modeval_ol/filelist.txt">file list</a>. All files are in the same directory (https://www.naoj.org/Projects/SCEXAO/data/20180905/aol0_modeval_ol). You cannot scan the directory but you can download individual files by adding filename to the directory name, or write a wget script to pull a set of files.</p>
 
+
+<hr>
+
+<h2> 2018-09-05 Simultaneous PyWFS - Vcamim1 images </h2>
+
+This dataset consists of pyramid WFS images (aol0_wfsim) and visible light focal plane images (vcamim). Both streams have been re-sampled to the same time sequence, compensating for hardware lag and different frame rates. The resampled data has 193,224 frames, at a temporal frame rate of 500 Hz.
+
+Files:
+<ul>
+	<li> <a href="exptime.aol0_wfsim.vcamim1.dat"> Exposure time log</a> </li>
+	<li> <a href="aol0_wfsim.fits"> Pyramid WFS images </a> </li>
+	<li> <a href="vcamim1.fits"> Visible light VAMPIRES camera images </a>  </li>
+	<li> <a href="simM0.fits"> Similarity matrix for aol0_wfsim </a> </li>
+	<li> <a href="simM1.fits"> Similarity matrix for vcamim1</a></li>
+</ul>
+
+The goal of this dataset is to explore if/how focal plane images can be reconstructed from WFS telemetry. Note that about 3% of the time samples are missing, so do not assume that time is simply proportional to frame index.
+
+
+
+
+
 <hr>
 <hr>
 
