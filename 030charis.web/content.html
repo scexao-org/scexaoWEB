@@ -1,7 +1,3 @@
-
-
-
-
 <h1>CHARIS</h1> 
 
 <br>
@@ -11,9 +7,9 @@ For detailed information, please consult the <a href="https://scholar.princeton.
 <p>The Coronagraphic High Angular Resolution Imaging Spectrograph (CHARIS) is an IFS for the Subaru telescope. It sits behind the SCExAO coronagraphic and extreme AO system and AO188 adaptive optics systems at the Subaru telescope.</p>
 
 <center>
-	<img src="hd1160.gif" alt="Pulpit rock" width=500 height=500>
+	<img src="file:///C:/Users/julie/Documents/scexaoWEB/030charis.web/hd1160.gif" alt="Pulpit rock" width="500" height="500">
 	<p>HD1160 data cube</p>
-	</br></center>
+	<br></center>
 	
 <h2>Capabilities</h2>
 
@@ -22,21 +18,26 @@ For detailed information, please consult the <a href="https://scholar.princeton.
 
 	<p>The current instrument capabilties are below:</p>
 
-	<table border=1 cellspacing="0" cellpadding="10">
-	<tr>
-	<th colspan=3> Basic Parameters</th> 
+	<table border="1" cellspacing="0" cellpadding="10">
+	<tbody><tr>
+	<th colspan="3"> Basic Parameters</th> 
 	</tr>
 	<tr>
-	  <td>Field of view</td><td>2.07''x2.07''</td><td> </td>
+	  <td rowspan="2">Field of view</td><td>2.07''x2.07''</td>
+<td> </td>
 	</tr>
 	<tr>
+    <td>2.07''x1.0''</td>
+    <td>Spectro-polarimetric mode (Wollaston prism in)</td>
+    </tr>
+<tr>
 	  <td>Plate Scale</td><td>16.2 mas/lenslet</td><td> </td>
 	</tr>
 	<tr>
 	  <td>Recommended Satellite Spot Contrast</td><td>1x10<sup>-1</sup> - 1x10<sup>-3</sup></td><td>Tunable</td>
 	</tr>
 	<tr>
-	  <td>Satellite Spot Location</td><td>15 λ/D (~0.7" at 1550nm)</td><td>Scales linearly with λ</td>
+	  <td>Satellite Spot Location</td><td>15.9 Î»/D (~0.63" at 1550 nm)</td><td>Scales linearly with Î»</td>
 	</tr>
 	
 	  <tr>
@@ -46,29 +47,30 @@ For detailed information, please consult the <a href="https://scholar.princeton.
     </tr>
   <tr>
     <td> Wavelength coverage</td>
-    <td> 1154nm to 238nmm</a></td>
+    <td> 1154 nm to 2387 nmm</td>
     <td> SCExAO feeds CHARIS with wavelengths longer than 950nm</td>
     </tr>
   <tr>
-    <td rowspan='2'> CHARIS throughput</td>
+    <td rowspan="2"> CHARIS throughput</td>
     <td> Low resolution mode: 65-70%</td>
-    <td rowspan='2' > ~15% from atmosphere to detector </td>
+    <td rowspan="2"> ~15% from atmosphere to detector </td>
     </tr>
   <tr>
     <td> High resolution mode: 55-60%</td>
     </tr>
   <tr>
-    <td rowspan='2'> Spectral resolution </td>
+    <td rowspan="2"> Spectral resolution </td>
     <td> Low resolution mode: R~19</td>
-    <td rowspan='2' > J, H and K bands </td>
+    <td> J, H or K band </td>
     </tr>
   <tr>
     <td> High resolution mode: R~70-90</td>
+<td> J, H and K bands combined</td>
     </tr>
   <tr>
     <td> Coronagraph modes</td>
     <td> Lyot, vAPP, PIAACMC, Vortex </td>
-    <td> See <a href="../010usingSCExAO.web/010currentcap.web/030coronagraphs.web/indexm.html">SCExAO coronagraph section</a></td>
+    <td> See <a href="file:///C:/Users/julie/Documents/scexaoWEB/010usingSCExAO.web/010currentcap.web/030coronagraphs.web/indexm.html">SCExAO coronagraph section</a></td>
   </tr>
   <tr>
     <td> Angular Differential Imaging</td>
@@ -86,49 +88,49 @@ For detailed information, please consult the <a href="https://scholar.princeton.
     <td> Tip-Tilt control performed using SCExAO <br>Low Order Wavefront Sensor</td>
     </tr>
   <tr>
-    <td> Polarimetric imaging</td>
-    <td> NO</td>
-    <td> Will be offered at a later time</td>
+    <td> Spectro-polarimetric imaging</td>
+    <td> YES</td>
+    <td>A Wollaston prism, combined with a field stop, is now available for spectro-polarimetry</td>
+    </tr>
+<tr>
+    <td> Dithering</td>
+    <td> Â±2"</td>
+    <td> It is now possible to offset the field-of-view with respect to the guide star</td>
     </tr>
   <tr>
 	
-	</table>
+	</tr></tbody></table>
 	
 	<hr>
 <h2>Wavelength modes</h2>
 	
 	<br>
-	<table border=1 cellspacing="0" cellpadding="10">
-	<tr>
-	<th colspan=3>Filters</th> <th colspan=4>Dispersion Modes </th>	
+	<table border="1" cellspacing="0" cellpadding="10">
+	<tbody><tr>
+	<th colspan="3">Filters</th> <th colspan="4">Dispersion Modes </th>	
 	</tr>
 	<tr>
-	  <td>Band<td>50% Transmission Range (nm)</td><td>In-Band Filter Transmission</td> 
+	  <td>Band</td><td>50% Transmission Range (nm)</td><td>In-Band Filter Transmission</td> 
 	  <td>Band</td> <td>Avg. Spectral Resolution (2x2 pixels)</td> <td># Output Channels</td><td>CHARIS Internal Throughput</td>
 	</tr>
 	<tr>
-	  <td>J</td><td>1176-1328</td> <td>>80%</td>
-	  <td>J</td><td>R=75.2</td> <td>15</td><td>>40%</td>
+	  <td>J</td><td>1176-1328</td> <td>&gt;80%</td>
+	  <td>J</td><td>R=75.2</td> <td>15</td><td>&gt;40%</td>
 	</tr>
 	<tr>
-	  <td>H</td><td>1490-1783</td> <td>>90%</td>
-	  <td>H</td><td>R=65.2</td> <td>20</td><td>>40%</td>
+	  <td>H</td><td>1490-1783</td> <td>&gt;90%</td>
+	  <td>H</td><td>R=65.2</td> <td>20</td><td>&gt;40%</td>
 	</tr>
 	<tr>
-	  <td>K</td><td>2019-2375</td> <td>>90%</td>
-	  <td>K</td><td>R=77.1</td> <td>17</td><td>>40%</td>
+	  <td>K</td><td>2019-2375</td> <td>&gt;90%</td>
+	  <td>K</td><td>R=77.1</td> <td>17</td><td>&gt;40%</td>
 	</tr>
 	<tr>
-	  <td>Broadband </td><td>1154-2387</td> <td>>93%</td>
-	  <td>Broadband</td><td>R=18.4</td> <td>22</td><td>>53%</td>
+	  <td>Broadband </td><td>1154-2387</td> <td>&gt;93%</td>
+	  <td>Broadband</td><td>R=18.4</td> <td>22</td><td>&gt;53%</td>
 	</tr>
 	<tr>
-	  <td>Cold ND3 </td><td>1165-2365</td> <td>>OD 3.258</td>
+	  <td>Cold ND3 </td><td>1165-2365</td> <td>&gt;OD 3.258</td>
 	  <td>Broadband</td><td>R=18.4</td> <td>22</td><td> - </td>
 	</tr>
-	</table>
-
-
-
-
-
+	</tbody></table>
