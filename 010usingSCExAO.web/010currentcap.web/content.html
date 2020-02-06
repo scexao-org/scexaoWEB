@@ -4,17 +4,69 @@
 
 <h2> Overview and Important Notes</h2>
 
-<p>This document describes SCExAO capabilities commissionned as of Aug 2018. S19A proposers can use this page as a guide to prepare their proposals.</p>
+<p>This document describes SCExAO capabilities commissionned as of February 2020. S20B proposers can use this page as a guide to prepare their proposals.</p>
 
 <p>More advanced operation modes that have not yet been commissioned are NOT described in this page, and may be available to observers (please check with SCExAO development team for readiness level and relevance to your observations).</p>
 
-<p>Before applying to use SCExAO, please refer to the instrument use <a href="../../110publis.web/010policy.web/indexm.html">polices</a></p>
+<p>Before applying to use SCExAO, please refer to the instrument use <a href="../../110publis.web/010policy.web/indexm.html">policies</a></p>
 
 
+<h1>Observational Overhead</h1>
 
+<h2>Changing target</h2>
 
+<p>
+The table below summarizes the different tasks required between targets. While the telescope is slewing, the configuration of SCExAO is generally set back to the default configuration.
+Without taking the slew time into account, that can range from less than a minute to almost 10 minutes, the total overhead between targets is about 5 minutes. 
+</p>
 
+<table border="1" cellspacing="0" cellpadding="10">
+	<tbody><tr>
+	<th colspan="2"> Overhead between targets</th> 
+	</tr>
+	<tr>
+	  <td>Stopping SCExAO's control loop</td><td>15 s</td>
+	</tr>
+	</tr>
+	<tr>
+	  <td>Confirming the next target and stopping AO188's control loop</td><td>15 s</td>
+	</tr>
+	<tr>
+	  <td>Slew time</td><td>30 s to 10 min depending on azimuthal change</td>
+	</tr>
+	<tr>
+	  <td>Closing AO188's control loop</td><td>60 s</td>
+	</tr>
+	<tr>
+	  <td>Aligning the starlight in SCExAO</td><td>20 s</td>
+	</tr>
+	<tr>
+	  <td>Closing the SCExAO loop and flux tuning</td><td>30 to 60 s</td>
+	</tr>
+	<tr>
+	  <td>Setting Coronagraph, dichroics, satellite speckles, etc.</td><td>1 to 2 min</td>
+	</tr>
+	<tr>
+	  <th>TOTAL minus slew time</th><th>~5 min</th>
+	</tr>
+        </tbody></table>
 
+<p>
+The overhead is slightly increased for the first target, since a pupil and focal plane alignment is required on our tracking camera, as well as the PyWFS. So typically 5 more minutes are necessary for the first target. 
+</p>
+
+<h2>Overheads during data acquisition</h2>
+
+<p>
+<strong>CHARIS observation efficiency ~ 85% (for 30 second exposure time) </strong>
+During data acquisition, there is an overhead of about 5 seconds between consecutive CHARIS exposures, which typically range from 4.5 seconds to 60 seconds exposure time.
+
+<strong>VAMPIRES observation efficiency ~ 75% </strong>
+In the case of VAMPIRES observations, there is a 2 mn setup overhead for each new target, before the data acquisition starts. VAMPIRES then records cubes of about a minute of data each, rotating the half-wave plate (or the differential filter wheel for the H-alpha mode) in between cubes. The overhead of VAMPIRES is dominated by writing the cubes on disk, which is about 5 to 20 seconds for every minute of data, depending on the frame rate.
+
+<strong>REACH observation overheads</strong>
+REACH requires an optimization of fiber coupling, in addition to the usual star acquisition and SCExAO operation. This requires an additional 10 minutes for each target.  
+</p>
 
 
 <h1>Additional Information</h1>
