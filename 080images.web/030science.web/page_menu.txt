@@ -1,0 +1,24 @@
+</div>
+<div id='cssmenu'>
+<ul>
+<div class="menul0"><a href="../.././000home.web/indexm.html" style="text-decoration: none"> <font color="00000"> Home </font> </a></div>
+<div class="menul0"><a href="../.././010usingSCExAO.web/indexm.html" style="text-decoration: none"> <font color="00000"> Using SCExAO > </font> </a></div>
+<div class="menul0"><a href="../.././020instrument.web/indexm.html" style="text-decoration: none"> <font color="00000"> Instrument > </font> </a></div>
+<div class="menul0"><a href="../.././030charis.web/indexm.html" style="text-decoration: none"> <font color="00000"> CHARIS > </font> </a></div>
+<div class="menul0"><a href="../.././040vampires.web/indexm.html" style="text-decoration: none"> <font color="00000"> VAMPIRES </font> </a></div>
+<div class="menul0"><a href="../.././041reach.web/indexm.html" style="text-decoration: none"> <font color="00000"> REACH </font> </a></div>
+<div class="menul0"><a href="../.././050devmodules.web/indexm.html" style="text-decoration: none"> <font color="00000"> Modules Under Development > </font> </a></div>
+<div class="menul0"><a href="../.././060team.web/indexm.html" style="text-decoration: none"> <font color="00000"> Team > </font> </a></div>
+<div class="menul0"><a href="../.././080images.web/indexm.html" style="text-decoration: none"> <font color="00000"> Images > </font> </a></div>
+<div class="menul1"><a href="../.././080images.web/010people.web/indexm.html" style="text-decoration: none"> <font color="00000"> People </font> </a></div>
+<div class="menul1"><a href="../.././080images.web/020instrumentPics.web/indexm.html" style="text-decoration: none"> <font color="00000"> Hardware Pics </font> </a></div>
+<div class="active menul1"><b>Science</b></div>
+<div class="menul0"><a href="../.././110publis.web/indexm.html" style="text-decoration: none"> <font color="00000"> Publications > </font> </a></div>
+<div class="menul0"><a href="../.././120software.web/indexm.html" style="text-decoration: none"> <font color="00000"> Software </font> </a></div>
+<div class="menul0"><a href="../.././130technotes.web/indexm.html" style="text-decoration: none"> <font color="00000"> Tech Notes </font> </a></div>
+<div class="menul0"><a href="../.././140datasets.web/indexm.html" style="text-decoration: none"> <font color="00000"> Data Sets </font> </a></div>
+<div class="menul0"><a href="../.././200hotnews.web/indexm.html" style="text-decoration: none"> <font color="00000"> Hot News </font> </a></div>
+<div class="menul0"><a href="../.././210oldnews.web/indexm.html" style="text-decoration: none"> <font color="00000"> Old News (Archive) </font> </a></div>
+</ul>
+</div>
+
