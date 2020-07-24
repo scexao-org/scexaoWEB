@@ -7,11 +7,11 @@ For detailed information, please consult the <a href="https://scholar.princeton.
 <p>The Coronagraphic High Angular Resolution Imaging Spectrograph (CHARIS) is an IFS for the Subaru telescope. It sits behind the SCExAO coronagraphic and extreme AO system and AO188 adaptive optics systems at the Subaru telescope.</p>
 
 <center>
-	<img src="file:///C:/Users/julie/Documents/scexaoWEB/030charis.web/hd1160.gif" alt="Pulpit rock" width="500" height="500">
-	<p>HD1160 data cube</p>
+	<img src="hd1160.gif" alt="Pulpit rock" width="500" height="500">
+	<p>HD1160 data cube. The central star is blocked by the coronagraph. The four bright speckles are the astrogrid used for photometric and astrometric calibration. A faint companion is visible on the left part of the image (8-oclock)</p>
 	<br></center>
 	
-<h2>Capabilities</h2>
+<h2>Capabilities - Overview</h2>
 
 
 	<p>Targets with an H-band magnitude brighter than 1 can only be observed with the internal CHARIS ND3 filter in-beam, which restricts the user to broadband mode.</p>
@@ -90,16 +90,96 @@ For detailed information, please consult the <a href="https://scholar.princeton.
   <tr>
     <td> Spectro-polarimetric imaging</td>
     <td> YES</td>
-    <td>A Wollaston prism, combined with a field stop, is now available for spectro-polarimetry</td>
+    <td>A Wollaston prism, combined with a field stop. See Spectro-Polarimetric Imaging section</td>
     </tr>
 <tr>
     <td> Dithering</td>
-    <td> Â±2"</td>
+    <td> ±2"</td>
     <td> It is now possible to offset the field-of-view with respect to the guide star</td>
     </tr>
   <tr>
 	
 	</tr></tbody></table>
+
+	<hr>
+	
+<h2>Spectro-Polarimetric Imaging</h2>
+
+Spectro-Polarimetric Imaging is enabled by a Wollaston prism, field stop, and half-waveplate (HWP) rotation for slow modulation. This mode is refered to as CHARIS-PDI (Polarization Differential Imaging).
+
+Observers using PDI should account for the following factors when planning observations:
+ <ul>
+  <li> <b>Field of View</b> is reduced to 1"x2" by the field stop.</li>
+  <li> <b>Image splitting</b> by the Wollaston prism produces two images in orthogonal linear polarizations. This usually calls for exposure times to be doubled to avoid incurring additional readout noise.</li>
+  <li> <b>Throughput</b> is reduced by the HWP and Wollaston prism. See table below.</li>
+</ul> 
+
+<br>
+<br>
+
+<table border="1" cellspacing="0" cellpadding="10">
+<tbody>
+	<tr>
+	<th colspan="4"> Spectro-Polarimetric Imaging Throughput (relative to non-PDI observations)</th> 
+	</tr>
+	
+	<tr> <td>Band</td> <td>HWP</td>   <td>Wollaston</td> <td>total</td></tr>
+	<tr> <td>J (1.24um)</td>    <td>96.1%</td> <td>93.2%</td>    <td>89.6%</td></tr>
+	<tr> <td>H (1.63um)</td>    <td>94.3%</td> <td>95.7%</td>    <td>90.2%</td></tr>
+	<tr> <td>K (2.14um)</td>    <td>92.2%</td> <td>92.2%</td>    <td>85.0%</td></tr>
+	
+</tbody></table>
+	
+<hr>
+
+
+<h2>Astrometric and photometric calibration</h2>
+
+Calibration speckles ("astrogrid") can be added in the image by way of fast DM modulation. The spot brightess and position are accurately referenced to the central PSF core, providing astrometric and photometric calibration in coronagraphic images where the central star is blocked.
+
+<br><br>
+
+Observers can choose the astrogrid contrast, angular separation and number of spots. Within a CHARIS exposure, the astrogrid phase is rapidly modulated between 0 and PI to ensure the reference speckles are incoherent with the existing PSF halo. Additionally, the spot pattern can be switched between CHARIS exposured for subtraction of the incoherent speckle halo. See table below for parameters.
+
+<br><br>
+
+<table border="1" cellspacing="0" cellpadding="10">
+<tbody>
+	<tr>
+	<th colspan="2"> Astrogrid settings</th> 
+	</tr>
+	
+	<tr> <td>Parameter</td> <td>Value(s)</td>  </tr>
+	<tr> <td> Angular separation from PSF core</td>    <td> 5.3 &lambda;/D, 7.5 &lambda;/D, 11.2 &lambda;/D, 15.9 &lambda;/D or 22.5 &lambda;/D</td> </tr>
+	<tr> <td>Brightness relative to central PSF</td>   <td> 1e-4 to 1e-2</td> </tr>
+	<tr> <td>Number of spots</td>                      <td> 2 or 4</td> </tr>
+	<tr> <td>Phase modulation</td>                     <td> 2 kHz</td> </tr>
+	<tr> <td>Spatial modulation (optional)</td>        <td> Synchronized with CHARIS exposures</td> </tr>
+	<tr> <td>Coronagraph</td>                          <td> Lyot, Vortex</td> </tr>
+</tbody></table>
+	
+
+<br><br>
+
+On-sky calibration photometric and astrometric precision has been estimated by measuring the flux ratio and relative position between calibration spots. Numbers are shown in the table below, and indicate the astrometric and photometric calibration precision for bright targets. Photon noise and readout noise may dominate on faint targets. 
+
+<table border="1" cellspacing="0" cellpadding="10">
+<tbody>
+	<tr>
+	<th colspan="3"> Astrogrid calibration precision (measured on star Beta Leo with 8.8nm DM modulation, 30mn observation)</th> 
+	</tr>
+	
+	<tr> <td>Wavelength band</td> <td>Photometry</td>  <td>Astrometry</td> </tr>
+	<tr> <td></td></tr>
+</tbody></table>
+	
+<hr>
+
+
+<hr>
+
+
+
 	
 	<hr>
 <h2>Wavelength modes</h2>
