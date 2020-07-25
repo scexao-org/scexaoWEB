@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SCExAO: VAMPIRES</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="keywords" content="scexao, subaru, adaptive optics, coronagraphic, extreme, ao, high contrast, instrument" />
+  <meta name="description" content="Website for the Subaru Coronagraphic Extreme Adaptive Optics (SCExAO) instrument." />
+  <meta property="og:title" content="SCExAO" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://www.naoj.org/Projects/SCEXAO/" />
+  <meta property="og:image" content="http://www.naoj.org/Projects/SCEXAO/Starbowl.jpg" />
+  <meta property="og:description" content="Website for the Subaru Coronagraphic Extreme Adaptive Optics (SCExAO) instrument." />
+  <LINK rel="stylesheet" href="../style.css" type="text/css">
+  <script src="../javascript.js" type="text/javascript"></script>
+  <script src="../script.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="wrapper">
+<div id="logo"><img border="0" src="../banner.jpg" width="1070px" height="140px"></div>
+
+<div id="inner">
+<div id="maincolumn">
+<h1>VAMPIRES</h1>
+
+<p>The Visible Aperture Masking Polarimetric Imager for Resolved Exoplanetary Structures (VAMPIRES) is a visible light instrument on the SCExAO system.</p>
+
+<hr>
+<br>
+See <a href="2018_VAMPIRES.pdf">this presentation</a> for an overview of VAMPIRES, including recent results (2018).
+<br>
+<hr>
+
+
+
+<h2> VAMPIRES capabilities and performance summary table</h2>
+  <table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
+
+  <tr>
+  <th colspan=3> VAMPIRES observational settings <br> VAMPIRES has completed commissioning and is now available for open use. Please refer to the information below when preparing proposals. Note, it can operate simultaneously with SCExAO/HiCIAO observations in the IR as a hitchhiker. A more detailed description can be found below. </th>
+  </tr>
+
+  <tr>
+    <td> Operating wavelength</td>
+    <td> 600 - 800 nm</td>
+    <td> Selectable 50 nm bandpasses using filters</td>
+  </tr>
+
+  <tr>
+    <td> Spatial resolution</td>
+    <td> <10 mas</td>
+    <td></td>
+    </tr>
+  <tr>
+
+  <tr>
+    <td> Field-of-view</td>
+    <td> ~ 500 mas</td>
+    <td> </td>
+    </tr>
+
+  <tr>
+    <td> Contrast ratio</td>
+    <td> See text below</td>
+    <td></td>
+    </tr>
+
+  <tr>
+    <td> Sub pupil configurations</td>
+    <td> 7 hole, 9 hole, 18 hole and annulus masks</td>
+    <td> Masks are selectable depending on brightness of target. Full pupil mode (speckle imaging) is also available. Please see figure below for options available. </td>
+    </tr>
+
+  <tr>
+    <td> Limiting magnitudes</td>
+    <td> 18 hole (I ~2-3 mags), 7 hole <br> (I ~ 7).</td>
+    <td> A function of the size and number of holes in the mask (i.e. Fourier coverage). However ongoing upgrades are pushing the detection limit fainter.</td>
+    </tr>
+
+  <tr>
+    <td> Conventional masking mode (non-polarised)</td>
+    <td> </td>
+    <td> Calibration is performed via the observation of a PSF calibrator star, as per the conventional sparse-aperture-masking methodology. This mode is ideal for the detection of faint companions and unpolarised circumstellar structure at very close separations (10s of mas). </td>
+    </tr>
+  <tr>
+    <td> Polarised imaging mode (full pupil)</td>
+    <td></td>
+    <td> The sparse aperture mask is removed, allowing conventional polarimetric imaging. The fast LCVR switching allows precise polarimetric differential imaging at 600-800 nm, and the EMCCD camera provides excellent sensitivity. In this mode, the field-of-view is approximately 1” by 2” with pixel scale of 6 mas / pixel.</td>
+    </tr>
+  <tr>
+    <td> Spectral differential mode</td>
+    <td> H-alpha/Continuum SII/continuum</td>
+    <td> Simultaneous spectral differential imaging using either H-alpha or SII lines can be performed. Imaging is performed simultaneously on two cameras via a non-polarising beamsplitter, with an H-alpha (or SII) filter before one camera and an adjacent continuum filter before the other. Filters can be rapidly swapped between cameras to help calibrate non common path errors. This mode may be used with both aperture-masking and full-pupil imaging.
+
+		As of Feb 2019, full-pupil H-alpha SDI contrast limits range from ~10^-3 at 50 mas separation through to ~10^-4 at 350 mas separation. Note this mode is in continuous development and contrast limits are expected to further improve.
+	</td>
+    </tr>
+  <tr>
+    <td> VAMPIRES setup time</td>
+    <td> 3-5 minutes </td>
+    <td> This includes, fine adjustments to the focus, rotating between masks (if necessary) and setting up software for data collection. </td>
+    </tr>
+
+  </table>
+
+  <br>
+  <br>
+
+
+
+
+
+
+<h2>VAMPIRES instrument description</h2>
+  <p>
+  The Visible Aperture Masking Polarimetric Interferometer for Resolving Exoplanetary Signatures (VAMPIRES) instrument draws on the established success of sparse aperture masking interferometry (also known as non-redundant masking) and combines it with differential polarimetry, to provide diffraction limited scattered-light imaging of circumstellar environments. Primary science targets include protoplanetary disks as well as the mass-loss shells of evolved stars. It is being developed in collaboration with a team from the University of Sydney, Australia, consisting of Peter Tuthill, Barnaby Norris, Guillaume Schworer and Paul Stewart.
+  </p>
+  <p>
+  Sparse aperture masking (SAM) allows the full diffraction limit of the telescope to be recovered by using selected sub-pupils of the telescope pupil as interferometer baselines. See, for example, Tuthill, et al. (2000), PASP, 112, 555; Huelamo, et al., (2011), A&A, 528, L7; Kraus & Ireland, (2012), ApJ, 745, 5. The addition of differential polarimetry allows SAM’s differential observables to be far more precisely calibrated, while providing polarization information of the target.
+  </p>
+  <p>
+  In a technique complementary to infrared coronagraphy, VAMPIRES provides an effective inner-working-angle at 600 to 800 nm of ~10 mas, depending on the contrast ratio. A comprehensive description of the instrument is given in Norris, et al. (2015), MNRAS, 447, 3. The science potential of VAMPIRES’ core technique - differential polarimetric spare aperture masking - is demonstrated in Norris, et al., (2012), Nature, 484, 220.
+  </p>
+  <p>
+  An instrument schematic is given below. Three tiers of differential calibration allow interferometric visibilities to be calibrated to 0.1%, and closure phases to better than a degree. In its primary mode (with masks and the polarimeter), VAMPIRES offers spatial resolution at the diffraction limit (<10 mas), while having a relatively small field-of-view — around ~500 mas — as defined by the shortest baseline. The sensitivity of VAMPIRES observations in the primary mode is determined by the contrast ratio between the unresolved stellar flux and the overall scattered-light flux from the circumstellar dust. As a guide, a star:disk contrast ratio of 1000:1 provides a 1 sigma detection on a single baseline. Depending on the aperture mask employed, typically hundreds or even thousands of baselines (in the case of the annular mask) are measured.
+  </p>
+  <p>
+  In addition to the primary differential-polarized SAM mode, VAMPIRES also offers several additional modes: conventional masking mode (non-polarized) and a polarized imaging mode (full pupil, no masks).
+  <p>
+  VAMPIRES can operate simultaneously with SCExAO/HiCIAO NIR observations. While wavelengths > 1μm are sent to SCExAO’s IR channel and HiCIAO, shorter wavelengths are sent to the SCExAO visible channel (including the pyramid WFS) and VAMPIRES.
+  </p>
+  <p>
+  The data product produced by VAMPIRES is a set of differential interferometric Visibilities and Closure Phases. The team at the University of Sydney provide expertise in interpretation of these data, including model-fitting. An example data set is shown in the figure below.
+  </p>
+  <center>
+  <img border="0" src="VAMPIRES_info_pic900.jpg" alt="Pulpit rock" width="100%">
+  <p>
+  <small>
+  (Top left) Schematic diagram of the VAMPIRES instrument. (Bottom left) Aperture mask choices in VAMPIRES, with corresponding Fourier coverage. (Right) Example data set. Results from mu Cep taken in September 2014 which provided precise measurements of a circumstellar dust shell (radius 18 mas). Full analysis of this data is currently underway.
+  </small>
+  </p>
+  </center>
+
+  <p>
+  For more technical details please refer to the <a href="../110publis.web/030scexao.web/indexm.html"> publications</a> page.
+  </p>
+
+<hr>
+File ./040vampires.web/content.html last modified  23/07/2020 19:30:18 HST<br></div>
+<div id='cssmenu'>
+<ul>
+<div class="menul0"><a href=".././000home.web/indexm.html" style="text-decoration: none"> <font color="00000"> Home </font> </a></div>
+<div class="menul0"><a href=".././010usingSCExAO.web/indexm.html" style="text-decoration: none"> <font color="00000"> Using SCExAO > </font> </a></div>
+<div class="menul0"><a href=".././020instrument.web/indexm.html" style="text-decoration: none"> <font color="00000"> Instrument > </font> </a></div>
+<div class="menul0"><a href=".././030charis.web/indexm.html" style="text-decoration: none"> <font color="00000"> CHARIS > </font> </a></div>
+<div class="active menul0"><b>VAMPIRES</b></div>
+<div class="menul0"><a href=".././041reach.web/indexm.html" style="text-decoration: none"> <font color="00000"> REACH </font> </a></div>
+<div class="menul0"><a href=".././050devmodules.web/indexm.html" style="text-decoration: none"> <font color="00000"> Modules Under Development > </font> </a></div>
+<div class="menul0"><a href=".././060team.web/indexm.html" style="text-decoration: none"> <font color="00000"> Team > </font> </a></div>
+<div class="menul0"><a href=".././080images.web/indexm.html" style="text-decoration: none"> <font color="00000"> Images > </font> </a></div>
+<div class="menul0"><a href=".././110publis.web/indexm.html" style="text-decoration: none"> <font color="00000"> Publications > </font> </a></div>
+<div class="menul0"><a href=".././120software.web/indexm.html" style="text-decoration: none"> <font color="00000"> Software </font> </a></div>
+<div class="menul0"><a href=".././130technotes.web/indexm.html" style="text-decoration: none"> <font color="00000"> Tech Notes </font> </a></div>
+<div class="menul0"><a href=".././140datasets.web/indexm.html" style="text-decoration: none"> <font color="00000"> Data Sets </font> </a></div>
+<div class="menul0"><a href=".././200hotnews.web/indexm.html" style="text-decoration: none"> <font color="00000"> Hot News </font> </a></div>
+<div class="menul0"><a href=".././210oldnews.web/indexm.html" style="text-decoration: none"> <font color="00000"> Old News (Archive) </font> </a></div>
+</ul>
+</div>
+
+</div>
+</div>
+</body>
+</html>

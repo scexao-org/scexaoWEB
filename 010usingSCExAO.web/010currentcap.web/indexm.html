@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SCExAO: Capabilities</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="keywords" content="scexao, subaru, adaptive optics, coronagraphic, extreme, ao, high contrast, instrument" />
+  <meta name="description" content="Website for the Subaru Coronagraphic Extreme Adaptive Optics (SCExAO) instrument." />
+  <meta property="og:title" content="SCExAO" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://www.naoj.org/Projects/SCEXAO/" />
+  <meta property="og:image" content="http://www.naoj.org/Projects/SCEXAO/Starbowl.jpg" />
+  <meta property="og:description" content="Website for the Subaru Coronagraphic Extreme Adaptive Optics (SCExAO) instrument." />
+  <LINK rel="stylesheet" href="../../style.css" type="text/css">
+  <script src="../../javascript.js" type="text/javascript"></script>
+  <script src="../../script.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="wrapper">
+<div id="logo"><img border="0" src="../../banner.jpg" width="1070px" height="140px"></div>
+
+<div id="inner">
+<div id="maincolumn">
+
+<h1>Current Capabilities for Science Observations</h1>
+
+
+<h2> Overview and Important Notes</h2>
+
+<p>This document describes SCExAO capabilities commissionned as of February 2020. S20B proposers can use this page as a guide to prepare their proposals.</p>
+
+<p>More advanced operation modes that have not yet been commissioned are NOT described in this page, and may be available to observers (please check with SCExAO development team for readiness level and relevance to your observations).</p>
+
+<p>Before applying to use SCExAO, please refer to the instrument use <a href="../../110publis.web/010policy.web/indexm.html">policies</a></p>
+
+
+<h1>Observational Overhead</h1>
+
+<h2>Changing target</h2>
+
+<p>
+The table below summarizes the different tasks required between targets. While the telescope is slewing, the configuration of SCExAO is generally set back to the default configuration.
+Without taking the slew time into account, that can range from less than a minute to almost 10 minutes, the total overhead between targets is about 5 minutes. 
+</p>
+
+<table border="1" cellspacing="0" cellpadding="10">
+	<tbody><tr>
+	<th colspan="2"> Overhead between targets</th> 
+	</tr>
+	<tr>
+	  <td>Stopping SCExAO's control loop</td><td>15 s</td>
+	</tr>
+	</tr>
+	<tr>
+	  <td>Confirming the next target and stopping AO188's control loop</td><td>15 s</td>
+	</tr>
+	<tr>
+	  <td>Slew time</td><td>30 s to 10 min depending on azimuthal change</td>
+	</tr>
+	<tr>
+	  <td>Closing AO188's control loop</td><td>60 s</td>
+	</tr>
+	<tr>
+	  <td>Aligning the starlight in SCExAO</td><td>20 s</td>
+	</tr>
+	<tr>
+	  <td>Closing the SCExAO loop and flux tuning</td><td>30 to 60 s</td>
+	</tr>
+	<tr>
+	  <td>Setting Coronagraph, dichroics, satellite speckles, etc.</td><td>1 to 2 min</td>
+	</tr>
+	<tr>
+	  <th>TOTAL minus slew time</th><th>~5 min</th>
+	</tr>
+        </tbody></table>
+
+<p>
+The overhead is slightly increased for the first target, since a pupil and focal plane alignment is required on our tracking camera, as well as the PyWFS. So typically 5 more minutes are necessary for the first target. 
+</p>
+
+<h2>Overheads during data acquisition</h2>
+
+<p>
+<strong>CHARIS observation efficiency ~ 85% (for 30 second exposure time) </strong>
+During data acquisition, there is an overhead of about 5 seconds between consecutive CHARIS exposures, which typically range from 4.5 seconds to 60 seconds exposure time.
+
+<strong>VAMPIRES observation efficiency ~ 75% </strong>
+In the case of VAMPIRES observations, there is a 2 mn setup overhead for each new target, before the data acquisition starts. VAMPIRES then records cubes of about a minute of data each, rotating the half-wave plate (or the differential filter wheel for the H-alpha mode) in between cubes. The overhead of VAMPIRES is dominated by writing the cubes on disk, which is about 5 to 20 seconds for every minute of data, depending on the frame rate.
+
+<strong>REACH observation overheads</strong>
+REACH requires an optimization of fiber coupling, in addition to the usual star acquisition and SCExAO operation. This requires an additional 10 minutes for each target.  
+</p>
+
+
+<h1>Additional Information</h1>
+
+<p>
+If additional information or clarification is required, please contact:
+  <ul>
+  <li>Olivier Guyon  - PI of SCExAO                               - guyon@naoj.org</li>
+  <li>Julien Lozi    - Technical lead of SCExAO                   - lozi@naoj.org</li>
+  <li>Tyler Groff    - Technical lead for CHARIS                  - tyler.groff@gmail.com</li>
+  <li>Thayne Currie  - SCExAO/CHARIS science & data reduction     - currie@naoj.org</li>
+  <li>Peter Tuthill  - PI of VAMPIRES                             - p.tuthill@physics.usyd.edu.au</li>
+  <li>Barnaby Norris - Project manager/technical lead on VAMPIRES - b.norris@physics.usyd.edu.au</li>
+  </ul>
+</p>
+
+<p>Any publication using data collected by the SCExAO instrument must reference the primary instrument paper (Jovanovic, N. et al, <a href='http://adsabs.harvard.edu/abs/2015PASP..127..890J'><i>PASP</i>,<b>127</b>, 890J</a>) and any other relevant papers about the module if it exists.</p>
+
+  
+<p>For more technical details please refer to the <a href="../../110publis.web/030scexao.web/indexm.html"> publications</a> page.</p>
+
+
+<hr>
+File ./010usingSCExAO.web/010currentcap.web/content.html last modified  23/07/2020 19:30:17 HST<br></div>
+<div id='cssmenu'>
+<ul>
+<div class="menul0"><a href="../.././000home.web/indexm.html" style="text-decoration: none"> <font color="00000"> Home </font> </a></div>
+<div class="menul0"><a href="../.././010usingSCExAO.web/indexm.html" style="text-decoration: none"> <font color="00000"> Using SCExAO > </font> </a></div>
+<div class="active menul1"><b>Capabilities</b></div>
+<div class="menul2"><a href="../.././010usingSCExAO.web/010currentcap.web/010sciencedetectors.web/indexm.html" style="text-decoration: none"> <font color="00000"> Science Detectors </font> </a></div>
+<div class="menul2"><a href="../.././010usingSCExAO.web/010currentcap.web/020wavefrontcorrection.web/indexm.html" style="text-decoration: none"> <font color="00000"> Wavefront Control </font> </a></div>
+<div class="menul2"><a href="../.././010usingSCExAO.web/010currentcap.web/030coronagraphs.web/indexm.html" style="text-decoration: none"> <font color="00000"> Coronagraphs </font> </a></div>
+<div class="menul2"><a href="../.././010usingSCExAO.web/010currentcap.web/040highcontrastimaging.web/indexm.html" style="text-decoration: none"> <font color="00000"> High Contrast Imaging </font> </a></div>
+<div class="menul2"><a href="../.././010usingSCExAO.web/010currentcap.web/050calibration.web/indexm.html" style="text-decoration: none"> <font color="00000"> Calibration </font> </a></div>
+<div class="menul1"><a href="../.././010usingSCExAO.web/015onskyperf.web/indexm.html" style="text-decoration: none"> <font color="00000"> On-sky Performance </font> </a></div>
+<div class="menul1"><a href="../.././010usingSCExAO.web/020openuse.web/indexm.html" style="text-decoration: none"> <font color="00000"> Open Use </font> </a></div>
+<div class="menul1"><a href="../.././010usingSCExAO.web/030techdev.web/indexm.html" style="text-decoration: none"> <font color="00000"> Testbed </font> </a></div>
+<div class="menul1"><a href="../.././010usingSCExAO.web/040dataanalysis.web/indexm.html" style="text-decoration: none"> <font color="00000"> Data Analysis </font> </a></div>
+<div class="menul0"><a href="../.././020instrument.web/indexm.html" style="text-decoration: none"> <font color="00000"> Instrument > </font> </a></div>
+<div class="menul0"><a href="../.././030charis.web/indexm.html" style="text-decoration: none"> <font color="00000"> CHARIS > </font> </a></div>
+<div class="menul0"><a href="../.././040vampires.web/indexm.html" style="text-decoration: none"> <font color="00000"> VAMPIRES </font> </a></div>
+<div class="menul0"><a href="../.././041reach.web/indexm.html" style="text-decoration: none"> <font color="00000"> REACH </font> </a></div>
+<div class="menul0"><a href="../.././050devmodules.web/indexm.html" style="text-decoration: none"> <font color="00000"> Modules Under Development > </font> </a></div>
+<div class="menul0"><a href="../.././060team.web/indexm.html" style="text-decoration: none"> <font color="00000"> Team > </font> </a></div>
+<div class="menul0"><a href="../.././080images.web/indexm.html" style="text-decoration: none"> <font color="00000"> Images > </font> </a></div>
+<div class="menul0"><a href="../.././110publis.web/indexm.html" style="text-decoration: none"> <font color="00000"> Publications > </font> </a></div>
+<div class="menul0"><a href="../.././120software.web/indexm.html" style="text-decoration: none"> <font color="00000"> Software </font> </a></div>
+<div class="menul0"><a href="../.././130technotes.web/indexm.html" style="text-decoration: none"> <font color="00000"> Tech Notes </font> </a></div>
+<div class="menul0"><a href="../.././140datasets.web/indexm.html" style="text-decoration: none"> <font color="00000"> Data Sets </font> </a></div>
+<div class="menul0"><a href="../.././200hotnews.web/indexm.html" style="text-decoration: none"> <font color="00000"> Hot News </font> </a></div>
+<div class="menul0"><a href="../.././210oldnews.web/indexm.html" style="text-decoration: none"> <font color="00000"> Old News (Archive) </font> </a></div>
+</ul>
+</div>
+
+</div>
+</div>
+</body>
+</html>

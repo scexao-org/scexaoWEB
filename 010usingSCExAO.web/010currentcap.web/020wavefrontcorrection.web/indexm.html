@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SCExAO: Wavefront Control</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="keywords" content="scexao, subaru, adaptive optics, coronagraphic, extreme, ao, high contrast, instrument" />
+  <meta name="description" content="Website for the Subaru Coronagraphic Extreme Adaptive Optics (SCExAO) instrument." />
+  <meta property="og:title" content="SCExAO" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://www.naoj.org/Projects/SCEXAO/" />
+  <meta property="og:image" content="http://www.naoj.org/Projects/SCEXAO/Starbowl.jpg" />
+  <meta property="og:description" content="Website for the Subaru Coronagraphic Extreme Adaptive Optics (SCExAO) instrument." />
+  <LINK rel="stylesheet" href="../../../style.css" type="text/css">
+  <script src="../../../javascript.js" type="text/javascript"></script>
+  <script src="../../../script.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="wrapper">
+<div id="logo"><img border="0" src="../../../banner.jpg" width="1070px" height="140px"></div>
+
+<div id="inner">
+<div id="maincolumn">
+<h1>Wavefront Correction</h1>
+
+<h2>Facility AO correction (AO188)</h2>
+
+<p>SCExAO is a booster stage for the initial AO correction provided by AO188. The table below summarizes the performance and key parameters required when putting together a proposal. </p>
+  
+  <table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
+
+  <tr>
+  <th colspan=3> Target acquisition and Image quality: AO188 </th>
+  </tr>
+  <tr>
+    <td> Strehl Ratio, FWHM</td>
+    <td> 30-40% in H-band (median seeing), See <a href="http://subarutelescope.org/Observing/Instruments/AO/parameters.html">AO188</a> performance</td></td>
+    </tr>
+  <tr>
+    <td> Target Acquisition and <br> setup overhead</td>
+    <td> AO188 target acquisition time + 10 mn</td>
+    <td> Does not include fine tuning of speckle control loop</td>
+    </tr>
+  <tr>
+    <td> Seeing limit</td>
+    <td> ~1.2"</td>
+    <td> See <a href="http://subarutelescope.org/Observing/Instruments/AO/parameters.html">AO188</a> performance</td>
+    </tr>
+  <tr>
+    <td> Bright limit </td>
+    <td> R=-1</td>
+    <td> Neutral Density filter can be placed in front of CHARIS for bright targets</td>
+    </tr>
+  <tr>
+    <td> Exclusion angle around the moon </td>
+    <td> 15 degrees </td>
+    <td> </td>
+    </tr>
+</table>
+
+
+<h2>ExAO primary correction (Pyramid WFS)</h2>
+<p>SCExAO's main wavefront sensor is a pyramid wavefront sensor (pyWFS), driving a 2000-actuator deformable mirror (DM). The PyWFS control loop offers 70-90% Strehl ratio in H-band in median seeing conditions. On-sky performance varies according to seeing, wind speed, and guide star magnitude. Wavefront sensing is performed in visible-to-nearIR light (from 600nm to 900nm).</p>
+
+
+<table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
+  <tr>
+  <th colspan=3> <b>High Order Wavefront Correction</b> </th>
+  </tr>
+  <tr>
+    <td> Strehl </td>
+    <td> >80%  </td>
+    <td> In median seeing in the H-band</td>
+    </tr>
+
+  <tr>
+    <td> High performance magnitude limit</td>
+    <td> <8 mag (R-band)  </td>
+    <td> Maximum Strehl can be provided down to R=8 mag </td>
+    </tr>
+  <tr>
+    <td> Limiting magnitude </td>
+    <td> 13 mag (R-band)  </td>
+    <td> The loop has been tested down to 13th magnitude and an improvement in Strehl was observed. However, below 8th magnitude there is an associated performance drop. </td>
+    </tr>
+
+
+  <tr>
+    <td> Wavefront sensing wavelength </td>
+    <td> 600-950 nm  </td>
+    <td> Selectable bandpass in this range. 50-150 nm bandwidth at a time which depends on magnitude of target.</td>
+    </tr>
+  <tr>
+    <td> Loop speed </td>
+    <td> 500Hz - 3500Hz  </td>
+    <td> Default speed 2 kHz used down to R=9 mag. Maximum 3.5 kHz loop speed used on bright stars and fast seeing. For R>9, the loop speed is reduced. </td>
+    </tr>
+  <tr>
+    <td> Loop setup time </td>
+    <td> 3-5 mn  </td>
+    <td> This time does not include overheads from AO188 and/or coronagraph setup times. </td>
+    </tr>
+</table>
+
+
+<h2>Coronagraphic Low-Order WFS</h2>
+Starlight blocked by the Coronagraph may be directed to a coronagraphic Low-Order Wavefront Sensor (CLOWFS), which keeps the star well-centered on the coronagraph mask. This mode is available with the PIAACMC and VORTEX coronagraph modes to ensure optimum starlight rejection.
+
+<h2>Speckle Control</h2>
+We offer a static speckle nulling observation mode, where a DM map is computed to create a half dark hole, and the wavefront control loop is then locking the wavefront around this new offset. This mode provides a ~2x improvement in raw contrast over one half of the field of view, but extra light (>2x) is injected on the opposite side.
+
+A speckle nulling map can be pre-carved off sky and then applied on-sky in the case targets are too faint to operate speckle nulling on. However, this is not as accurate as performing the nulling process on the star of interest
+
+<hr>
+File ./010usingSCExAO.web/010currentcap.web/020wavefrontcorrection.web/content.html last modified  10/08/2018 11:40:56 HST<br></div>
+<div id='cssmenu'>
+<ul>
+<div class="menul0"><a href="../../.././000home.web/indexm.html" style="text-decoration: none"> <font color="00000"> Home </font> </a></div>
+<div class="menul0"><a href="../../.././010usingSCExAO.web/indexm.html" style="text-decoration: none"> <font color="00000"> Using SCExAO > </font> </a></div>
+<div class="menul1"><a href="../../.././010usingSCExAO.web/010currentcap.web/indexm.html" style="text-decoration: none"> <font color="00000"> Capabilities > </font> </a></div>
+<div class="menul2"><a href="../../.././010usingSCExAO.web/010currentcap.web/010sciencedetectors.web/indexm.html" style="text-decoration: none"> <font color="00000"> Science Detectors </font> </a></div>
+<div class="active menul2"><b>Wavefront Control</b></div>
+<div class="menul2"><a href="../../.././010usingSCExAO.web/010currentcap.web/030coronagraphs.web/indexm.html" style="text-decoration: none"> <font color="00000"> Coronagraphs </font> </a></div>
+<div class="menul2"><a href="../../.././010usingSCExAO.web/010currentcap.web/040highcontrastimaging.web/indexm.html" style="text-decoration: none"> <font color="00000"> High Contrast Imaging </font> </a></div>
+<div class="menul2"><a href="../../.././010usingSCExAO.web/010currentcap.web/050calibration.web/indexm.html" style="text-decoration: none"> <font color="00000"> Calibration </font> </a></div>
+<div class="menul0"><a href="../../.././020instrument.web/indexm.html" style="text-decoration: none"> <font color="00000"> Instrument > </font> </a></div>
+<div class="menul0"><a href="../../.././030charis.web/indexm.html" style="text-decoration: none"> <font color="00000"> CHARIS > </font> </a></div>
+<div class="menul0"><a href="../../.././040vampires.web/indexm.html" style="text-decoration: none"> <font color="00000"> VAMPIRES </font> </a></div>
+<div class="menul0"><a href="../../.././041reach.web/indexm.html" style="text-decoration: none"> <font color="00000"> REACH </font> </a></div>
+<div class="menul0"><a href="../../.././050devmodules.web/indexm.html" style="text-decoration: none"> <font color="00000"> Modules Under Development > </font> </a></div>
+<div class="menul0"><a href="../../.././060team.web/indexm.html" style="text-decoration: none"> <font color="00000"> Team > </font> </a></div>
+<div class="menul0"><a href="../../.././080images.web/indexm.html" style="text-decoration: none"> <font color="00000"> Images > </font> </a></div>
+<div class="menul0"><a href="../../.././110publis.web/indexm.html" style="text-decoration: none"> <font color="00000"> Publications > </font> </a></div>
+<div class="menul0"><a href="../../.././120software.web/indexm.html" style="text-decoration: none"> <font color="00000"> Software </font> </a></div>
+<div class="menul0"><a href="../../.././130technotes.web/indexm.html" style="text-decoration: none"> <font color="00000"> Tech Notes </font> </a></div>
+<div class="menul0"><a href="../../.././140datasets.web/indexm.html" style="text-decoration: none"> <font color="00000"> Data Sets </font> </a></div>
+<div class="menul0"><a href="../../.././200hotnews.web/indexm.html" style="text-decoration: none"> <font color="00000"> Hot News </font> </a></div>
+<div class="menul0"><a href="../../.././210oldnews.web/indexm.html" style="text-decoration: none"> <font color="00000"> Old News (Archive) </font> </a></div>
+</ul>
+</div>
+
+</div>
+</div>
+</body>
+</html>
