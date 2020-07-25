@@ -1,0 +1,32 @@
+rm indexm.html
+rm page_header.txt
+rm page_footer.txt
+rm page_modtime.txt
+rm indexm.html
+rm page_menu.txt
+
+rm */indexm.html
+rm */page_header.txt
+rm */page_footer.txt
+rm */page_modtime.txt
+rm */indexm.html
+rm */page_menu.txt
+
+
+rm */*/indexm.html
+rm */*/page_header.txt
+rm */*/page_footer.txt
+rm */*/page_modtime.txt
+rm */*/indexm.html
+rm */*/page_menu.txt
+
+rm */*/*/indexm.html
+rm */*/*/page_header.txt
+rm */*/*/page_footer.txt
+rm */*/*/page_modtime.txt
+rm */*/*/indexm.html
+rm */*/*/page_menu.txt
+
+rm listdir.txt
+rm sitemap.txt
+rm scripts/makeweb
