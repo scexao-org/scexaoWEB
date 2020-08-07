@@ -25,6 +25,7 @@
 ./050devmodules.web/030rhea.web
 ./050devmodules.web/040glint.web
 ./050devmodules.web/050ird.web
+./050devmodules.web/060fastPDI.web
 ./060team.web
 ./060team.web/010team.web
 ./060team.web/020collab.web
