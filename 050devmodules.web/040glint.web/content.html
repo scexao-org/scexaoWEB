@@ -1,8 +1,158 @@
 <h1>GLINT</h1>
+<p>The Guided-Light Interferometric Nulling Technology (GLINT) is an instrument that uses integrated-optic and photonic technologies to perform nulling interferometry. 
+The light of a star is cancelled out by means of destructive interference in a photonic chip.
+The light from an off-axis source carries a phase-shift imposed by the non-axial angle of incidence so that the light does not destructively interfere and is transmitted through the instrument.
+</p>
 
-<p>The Guided-Light Interferometric Nulling Technology (GLINT) is an instrument that uses photonic technology to perform nulling interferometry. The light of a star is cancelled out by means of destructive interference in a photonic chip.</p>
-<br>
+
+<h2> Purposes </h2>
+GLINT is a platform to develop the nulling interferometry technique in order to image exoplanets within the habitable zone or within the snow line of the
+host star.
+It is a complement to coronagraphy by probing the area below their Inner-Working Angle.
+
+<h2> The instrument </h2>
+<p>Operating in the H band, light from the Subaru Telescope undergoes wavefront correction with AO188 and SCExAO extreme adaptive optics system (Figure below, left).
+It first meets the image rotator (IMR), which controls the angle of projection of the baselines onto the sky plane.
+Then, the telescope pupil is re-imaged onto an opaque carbon fibre mask, containing four apertures providing six non-redundant baselines.
+The mask is aligned to the segmented mirror (MEMS) so that the four apertures match with four different segments of the MEMS (Figure below, right), which tip, tilt and piston positions are controlled to optimise the injection and get the nulled signal.
+The pupil is undersized to a maximum baseline of 6.45~m with respect to the size of the primary mirror because of optical constraints.
+Next, a polariser (POLA) selects a single linear polarization state.
+Then, a beam splitter splits the light between the science optical path and a separate set of control/metrology optics.
+On the former path, the light is injected into the chip by a microlens array (MLA) while the image and pupil planes are monitored with two cameras in the latter path to control the alignment of GLINT's internal optics with SCExAO.
+</p>
+
+<p>GLINT currently coherently combines 4 apertures with codirectional couplers to deliver 6 interferometric baselines (see Table below).
+The provided signal consists of:
+<ul>
+	<li> 6 outputs giving the destructive interferences (also called <em>null</em>)</li>
+	<li> 6 outputs giving the constructive interferences (also called <em>anti-null</em>)</li>
+	<li> 4 outputs giving the photometry of each aperture</li>
+</ul>
+
+<p>The spectrograph of GLINT has a spectral resolution of 160 at 1.55 microns, providing dispersed signal to enhance the accuracy of the measurements
+and perform spectroscopy.</p>
+
+<p>The current detector is  the C-Red2 InGaAs camera with  less than 30 e- read noise (<a href="https://ui.adsabs.harvard.edu/abs/2020JATIS...6a1002G">Gibson et al. (2020)</a>).</p>
+
+<p>The limiting magnitude is estimated at 0 in H band.</p>
 
 <center>
-<a href="image_GLINT.png"><img src="image_GLINT.png" alt="GLINT instrument" width="700px"></a>
+<table>
+   <tr>
+       <td><center><a href="glint_schematics.png"><img src="glint_schematics.png" width="400px"></a></center></td>
+       <td><center><a href="mems.png"><img src="mems.png" width="300px"></a></center></td>
+   </tr>
+   <tr>
+       <td><center>GLINT schematics</center></td>
+       <td><center>MEMS with the segments of interest highlighted.</center></td>
+   </tr>
+</table>
 </center>
+</br>
+<center>
+<table border="1">
+	<caption>Identification table cross-referencing the nulled and anti-nulled outputs</caption>
+   <tr>
+       <td><center>(Anti-)Null</center></td>
+       <td><center>Pair of beams</center></td>
+	  <td><center>Baseline (m)</center></td>
+   </tr>
+   <tr>
+       <td><center>(A)N1</center></td>
+       <td><center>1-2</center></td>
+       <td><center>5.55</center></td>
+   </tr>
+   <tr>
+       <td><center>(A)N2</center></td>
+       <td><center>2-3</center></td>
+       <td><center>6.45</center></td>
+   </tr>
+   <tr>
+       <td><center>(A)N3</center></td>
+       <td><center>1-4</center></td>
+       <td><center>4.65</center></td>
+   </tr>
+   <tr>
+       <td><center>(A)N4</center></td>
+       <td><center>3-4</center></td>
+       <td><center>2.15</center></td>
+   </tr>
+   <tr>
+       <td><center>(A)N5</center></td>
+       <td><center>3-1</center></td>
+       <td><center>3.2</center></td>
+   </tr>
+   <tr>
+       <td><center>(A)N6</center></td>
+       <td><center>2-4</center></td>
+       <td><center>5.68</center></td>
+   </tr>
+</table>
+</center>
+
+<h2> Data reduction </h2>
+<p>The data reduction of GLINT relies on the statistical analysis of the measured null depth to measure the underlying astrophysical null depth
+determined by the degree of spatial coherence (<a href="https://ui.adsabs.harvard.edu/abs/2011ApJ...729..110H">Hanot et al. (2011)</a>, <a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.491.4180N">Norris et al. (2020)</a>).
+Currently, we use all the spectral information to determine one astrophysical null depth, instead of measuring this quantity for each spectral channel.
+</p>
+
+<p>The current code is open source and available on <a href="https://github.com/SydneyAstrophotonicInstrumentationLab/GLINTPipeline">GitHub</a> and the documentation is on <a href="https://glintpipeline.readthedocs.io/en/latest/">readthedocs</a>.</p>
+
+
+<h2>Commissioning and results</h2>
+<h3>Stellar diameters</h3>
+<strong>We successfully measured with GLINT the stellar diameters of Arcturus and Delta Virgo</strong> in June and July 2020 by analysing the starlight leakage through the instrument.
+We use 4 baselines out of 6: N1, N4, N5 and N6.
+<p>Published angular diameters of Arcturus are between 19.1 and 20.4 mas <a href="https://ui.adsabs.harvard.edu/abs/2005A&A...431..773R">(Richichi et al. (2005))</a> in K band, i.e. around 40% of the formal diffraction limit of the telescope in H band.</p>
+<p>The angular diameter of Delta Virgo is 10.6 &plusmn; 0.736 mas <a href="https://ui.adsabs.harvard.edu/abs/2017yCat.2346....0B">(Bourges et al. (2017))</a> in H band, , i.e. around 20% of the diffraction limit.</p>
+
+<p>
+The four astrophysical null depth points are an excellent match to the form of the expected curve for both stars and yield parameters within the range of expected literature values (see figures below).
+The angular diameter found is <strong>19.7 &plusmn; 0.1 mas</strong> for Arcturus and <strong>10.9 &plusmn; 0.1 mas </strong> for Delta Virgo.
+The high values of &chi;<sup>2</sup> for both stars reflect the underestimation of the error bars which only take into account the statistical fluctuations of the data but not the systematics.
+</p>
+<center>
+<table>
+   <tr>
+       <td><center><a href="20200601_alfboo_ud_fit3.png"><img src="20200601_alfboo_ud_fit3.png" width="100%"></a></center></td>
+       <td><center><a href="20200705_delVir_ud_fit3.png"><img src="20200705_delVir_ud_fit3.png" width="100%"></a></center></td>
+   </tr>
+   <tr>
+       <td><center>Null depth vs baseline for Arcturus</center></td>
+       <td><center>Null depth vs baseline for Delta Virgo</center></td>
+   </tr>
+</table>
+</center>
+
+These observations demonstrate the performance of GLINT and the data reduction method.
+
+<h3>Low order aberration</h3>
+GLINT is sensitive to low-order aberrations (see figure below) such as low-wind effect (LWE), which are not well detected by classic pupil-plane wavefront sensing.
+These aberrations are seen as swaps between the null and antinull outputs.
+Consequently, it is possible to an integrated-photonic nuller to measure these aberrations so that the AO compensates them.
+While the spectral dispersion of GLINT provides phase unwrapping, the use of the two interferometric outputs in GLINT does not give the direction of the variation of the phase, so no fringe tracking is possible.
+The use of tricoupler instead of codirectional coupler gives all the phase information and the nulled signal, simultaneously.
+With this ability, GLINT will also be able to detect LWE and be part of the AO system to correct it.</p>
+
+<center>
+	<a href="lwe_null1_frame_selection_monitor_1.0_1.0.png"><img src="lwe_null1_frame_selection_monitor_1.0_1.0.png" width="50%"></a></br>
+	<figcaption>Time sequence of the flux measured in the null (I<sup>-</sup>) and in the antinull (I<sup>+</sup>) outputs with two low-wind effects swapping the outputs.</figcaption>
+</center>
+
+<h2>Next steps</h2>
+<p>With the current version of GLINT, we can do the following:</p>
+<ul>
+	<li>Detection of a companion in a binary system</li>
+	<li>Improve accuracy of the self-calibrating method and compare it with classic cal-sci-cal method</li>
+</ul>
+<p>For longer term, the performance of GLINT are limited by the sensitivity of the camera and the phase errors (e.g. low wind effect).
+The former can be solved by changing the detector and the latter by developing a fringe tracking system.
+This is why the next iteration of GLINT will use tricouplers to perform nulling and fringe tracking at the same time.
+It will also be able to do wavefront sensing for the AO system.</p>
+
+<h2>Publications on GLINT</h2>
+<ul>
+	<li><a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.491.4180N">Norris et al. (2020)</a>: old version of GLINT combining 2 beams without spectral dispersion. Present the data reduction method and how large phase errors are handled.</li>
+	<li>Martinod et al., <em>submitted</em>: presents GLINT combining 4 beams with spectral dispersion, the data reduction considering multiple baseline and the spectral dispersion and the on-sky commissioning.</li>
+	<li><a href="https://ui.adsabs.harvard.edu/abs/2020SPIE11203E..0RM/abstract">Martinod et al. (2020)</a>: SPIE proceeding about GLINT.</li>
+</ul>
