@@ -1,27 +1,110 @@
-<h2>NIR Fast Polarization Differential Imaging Overview</h2>
+<h1>Fats NIR Polarization Differential Imaging</h1> 
 
-<p>High-speed polarization differential imaging is achieved by way of synchronizing a high frame rate camera with polarization modulation.</p>
+<p>High-speed polarization differential imaging is achieved by way of synchronizing a high frame rate <a href="https://www.first-light-imaging.com/product/c-red-one/">C-RED ONE</a> camera with polarization modulation.</p>
 
 <p> Key elements of the NIR fast-PDI mode are:
 <ul>
 <li>Half-waveplate (HWP) for slow modulation</li>
+<li>Field stop</li>
 <li>Ferro-electric Liquid Crystal (FLC) modulator</li>
 <li>Wollaston prism</li>
 <li>High speed NIR camera</li>
 </ul>
-The NIR Fast-PDI mode is under development. As of Aug 2020, the mode is in operation with a <a href="https://www.first-light-imaging.com/product/c-red-2/">C-RED 2</a>. An upgrade to a <a href="https://www.first-light-imaging.com/product/c-red-one/">C-RED ONE</a> camera is planned within calendar year 2020.
 </p>
 
-Much of the optical train is shared with the CHARIS-PDI mode. The Wollaston prism is a duplicate of the CHARIS-PDI Wollaston.
+<p>Much of the optical train is shared with the CHARIS-PDI mode. The Wollaston prism is a duplicate of the CHARIS-PDI Wollaston.</p>
 
+<p>Two modes are offered:</p>
+<ul>
+<li><b>Mode #1: Double-differential imaging</b>. In this mode, we use the HWP for slow modulation, the field stop and the Wollaston prism. </li>
+<li><b>Mode #2: Triple-differential imaging</b>. In this mode, we add the FLC modulator, synchronized with the camera acquisition.
+</li>
+.
+<h2>Capabilities - Overview</h2>
 
+	<table border="1" cellspacing="0" cellpadding="10">
+	<tbody><tr>
+	<th colspan="3"> Basic Parameters</th> 
+	</tr>
+	<tr>
+	  <td>Field of view</td><td>1.1''x2.4''</td><td> </td>
+	</tr>
+	<tr>
+	  <td>Plate Scale</td><td>15.3 mas/pixel</td><td> </td>
+	</tr>
+	  <tr>
+    <td> Camera</td>
+    <td> First Light Imaging C-RED ONE</td>
+    <td> See <a href="https://www.first-light-imaging.com/product/c-red-one/">Camera description</a></td>
+    </tr>
+  <tr>
+    <td rowspan="5"> Wavelength coverage</td>
+    <td>Broadband (950-1860 nm)</td>
+    <td> Mode #1. CHARIS PDI can be used simultaneously in high-res K-band.</td>
+    </tr>
+  <tr>
+    <td>y-band</td>
+    <td> Mode #1. CHARIS PDI can be used simultaneously in low-res broadband or high-res with band filter.</td>
+    </tr>
+  <tr>
+    <td>J-band</td>
+    <td> Mode #1. CHARIS PDI can be used simultaneously in high-res H- or K-band.</td>
+    </tr>
+  <tr>
+    <td>H-band</td>
+    <td> Mode #1. CHARIS PDI can be used simultaneously in K-band.</td>
+    </tr>
+  <tr>
+    <td>H-band with FLC</td>
+    <td> Mode #2. CHARIS PDI can be used simultaneously in K-band.</td>
+    </tr>
+  <tr>
+    <td rowspan="2"> SCExAO PDI throughput</td>
+    <td> Mode #1: 46-54%</td>
+    <td rowspan="2"> ~15% from atmosphere to detector </td>
+    </tr>
+  <tr>
+    <td> Mode #2: 41-48%</td>
+    </tr>
+  <tr>
+    <td> Camera gain</td>
+    <td> x1 to x50</td>
+    <td> </td>
+    </tr>
+  <tr>
+    <td rowspan="2"> Frame rate</td>
+    <td> 1 Hz to 3.5 kHz</td>
+    <td> mode #1, Full frame. Limited by the frame rate of the camera.</td>
+    </tr>
+  <tr>
+    <td> 1 Hz to ~1 kHz</td>
+    <td> mode #2, Full frame. Limited by the switching time of the FLC.</td>
+    </tr>
+  <tr>
+    <td> Zero-point magnitude</td>
+    <td> 1ADU = 23.2 H-mag</td>
+    <td> mode #1, gain 1, no coronagraph</td>
+    </tr>
+  <tr>
+    <td rowspan="2"> Observation efficiency</td>
+    <td> ~90%</td>
+    <td> mode #1. Limited by the rotation of AO188's HWP (few seconds every 1-2 minutes)</td>
+    </tr>
+  <tr>
+    <td> 40 to 90%</td>
+    <td> mode #2. Depending on the frame rate, limited by the switching time of the FLC.</td>
+    </tr>
+  <tr>
+	</tr></tbody></table>
+
+	<hr>
 
 
 <h2>Throughput</h2>
 
 <p style="font-size:30px border:3px; border-style:solid; border-color:#AA8866; padding: 1em;">
 <b>
-Fast-PDI is optimized for H-band. FLC polarization modulation in J-band is partial.<br>
+Fast-PDI is optimized for H-band, but can be used in broadband or y- and J-band without the FLC.<br>
 </b>
 </p>
 
@@ -37,4 +120,21 @@ Fast-PDI is optimized for H-band. FLC polarization modulation in J-band is parti
 	
 </tbody></table>
 
+<h2>Preliminary contrast curves</h2>
 
+
+<p>Contrast curves were calculated on two targets observe during engineering nights with excellent seeing conditions (~0.4''): the unpolarized standard star psi01 Aqr, and the polarization target R Aqr.</p>
+
+<p>A raw contrast curve was calculated using only one minute of data on the unpolarized standard star psi01 Aqr, showing that we achieve ~1e-4 raw contrast at ~0.15 arcsec separations, before double-differential processing. The contrast for stokes Q and U were also calculated, showing that we achieve a contrast of a few 1e-6 at 0.15 arcsec with double-differential processing (mode #1, H-band). The addition of a third differential processing (mode #2) should improve this further.</p>
+
+<center>
+	<img src="psi01Aqr_contrast.jpg" alt="psi01 Aqr Contrast curve" width="636" height="621">
+	<p>Contrast curve calculated from 1 minute of non-coronagraphic data on the unpolarized standard star psi01 Aqr. The contrast of stokes Q and U was also estimated after double-differential processing (mode #1).</p>
+	<br></center>
+
+<p>We also produced contrast curves using  the non-coronagraphic and coronagraphic images of R Aqr (one minute datasets). The raw contrast is similar in this case without coronagraphic mask, and goes down significantly with the coronagraph, especially at small separations. The green curve was obtained by subtracting two datasets ~5 minutes apart. It shows that the contrast stability over a short timescale is on the order of 1e-6.</p>
+
+<center>
+	<img src="RAqr_contrast.jpg" alt="R Aqr Contrast curve" width="633" height="636">
+	<p>Contrast curve calculated from 1 minute of non-coronagraphic and coronagraphic data on the polarized star R Aqr. The contrast stability was also estimated by subtracting two datasets ~5 minutes apart.</p>
+	<br></center>
