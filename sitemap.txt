@@ -26,7 +26,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<a href=".././050devmodules.web/020first.web/content.html" style="text-decoration: none"><font color="00000"> FIRST </font> </a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href=".././050devmodules.web/030rhea.web/content.html" style="text-decoration: none"><font color="00000"> RHEA </font> </a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href=".././050devmodules.web/040glint.web/content.html" style="text-decoration: none"><font color="00000"> GLINT </font> </a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<a href=".././050devmodules.web/050ird.web/content.html" style="text-decoration: none"><font color="00000"> SCExAO-IRD </font> </a><br>
 <b><a href=".././060team.web/content.html" style="text-decoration: none"><font color="00000"> Team </font> </a></b><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href=".././060team.web/010team.web/content.html" style="text-decoration: none"><font color="00000"> Team Members </font> </a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href=".././060team.web/020collab.web/content.html" style="text-decoration: none"><font color="00000"> Collaborations </font> </a><br>
@@ -44,4 +43,6 @@
 <b><a href=".././300technical.web/content.html" style="text-decoration: none"><font color="00000"> Tech Area </font> </a></b><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href=".././300technical.web/120software.web/content.html" style="text-decoration: none"><font color="00000"> Software </font> </a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href=".././300technical.web/130technotes.web/content.html" style="text-decoration: none"><font color="00000"> Tech Notes </font> </a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=".././300technical.web/130technotes.web/yr2018.web/content.html" style="text-decoration: none"><font color="00000"> 2018 </font> </a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=".././300technical.web/130technotes.web/yr2018.web/050ird.web/content.html" style="text-decoration: none"><font color="00000"> REACH v1 switchard </font> </a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href=".././300technical.web/140datasets.web/content.html" style="text-decoration: none"><font color="00000"> Data Sets </font> </a><br>

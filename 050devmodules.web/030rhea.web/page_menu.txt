@@ -9,7 +9,6 @@
 <div class="menul1"><a href="../.././050devmodules.web/020first.web/indexm.html" style="text-decoration: none"> <font color="00000"> FIRST </font> </a></div>
 <div class="active menul1"><b>RHEA</b></div>
 <div class="menul1"><a href="../.././050devmodules.web/040glint.web/indexm.html" style="text-decoration: none"> <font color="00000"> GLINT </font> </a></div>
-<div class="menul1"><a href="../.././050devmodules.web/050ird.web/indexm.html" style="text-decoration: none"> <font color="00000"> SCExAO-IRD </font> </a></div>
 <div class="menul0"><a href="../.././060team.web/indexm.html" style="text-decoration: none"> <font color="00000"> Team > </font> </a></div>
 <div class="menul0"><a href="../.././080images.web/indexm.html" style="text-decoration: none"> <font color="00000"> Images > </font> </a></div>
 <div class="menul0"><a href="../.././110publis.web/indexm.html" style="text-decoration: none"> <font color="00000"> Publications > </font> </a></div>
