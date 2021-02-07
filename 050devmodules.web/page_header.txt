@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SCExAO: Modules Under Development</title>
+  <title>SCExAO: Modules in Development</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="keywords" content="scexao, subaru, adaptive optics, coronagraphic, extreme, ao, high contrast, instrument" />

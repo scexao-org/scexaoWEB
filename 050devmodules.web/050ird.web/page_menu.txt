@@ -3,9 +3,9 @@
 <ul>
 <div class="menul0"><a href="../.././000home.web/indexm.html" style="text-decoration: none"> <font color="00000"> Home </font> </a></div>
 <div class="menul0"><a href="../.././010usingSCExAO.web/indexm.html" style="text-decoration: none"> <font color="00000"> Using SCExAO > </font> </a></div>
-<div class="menul0"><a href="../.././020instrument.web/indexm.html" style="text-decoration: none"> <font color="00000"> Instrument > </font> </a></div>
-<div class="menul0"><a href="../.././030openuse.web/indexm.html" style="text-decoration: none"> <font color="00000"> Open Use Instruments and Modes > </font> </a></div>
-<div class="menul0"><a href="../.././050devmodules.web/indexm.html" style="text-decoration: none"> <font color="00000"> Modules Under Development > </font> </a></div>
+<div class="menul0"><a href="../.././020instrument.web/indexm.html" style="text-decoration: none"> <font color="00000"> Overview > </font> </a></div>
+<div class="menul0"><a href="../.././030openuse.web/indexm.html" style="text-decoration: none"> <font color="00000"> Open Use Modules/Instruments > </font> </a></div>
+<div class="menul0"><a href="../.././050devmodules.web/indexm.html" style="text-decoration: none"> <font color="00000"> Modules in Development > </font> </a></div>
 <div class="menul1"><a href="../.././050devmodules.web/020first.web/indexm.html" style="text-decoration: none"> <font color="00000"> FIRST </font> </a></div>
 <div class="menul1"><a href="../.././050devmodules.web/030rhea.web/indexm.html" style="text-decoration: none"> <font color="00000"> RHEA </font> </a></div>
 <div class="menul1"><a href="../.././050devmodules.web/040glint.web/indexm.html" style="text-decoration: none"> <font color="00000"> GLINT </font> </a></div>
