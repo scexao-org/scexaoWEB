@@ -13,11 +13,8 @@
 <div class="active menul1"><b>Science </b></div>
 <div class="menul1"><a href="../.././110publis.web/030scexao.web/indexm.html" style="text-decoration: none"> <font color="00000"> Instrument Pubs </font> </a></div>
 <div class="menul1"><a href="../.././110publis.web/040related.web/indexm.html" style="text-decoration: none"> <font color="00000"> Related </font> </a></div>
-<div class="menul0"><a href="../.././120software.web/indexm.html" style="text-decoration: none"> <font color="00000"> Software </font> </a></div>
-<div class="menul0"><a href="../.././130technotes.web/indexm.html" style="text-decoration: none"> <font color="00000"> Tech Notes </font> </a></div>
-<div class="menul0"><a href="../.././140datasets.web/indexm.html" style="text-decoration: none"> <font color="00000"> Data Sets </font> </a></div>
-<div class="menul0"><a href="../.././200hotnews.web/indexm.html" style="text-decoration: none"> <font color="00000"> Hot News </font> </a></div>
-<div class="menul0"><a href="../.././210oldnews.web/indexm.html" style="text-decoration: none"> <font color="00000"> Old News (Archive) </font> </a></div>
+<div class="menul0"><a href="../.././200hotnews.web/indexm.html" style="text-decoration: none"> <font color="00000"> Hot News > </font> </a></div>
+<div class="menul0"><a href="../.././300technical.web/indexm.html" style="text-decoration: none"> <font color="00000"> Tech Area > </font> </a></div>
 </ul>
 </div>
 
