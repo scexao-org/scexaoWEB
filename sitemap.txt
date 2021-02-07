@@ -14,13 +14,14 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<a href=".././020instrument.web/000intro.web/content.html" style="text-decoration: none"><font color="00000"> Introduction </font> </a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href=".././020instrument.web/010wfsc.web/content.html" style="text-decoration: none"><font color="00000"> Wavefront Control </font> </a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href=".././020instrument.web/020coronagraphs.web/content.html" style="text-decoration: none"><font color="00000"> Coronagraphy </font> </a><br>
-<b><a href=".././030charis.web/content.html" style="text-decoration: none"><font color="00000"> CHARIS </font> </a></b><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<a href=".././030charis.web/100charisPDI.web/content.html" style="text-decoration: none"><font color="00000"> CHARIS PDI </font> </a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<a href=".././030charis.web/200astrogrid.web/content.html" style="text-decoration: none"><font color="00000"> CHARIS astrogrid </font> </a><br>
-<b><a href=".././040vampires.web/content.html" style="text-decoration: none"><font color="00000"> VAMPIRES </font> </a></b><br>
-<b><a href=".././041reach.web/content.html" style="text-decoration: none"><font color="00000"> REACH </font> </a></b><br>
-<b><a href=".././042mec.web/content.html" style="text-decoration: none"><font color="00000"> MKID camera </font> </a></b><br>
-<b><a href=".././043fastPDI.web/content.html" style="text-decoration: none"><font color="00000"> Fast PDI </font> </a></b><br>
+<b><a href=".././030openuse.web/content.html" style="text-decoration: none"><font color="00000"> Open Use Instruments and Modes </font> </a></b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href=".././030openuse.web/030charis.web/content.html" style="text-decoration: none"><font color="00000"> CHARIS </font> </a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=".././030openuse.web/030charis.web/100charisPDI.web/content.html" style="text-decoration: none"><font color="00000"> CHARIS PDI </font> </a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=".././030openuse.web/030charis.web/200astrogrid.web/content.html" style="text-decoration: none"><font color="00000"> CHARIS astrogrid </font> </a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href=".././030openuse.web/040vampires.web/content.html" style="text-decoration: none"><font color="00000"> VAMPIRES </font> </a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href=".././030openuse.web/041reach.web/content.html" style="text-decoration: none"><font color="00000"> REACH </font> </a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href=".././030openuse.web/042mec.web/content.html" style="text-decoration: none"><font color="00000"> MKID camera </font> </a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href=".././030openuse.web/043fastPDI.web/content.html" style="text-decoration: none"><font color="00000"> Fast PDI </font> </a><br>
 <b><a href=".././050devmodules.web/content.html" style="text-decoration: none"><font color="00000"> Modules Under Development </font> </a></b><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href=".././050devmodules.web/020first.web/content.html" style="text-decoration: none"><font color="00000"> FIRST </font> </a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href=".././050devmodules.web/030rhea.web/content.html" style="text-decoration: none"><font color="00000"> RHEA </font> </a><br>
