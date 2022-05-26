@@ -5,52 +5,78 @@
 
 <h2>Important information for observers</h2>
 <p>
-  The coronagraph only works in conventional imaging mode, that is, without any sub-pupil masks. The coronagraph works in normal imaging, as well as polarimetric differential imaging mode. No field stops can be used while using the coronagraph.
-  It takes ~5 minutes to place and align the focal plane mask and Lyot stop. Currently, coronagraphic imaging with VAMPIRES is well-suited for <i>optically-bright</i> targets, where the coronagraph improves the effective dynamic range in conjunction with the electron-multiplycing CCDs that VAMPIRES employs.
+  The coronagraph only works in conventional imaging mode, that is, without any sub-pupil masks. The coronagraph works
+  in normal imaging, as well as polarimetric differential imaging mode. No field stops can be used while using the
+  coronagraph.
+  It takes ~5 minutes to place and align the focal plane mask and Lyot stop. Currently, coronagraphic imaging with
+  VAMPIRES is well-suited for <i>optically-bright</i> targets, where the coronagraph improves the effective dynamic
+  range in conjunction with the electron-multiplycing CCDs that VAMPIRES employs.
 </p>
 
 <p>
-  We recommend coordinating the SCExAO team if you plan to use the coronagraph for your observations. This ensures we have the masks well-aligned in preparation for the night to minimize downtime. The PI for the coronagraph mode is Miles Lucas (<a href="mailto:mdlucas@hawaii.edu">mdlucas@hawaii.edu</a>).
+  We recommend coordinating the SCExAO team if you plan to use the coronagraph for your observations. This ensures we
+  have the masks well-aligned in preparation for the night to minimize downtime. The PI for the coronagraph mode is
+  Miles Lucas (<a href="mailto:mdlucas@hawaii.edu">mdlucas@hawaii.edu</a>).
 </p>
 
 <h2>Coronagraph description</h2>
-  <p>
-  VAMPIRES coronagraph is a classic Lyot-style coronagraph, consisting of a circular, hard-edge focal plane mask and a Lyot stop. Available mask sizes are 2, 3, 5 and 7 lambda/D (calculated at 750nm). Focal plane masks have a 1e-3 transmission for alignment and calibration. The Lyot stop is reflective to allow for precise alignment and is undersized compared to the SCExAO pupil (relative throughput is 65.7%).
-  </p>
+<p>
+  VAMPIRES coronagraph is a classic Lyot-style coronagraph, consisting of a circular, hard-edge focal plane mask and a
+  Lyot stop. Available mask sizes are 2, 3, 5 and 7 lambda/D (calculated at 750nm). Focal plane masks have a 1e-3
+  transmission for alignment and calibration. The Lyot stop is reflective to allow for precise alignment and is
+  undersized compared to the SCExAO pupil (relative throughput is 65.7%).
+</p>
 
-  <table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
-    <thead>
-      <th>Name</th>
-      <th>Linear radius (micron)</th>
-      <th>Angular radius (mas)</th>
-    </thead>
-    <tbody>
-      <tr>
-        <td>CLC-2</td><td>38.6</td><td>37</td>
-      </tr>
-      <tr>
-        <td>CLC-3</td><td>57.9</td><td>55</td>
-      </tr>
-      <tr>
-        <td>CLC-5</td><td>96.5</td><td>91</td>
-      </tr>
-      <tr>
-        <td>CLC-7</td><td>135</td><td>128</td>
-      </tr>
-    </tbody>
-  </table>
-  
- <h2>Measured contrast</h2>
-  
-  <p>Raw contrast curves measured with the calibration source (off-sky) without speckle control. These raw contrast values can be approached on-sky under excellent conditions (bright star, good seeing).</p>
-  
+<center>
+<table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
+  <thead>
+    <th>Name</th>
+    <th>Linear radius (micron)</th>
+    <th>Inner working angle (mas)</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CLC-2</td>
+      <td>38.6</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <td>CLC-3</td>
+      <td>57.9</td>
+      <td>55</td>
+    </tr>
+    <tr>
+      <td>CLC-5</td>
+      <td>96.5</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <td>CLC-7</td>
+      <td>135</td>
+      <td>128</td>
+    </tr>
+  </tbody>
+</table>
+<br/>
+<div style="width:60%;">
+  <img border="0" src="VAMPIRES_CLC_throughput.png" alt="CLC off-axis throughput" width="100%">
+    <p><small>Off-axis coronagraphic throughput. The inner working angle is defined at 50% throughput (black dashed
+        line) and is marked by vertical dotted lines for each mask.</small></p>
+</div>
+</center>
+
+<h2>Measured contrast</h2>
+
+<p>Raw contrast curves measured with the calibration source (off-sky) without speckle control. These raw contrast values
+  can be approached on-sky under excellent conditions (bright star, good seeing).</p>
+
 
 <center>
   <img border="0" src="50nm_bench_agon_CLC-3_contrast.png" alt="CLC3" width="80%">
   <p>
-  <small>
-  Measured contrast with 3 l/D focal plane mask. Inner working angle = 55 mas.
-  </small>
+    <small>
+      Measured contrast with 3 l/D focal plane mask. Inner working angle = 55 mas.
+    </small>
   </p>
 </center>
 
@@ -58,9 +84,9 @@
 <center>
   <img border="0" src="50nm_bench_agon_CLC-5_contrast.png" alt="CLC5" width="80%">
   <p>
-  <small>
-  Measured contrast with 5 l/D focal plane mask. Inner working angle = 91 mas.
-  </small>
+    <small>
+      Measured contrast with 5 l/D focal plane mask. Inner working angle = 91 mas.
+    </small>
   </p>
 </center>
 
@@ -68,27 +94,30 @@
 <center>
   <img border="0" src="50nm_bench_agon_CLC-7_contrast.png" alt="CLC7" width="80%">
   <p>
-  <small>
-  Measured contrast with 7 l/D focal plane mask. Inner working angle = 128 mas.
-  </small>
+    <small>
+      Measured contrast with 7 l/D focal plane mask. Inner working angle = 128 mas.
+    </small>
   </p>
 </center>
 
 
 <h2>Calibration</h2>
 
-<p>In coronagraphic images photometry and astrometry can be calibrated by using astrogrid DM modulation to create satellite spots of known position and flux relative to the PSF core.</p>
+<p>In coronagraphic images photometry and astrometry can be calibrated by using astrogrid DM modulation to create
+  satellite spots of known position and flux relative to the PSF core.</p>
 
 <center>
   <img border="0" src="CLC-5_750-50_50nm-astrogrid.png" alt="VampAstrogrid" width="60%">
   <p>
-  <small>
-  Example coronagraphic image with calibration speckles. This uses CLC-5, the 750-50 filter, and 50nm astrogrid pokes at 15.9 lam/D from the star.
-  </small>
+    <small>
+      Example coronagraphic image with calibration speckles. This uses CLC-5, the 750-50 filter, and 50nm astrogrid
+      pokes at 15.9 lam/D from the star.
+    </small>
   </p>
-  </center>
+</center>
 
 
 <h2>Contact information</h2>
 
-For support or more information about the VAMPIRES coronagraph, please contact the PI: Miles Lucas (<a href="mailto:mdlucas@hawaii.edu">mdlucas@hawaii.edu</a>)
+For support or more information about the VAMPIRES coronagraph, please contact the PI: Miles Lucas (<a
+  href="mailto:mdlucas@hawaii.edu">mdlucas@hawaii.edu</a>)
