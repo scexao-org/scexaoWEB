@@ -10,7 +10,7 @@
   coronagraph.
   It takes ~5 minutes to place and align the focal plane mask and Lyot stop. Currently, coronagraphic imaging with
   VAMPIRES is well-suited for <i>optically-bright</i> targets, where the coronagraph improves the effective dynamic
-  range in conjunction with the electron-multiplycing CCDs that VAMPIRES employs.
+  range in conjunction with the electron-multiplying CCDs that VAMPIRES employs.
 </p>
 
 <p>
@@ -22,8 +22,7 @@
 <h2>Coronagraph description</h2>
 <p>
   VAMPIRES coronagraph is a classic Lyot-style coronagraph, consisting of a circular, hard-edge focal plane mask and a
-  Lyot stop. Available mask sizes are 2, 3, 5 and 7 lambda/D (calculated at 750nm). Focal plane masks have a 1e-3
-  transmission for alignment and calibration. The Lyot stop is reflective to allow for precise alignment and is
+  Lyot stop. Available mask sizes are 36, 55, 92, or 129 mas, which corresponds to roughly 2, 3, 5 and 7 lambda/D (calculated at 750nm). Focal plane masks have a 0.06% transmission for alignment and calibration. The Lyot stop is reflective to allow for precise alignment and is
   undersized compared to the SCExAO pupil (relative throughput is 65.7%).
 </p>
 
@@ -67,39 +66,19 @@
 
 <h2>Measured contrast</h2>
 
+<h3>Testbed</h3>
 <p>Raw contrast curves measured with the calibration source (off-sky) without speckle control. These raw contrast values
-  can be approached on-sky under excellent conditions (bright star, good seeing).</p>
+  can be approached on-sky under excellent conditions (bright star, good seeing). At 0.1", the 5-sigma raw contrast (median noise per annulus) is around 1e2, and at separations >0.8" is around 1e5.</p>
 
 
 <center>
-  <img border="0" src="50nm_bench_agon_CLC-3_contrast.png" alt="CLC3" width="80%">
+  <img border="0" src="saturated_bench_20220628_curves.png" alt="testbed raw contrast curves" width="80%">
   <p>
     <small>
-      Measured contrast with 3 l/D focal plane mask. Inner working angle = 55 mas.
+      Raw 5-sigma contrast curves measured on the SCExAO testbed. These curves account for small-sample statistics and have no PSF subtraction. The black curve is the non-coronagraphic contrast measured from a saturated PSF (which has been masked out), while the orange through purple curves correspond to each focal plane mask. The IWA for each curve is marked with a dotted vertical line. The astrogrid speckles are also masked out.
     </small>
   </p>
 </center>
-
-
-<center>
-  <img border="0" src="50nm_bench_agon_CLC-5_contrast.png" alt="CLC5" width="80%">
-  <p>
-    <small>
-      Measured contrast with 5 l/D focal plane mask. Inner working angle = 92 mas.
-    </small>
-  </p>
-</center>
-
-
-<center>
-  <img border="0" src="50nm_bench_agon_CLC-7_contrast.png" alt="CLC7" width="80%">
-  <p>
-    <small>
-      Measured contrast with 7 l/D focal plane mask. Inner working angle = 129 mas.
-    </small>
-  </p>
-</center>
-
 
 <h2>Calibration</h2>
 
