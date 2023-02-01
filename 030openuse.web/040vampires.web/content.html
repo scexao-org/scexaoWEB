@@ -1,99 +1,77 @@
 <h1>VAMPIRES</h1>
 
-<p>The Visible Aperture Masking Polarimetric Imager for Resolved Exoplanetary Structures (VAMPIRES) is a visible-light instrument on the SCExAO system.</p>
+<p>The Visible Aperture Masking Polarimetric Imager for Resolved Exoplanetary Structures (VAMPIRES) is a visible-light instrument on the SCExAO system. See <a href="2018_VAMPIRES.pdf">this presentation</a> for an overview of VAMPIRES (2018).
 
 <hr>
-<br>
-See <a href="2018_VAMPIRES.pdf">this presentation</a> for an overview of VAMPIRES (2018).
-<br>
-<hr>
 
+<h2>Note for observers: VAMPIRES Upgrades (S23B)</h2>
 
+<p>VAMPIRES will be undergoing significant upgrades in June 2023, prior to the 23B observing semester. These upgrades will improve the sensitivity, speed, and dynamic range of the instrument in addition to the addition of a multi-band imaging mode. The core of the VAMPIRES upgrade are the switch from <a href="https://andor.oxinst.com/products/ixon-emccd-camera-series/ixon-ultra-897">EM-CCD detectors</a> to <a href="https://www.hamamatsu.com/us/en/product/cameras/qcmos-cameras/C15550-20UP.html">ultra-low read noise CMOS detectors</a>.</p>
 
-<h2> VAMPIRES capabilities and performance summary table</h2>
-  <table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
+<p>All current modes of VAMPIRES will be supported in shared-risk mode:
+<ul>
+  <li>Full-pupil speckle imaging</li>
+  <li>Sparse aperture mask interferometry</li>
+  <li>Polarized differential imaging</li>
+  <li>Spectral differential imaging</li>
+</ul>
+in addition to a new multi-band imaging (MBI) mode.</p>
 
+<p>New calibrations will be done to fully characterize the system, including zero-points, contrast curves, polarimetric efficiency, and astrometric calibration. Observers are recommended to get in contact </p>
+
+<h3>Camera parameters</h3>
+<table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
   <tr>
-  <th colspan=3> VAMPIRES observational settings <br>  VAMPIRES has completed commissioning and is now available for open use. Please refer to the information below when preparing proposals. Note, VAMPIRES can operate simultaneously with certain IR instruments as the primary science instrument or as a hitchhiker (see <a href="../indexm.html"> SCExAO Instruments and Modules</a>).</th>
+  <th colspan=3> Upgraded VAMPIRES Parameters<br>BASED ON MANUFACTURER/LAB TESTS, SUBJECT TO CHANGE</th>
   </tr>
-
-  <tr>
-    <td> Operating wavelength</td>
-    <td> 600 - 800 nm</td>
-    <td> Five selectable 50 nm bandpass filters with central wavelengths: 625 nm, 675 nm, 725 nm, 750 nm, and 775 nm. The open filter receives the full wavelength range.</td>
-  </tr>
-
   <tr>
     <td>Spatial resolution</td>
-    <td>6.24 mas / px</td>
-    <td>Diffraction-limited pixel scale</td>
+    <td>15.6 mas</td>
+    <td>Diffraction-limited FWHM at 600 nm.</td>
     </tr>
   <tr>
-
   <tr>
-    <td> Field-of-view</td>
-    <td> 3” by 3”</td>
-    <td> Full FOV frame rate = 56 Hz. Higher frame rate achieved with smaller readout window. See camera (iXon Ultra 897) documentation for details.</td>
-    </tr>
-
-  <tr>
-    <td> Coronagraph modes</td>
-    <td> Lyot</td>
-    <td> Focal plane mask inner working angles (IWA): 36, 55, 92, and 129 mas (roughly 2, 3, 5 and 7 lambda/D at 750 nm). Lyot throughput = 65.7%. See the <a href="./100vampcoronagraph.web/indexm.html">coronagraph section</a> for details.</td>
-    </tr>
-
-  <tr>
-    <td> Contrast ratio</td>
-    <td> Raw contrast approx 1e3 at 0.1", 1e5 at >0.8"</td>
-    <td> Contrast limited by residual wavefront errors. Deep contrast at large angular separation (>0.2") requires coronagraph mode.</td>
-    </tr>
-
-  <tr>
-    <td> Sub pupil configurations</td>
-    <td> 7 hole, 9 hole, 18 hole and annulus masks</td>
-    <td> Masks are selectable depending on brightness of target. Full pupil mode (speckle imaging) is also available. Please see figure below for options available. </td>
-    </tr>
-
-  <tr>
-    <td> Limiting magnitudes</td>
-    <td> 18 hole (I ~2-3 mags), 7 hole <br> (I ~ 7).</td>
-    <td> A function of the size and number of holes in the mask (i.e. Fourier coverage). However ongoing upgrades are pushing the detection limit fainter.</td>
-    </tr>
-
-  <tr>
-    <td> Conventional masking mode (non-polarised)</td>
-    <td> </td>
-    <td> Calibration is performed via the observation of a PSF calibrator star, as per the conventional sparse-aperture-masking methodology. This mode is ideal for the detection of faint companions and unpolarised circumstellar structure at very close separations (10s of mas). </td>
-    </tr>
-  <tr>
-    <td> Polarised imaging mode (full pupil)</td>
+    <td>Plate scale</td>
+    <td>5.61 mas / px</td>
     <td></td>
-    <td> The sparse aperture mask is removed, allowing conventional polarimetric imaging. The fast LCVR switching allows precise polarimetric differential imaging at 600-800 nm, and the EMCCD camera provides excellent sensitivity. In this mode, the field-of-view is approximately 1” by 2” with pixel scale of 6 mas / pixel.</td>
     </tr>
   <tr>
-    <td> Spectral differential mode</td>
-    <td> H-alpha/Continuum SII/continuum</td>
-    <td> Simultaneous spectral differential imaging using either H-alpha or SII lines can be performed. Imaging is performed simultaneously on two cameras via a non-polarising beamsplitter, with an H-alpha (or SII) filter before one camera and an adjacent continuum filter before the other. Filters can be rapidly swapped between cameras to help calibrate non common path errors. This mode may be used with both aperture-masking and full-pupil imaging.
-
-		As of Feb 2019, full-pupil H-alpha SDI contrast limits range from ~10^-3 at 50 mas separation through to ~10^-4 at 350 mas separation. Note this mode is in continuous development and contrast limits are expected to further improve.
-	</td>
-    </tr>
   <tr>
-    <td> VAMPIRES setup time</td>
-    <td> 3-5 minutes </td>
-    <td> This includes, fine adjustments to the focus, rotating between masks (if necessary) and setting up software for data collection. </td>
-    </tr>
+    <td>FOV</td>
+    <td>3” x 3”</td>
+    <td>Maximum field-of-view. Can be cropped to achieve higher frame rates.</td>
+  </tr>
+  <tr>
+    <td>Frame rate</td>
+    <td>532 Hz (fast)<br>36 Hz (slow)</td>
+    <td>Frame rate at maximum FOV.</td>
+  </tr>
+  <tr>
+    <td>Read noise</td>
+    <td>0.45 e- (fast)<br>0.25 e- (slow)</td>
+    <td>RMS read noise.</td>
+  </tr>
+  <tr>
+    <td>Gain</td>
+    <td>0.10 e- / ADU (fast)<br>0.11 e- / ADU (slow)</td>
+    <td>Electron conversion gain factor</td>
+  </tr>
+</table>
 
-  </table>
+<h3>Multi-band imaging (MBI)</h3>
 
-  <br>
-  <br>
+<p>In S23B we will be testing a new multi-band imaging (MBI) mode which uses a stack of dichroics at slightly offset angles of incidence to form multiple images across the detectors. A schematic of the principle is shown below. This mode will be compatible with all observing modes except the spectral differential mode.</p>
 
+<center>
+  <img border="0" src="MBI_schematic.png" alt="VAMPIRES MBI schematic" width="75%">
+  <p><small>
+    Schematic of the MBI mode.
+  </small></p>
+</center>
 
-<h2>VAMPIRES filters</h2>
+<p>The spectral coverage for each field is carved out by each dichroic, creating the following effective filters:</p>
 
-<p>
-<table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
+<p><table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
   <thead>
     <th>Filter name</th>
     <th>Central wavelength (nm)</th>
@@ -103,31 +81,197 @@ See <a href="2018_VAMPIRES.pdf">this presentation</a> for an overview of VAMPIRE
   </thead>
   <tbody>
     <tr>
-      <td>625-50</td><td>625</td><td>49</td><td>595 - 656</td><td>Overlaps with AO188 dichroic- poor throughput</td>
+      <td>F620</td><td>617</td><td>73</td><td>550 - 662</td><td>Overlaps with AO188 dichroic</td>
     </tr>
     <tr>
-      <td>675-50</td><td>675</td><td>49</td><td>645 - 706</td><td></td>
+      <td>F670</td><td>672</td><td>44</td><td>644 - 698</td><td></td>
     </tr>
     <tr>
-      <td>725-50</td><td>725</td><td>49</td><td>696 - 754</td><td></td>
+      <td>F720</td><td>719</td><td>48</td><td>688 - 746</td><td></td>
     </tr>
     <tr>
-      <td>750-50</td><td>748</td><td>49</td><td>719 - 778</td><td>Highest throughput</td>
-    </tr>
-    <tr>
-      <td>775-50</td><td>775</td><td>49</td><td>745 - 805</td><td></td>
+      <td>F770</td><td>769</td><td>57</td><td>738 - 798</td><td>Overlaps with PyWFS dichroic</td>
     </tr>
   </tbody>
 </table>
-<legend>*: Cut-on/Cut-off wavelengths are where the filter has at least 1% transmission</legend>
+<legend>*: Cut-on/Cut-off wavelengths are where the filter has at least 1% transmission</legend></p>
+
+<center>
+  <img border="0" src="vampires_mbi_filters.png" alt="VAMPIRES MBI filters" width="75%">
+  <p><small>
+    Throughput curves for the bandpasses in the MBI mode.
+  </small></p>
+</center>
+
+<hr>
+
+<h2>VAMPIRES Capabilities and Performance</h2>
+
+
+<table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
+  <tr>
+  <th colspan=3>VAMPIRES observational settings <br>  VAMPIRES has completed commissioning and is now available for open use. Please refer to the information below when preparing proposals. Note, VAMPIRES can operate simultaneously with certain IR instruments as the primary science instrument or as a hitchhiker (see <a href="../indexm.html"> SCExAO Instruments and Modules</a>).</th>
+  </tr>
+  <tr>
+    <td>Operating wavelength</td>
+    <td>600 - 800 nm</td>
+    <td>Five selectable 50 nm bandpass filters with central wavelengths: 625 nm, 675 nm, 725 nm, 750 nm, and 775 nm. The open filter receives the full wavelength range.</td>
+  </tr>
+  <tr>
+    <td>Spatial resolution</td>
+    <td>15.6 mas</td>
+    <td>Diffraction-limited FWHM at 600 nm.</td>
+    </tr>
+  <tr>
+  <tr>
+    <td>Plate scale</td>
+    <td>6.24 mas / px</td>
+    <td>Calibrated using binary systems.</td>
+    </tr>
+  <tr>
+  <tr>
+    <td>FOV</td>
+    <td>3” x 3”</td>
+    <td>Maximum field-of-view. Can be cropped to achieve higher frame rates.</td>
+  </tr>
+  <tr>
+    <td>Frame rate</td>
+    <td>56 Hz</td>
+    <td>Frame rate at maximum FOV.</td>
+  </tr>
+  <tr>
+    <td>VAMPIRES setup time</td>
+    <td>3-5 minutes </td>
+    <td>This includes, fine adjustments to the focus, rotating between masks (if necessary) and setting up software for data collection. </td>
+  </tr>
+</table>
+
+
+<h3>Filter information</h3>
+
+<p>
+<table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
+  <thead>
+    <th>Filter name</th>
+    <th>Central wavelength (nm)</th>
+    <th>Effective width (nm)</th>
+    <th>Cut-on/off wavelengths* (nm)</th>
+    <th>Zero-point** (photon/sec)</th>
+    <th>Notes</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>625-50</td><td>625</td><td>49</td><td>595 - 656</td><td></td><td>Overlaps with AO188 dichroic- poor throughput</td>
+    </tr>
+    <tr>
+      <td>675-50</td><td>675</td><td>49</td><td>645 - 706</td><td></td><td></td>
+    </tr>
+    <tr>
+      <td>725-50</td><td>725</td><td>49</td><td>696 - 754</td><td></td><td></td>
+    </tr>
+    <tr>
+      <td>750-50</td><td>748</td><td>49</td><td>719 - 778</td><td>9.62e9</td><td>Optimal polarimetric efficiency.</td>
+    </tr>
+    <tr>
+      <td>775-50</td><td>775</td><td>49</td><td>745 - 805</td><td></td><td></td>
+    </tr>
+  </tbody>
+</table>
+<legend>*: Cut-on/Cut-off wavelengths are where the filter has at least 1% transmission<br>**: Zero-point assumes no beamsplitter and no EM gain, and should be considered unreliable for photometric calibration</legend>
 </p>
 
 <center>
-  <img border="0" src="VAMPIRES_filters.jpg" alt="VAMPIRES filters" width="75%">
+  <img border="0" src="vampires_2022_filters.png" alt="VAMPIRES 2022 filters" width="75%">
   <p><small>
     Throughput curves for the 5 bandpass filters in VAMPIRES.
   </small></p>
 </center>
+
+<h2>Polarimetry</h2>
+
+<p>VAMPIRES uses a triple-differential polarization calibration methodology comprising of a polarizing beamsplitter, a fast ferroelectric liquid crystal (FLC), and an achromatic half-wave plate (HWP). The HWP switches every cube (~30-60 s), the FLC switches every other frame (~50 Hz), and the beamsplitter allows simultaneous measurement of both polarization states by each camera. Note that the HWP is in AO188, which means you cannot use other instruments on SCExAO without also using their polarimetric modes. The HWP can be synced across FastPDI and CHARIS.</p>
+
+<h2>Coronagraphy</h2>
+
+<p>VAMPIRES is equipped with a classic Lyot coronagraph with the combination of a focal-plane mask and a pupil stop. The coronagraph can be used with any full-pupil observing mode (i.e., cannot be used with the sparse aperture masks). For moderately bright targets (6 &lt I &lt 8 mag) the coronagraph can be deployed without the Lyot stop to maximize the signal-to-noise ratio at the cost of diffraction control (e.g., protoplanetary disk imaging). See the <a href="./100vampcoronagraph.web/indexm.html">coronagraph section</a> for more details.</p>
+
+<table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
+  <tr><th colspan=3> VAMPIRES Coronagraph</th></tr>
+  <tr>
+    <td>IWA</td>
+    <td>36, 55, 92, and 129 mas</td>
+    <td>Focal plane mask inner working angle. Roughly 2, 3, 5, and 7 lambda/D at 750 nm.</td>
+  </tr>
+  <tr>
+    <td>Lyot throughput</td>
+    <td>65.7%</td>
+    <td>Geometric pupil throughput compared to SCExAO pupil</td>
+  </tr>
+  <tr>
+    <td>Raw contrast ratio</td>
+    <td>1e-3 at 0.1"<br>1e-5 at &gt;0.8"</td>
+    <td>Contrast measured without PSF subtraction which is limited by residual wavefront errors. Read noise limited beyond 0.2".</td>
+  </tr>
+  <tr>
+    <td>Setup time</td>
+    <td>5 minutes</td>
+    <td>This includes fine adjustments to the focus and alignment of the focal plane and pupil masks.</td>
+  </tr>
+</table>
+
+<h3>Calibration</h3>
+
+<p>Calibration is performed via artifical speckles generated by the deformable mirror which have a known angular offset and differential photometry compared to the star. This allows astrometric and photometric calibration of the star behind the focal plane mask.</p>
+
+<h2>Sparse Aperture Masking</h2>
+
+<p>Sparse aperture masking (SAM) allows the full diffraction limit of the telescope to be recovered by using selected sub-pupils of the telescope pupil as interferometer baselines. See, for example, Tuthill, et al. (2000), PASP, 112, 555; Huelamo, et al., (2011), A&A, 528, L7; Kraus & Ireland, (2012), ApJ, 745, 5.</p>
+
+<table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
+  <tr><th colspan=3>Sparse Aperture Masking</th></tr>
+  <tr>
+    <td>Sub pupil configurations</td>
+    <td>7 hole, 9 hole, 18 hole and annulus masks</td>
+    <td>Masks are selectable depending on brightness of target. See figure below for mask options.</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Limiting magnitudes</td>
+    <td>18 hole (I ~2-3 mags)</td>
+    <td rowspan="2">A function of the size and number of holes in the mask (i.e. Fourier coverage). However ongoing upgrades are pushing the detection limit fainter.</td>
+  </tr>
+  <tr>
+    <td>7 hole (I ~ 7)</td>
+  </tr>
+</table>
+
+<h3>Calibration</h3>
+<p>Calibration is performed via the observation of a PSF calibrator star, as per the conventional sparse aperture-masking methodology. This mode is ideal for the detection of faint companions and unpolarized circumstellar structure at very close separations (10s of mas).</p>
+
+<h2>Spectral Differential Imaging</h2>
+
+<p>Simultaneous spectral differential imaging (SDI) using either H-alpha or SII lines can be performed. Imaging is performed simultaneously on two cameras via a non-polarizing beamsplitter, with an H-alpha (or SII) filter before one camera and an adjacent continuum filter before the other. Filters can be rapidly swapped between cameras to help calibrate non common path errors. This mode may be used with both aperture-masking and full-pupil imaging. Note this mode is in continuous development and contrast limits are expected to further improve.</p>
+
+<table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
+  <tr><th colspan=3>Spectral Differential Imaging</th></tr>
+  <tr>
+    <td rowspan="2">Filters</td>
+    <td>H-alpha</td>
+    <td>Custom 656.3 ± 0.5 nm narrowband filter</td>
+  </tr>
+  <tr>
+    <td>Continuum</td>
+    <td>Custom 647.68 ± 1.025 nm narrowband filter</td>
+  </tr>
+  <tr>
+    <td>Contrast</td>
+    <td>1e-3 at 50 mas<br>1e-4 at &gt;350 mas</td>
+    <td>As of Feb. 2019.</td>
+  </tr>
+</table>
+
+
+</td>
+  </tr>
 
 
 <h2>VAMPIRES instrument description</h2>
