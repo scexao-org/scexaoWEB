@@ -67,6 +67,15 @@ in addition to a new multi-band imaging (MBI) mode.</p>
   </tr>
 </table>
 
+<p>These CMOS cameras are capable of photon counting in the low read noise "slow" mode. The plot below shows a photon counting histogram fit to an 800x256 pixel subwindow in slow mode. Being able to separate the peaks in the Poisson distribution allows a read-noise-free estimate of ultra-low signals (in this case, 0.744 e-).</p>
+
+<center>
+  <img border="0" src="pch.png" alt="photon counting histogram" width="75%">
+  <p><small>
+    Photon counting histogram fit to an 800x256 subwindow of low-signal data.
+  </small></p>
+</center>
+
 <h3>Multi-band imaging (MBI)</h3>
 
 <p>In S23B we will be testing a new multi-band imaging (MBI) mode which uses a stack of dichroics at slightly offset angles of incidence to form multiple images across the detectors. A schematic of the principle is shown below. This mode will be compatible with all observing modes except the spectral differential mode.</p>
@@ -147,6 +156,19 @@ in addition to a new multi-band imaging (MBI) mode.</p>
     <td>Frame rate</td>
     <td>56 Hz</td>
     <td>Frame rate at maximum FOV.</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Read noise</td>
+    <td>82 e- (0 EM gain)</td>
+    <td rowspan="2">RMS read noise.</td>
+  </tr>
+  <tr>
+    <td>0.27 e- (300 EM gain)</td>
+  </tr>
+  <tr>
+    <td>Gain</td>
+    <td>4.5 e-/ADU<br></td>
+    <td>Electron conversion gain factor</td>
   </tr>
   <tr>
     <td>VAMPIRES setup time</td>
