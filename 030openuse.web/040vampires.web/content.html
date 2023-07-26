@@ -263,7 +263,30 @@ in addition to a new multi-band imaging (MBI) mode.</p>
 
 <h2>Polarimetry</h2>
 
-<p>VAMPIRES uses a triple-differential polarization calibration methodology comprising of a polarizing beamsplitter, a fast ferroelectric liquid crystal (FLC), and an achromatic half-wave plate (HWP). The HWP switches every cube (~30-60 s), the FLC switches every other frame (~50 Hz), and the beamsplitter allows simultaneous measurement of both polarization states by each camera. Note that the HWP is upstream from AO188, which requires synchronization if you want to operate in PDI mode simultaneously with other SCExAO instruments. Currently the HWP can be synced across VAMPIRES, FastPDI, and CHARIS.</p>
+<p>VAMPIRES has two different polarimetry modes: "slow" mode, which uses an upstream half-wave plate (HWP) to slowly modulate the polarization state and "fast" mode, which includes a fast achromatic liquid crystal (AFLC) to quickly modulate the signal. For both modes the light is split by a polarizing beamsplitter cube to simultaneously measure orthogonal polarization states on each camera. Note: the HWP is upstream from AO188, which requires synchronization if you want to operate in PDI mode simultaneously with other SCExAO instruments. Currently the HWP can be synced across VAMPIRES, FastPDI, and CHARIS.</p>
+
+<table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
+  <thead>
+    <th colspan=5> VAMPIRES Polarimetry</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Slow</td>
+      <td>HWP</td>
+      <td>HWP: 10 s - 60 s</td>
+      <td>Uses double-difference method.</td>
+    </tr>
+    <tr>
+      <td>Fast</td>
+      <td>HWP + AFLC</td>
+      <td>HWP: 10 s - 60 s<br>AFLC: every frame</td>
+      <td>AFLC requires exposure times &lt;1s. Uses triple-difference method.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Data-processing and calibration</h3>
+<p>VAMPIRES uses double-difference for slow polarimetry mode and triple-difference for the fast mode. The instrumental polarization is calibrated using an empirical Mueller matrix model fit to polarized flat fields. We recommend observing a polarized and unpolarized standard star during your observations if polarimetric accuracy is paramount.</p>
 
 <hr>
 
