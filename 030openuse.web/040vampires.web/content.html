@@ -6,23 +6,32 @@
 
 <h2>Note for observers: VAMPIRES Upgrades (S23B)</h2>
 
-<p>VAMPIRES will be undergoing significant upgrades in June 2023, prior to the 23B observing semester. These upgrades will improve the sensitivity, speed, and dynamic range of the instrument along with the addition of a multi-band imaging mode. The core of the VAMPIRES upgrade are the switch from <a href="https://andor.oxinst.com/products/ixon-emccd-camera-series/ixon-ultra-897">EM-CCD detectors</a> to <a href="https://www.hamamatsu.com/us/en/product/cameras/qcmos-cameras/C15550-20UP.html">ultra-low read noise CMOS detectors</a>.</p>
+<p>VAMPIRES underwent significant upgrades in June 2023, prior to the 23B observing semester. These upgrades improved the sensitivity, speed, and dynamic range of the instrument along with the addition of a multi-band imaging mode. The core of the VAMPIRES upgrade were the switch from <a href="https://andor.oxinst.com/products/ixon-emccd-camera-series/ixon-ultra-897">EM-CCD detectors</a> to <a href="https://www.hamamatsu.com/us/en/product/cameras/qcmos-cameras/C15550-20UP.html">ultra-low read noise CMOS detectors</a>.</p>
 
-<p>All current modes of VAMPIRES will be supported in shared-risk mode:
+<p>All current modes of VAMPIRES are supported in shared-risk mode for 23B, and open-use in 24A:
 <ul>
-  <li>Normal imaging (speckle imaging)</li>
-  <li>Sparse aperture mask interferometry</li>
-  <li>Polarized differential imaging</li>
+  <li>Normal imaging (speckle imaging) / single- or dual-cam</li>
+  <li>Sparse aperture mask interferometry / single- or dual-cam</li>
+  <li>Polarimetric differential imaging</li>
   <li>Spectral differential imaging</li>
+  <li>Polarimetric spectral differential imaging</li>
 </ul>
 in addition to a new multi-band imaging (MBI) mode.</p>
 
 <p>New calibrations will be done to fully characterize the system, including zero-points, contrast curves, polarimetric efficiency, and astrometric calibration. Observers are recommended to get in contact with the SCExAO team if proposing for VAMPIRES in S23B (cc <a href="mailto:mdlucas@hawaii.edu">Miles Lucas</a>).</p>
 
-<h3>Camera parameters</h3>
+<hr>
+
+<h2>VAMPIRES Capabilities and Performance</h2>
+
 <table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
+  <thead>
+    <th colspan=3> VAMPIRES Parameters</th>
+  </thead>
   <tr>
-  <th colspan=3> Upgraded VAMPIRES Parameters<br>BASED ON MANUFACTURER/LAB TESTS, SUBJECT TO CHANGE</th>
+    <td>Operating wavelength</td>
+    <td>600 - 800 nm</td>
+    <td>Five selectable 50 nm bandpass filters, two pairs of narrowband filters, or multiband imaging with four ~50nm width fields.</td>
   </tr>
   <tr>
     <td>Spatial resolution</td>
@@ -32,41 +41,111 @@ in addition to a new multi-band imaging (MBI) mode.</p>
   <tr>
   <tr>
     <td>Plate scale</td>
-    <td>5.61 mas/px</td>
+    <td>6.0 mas/px</td>
     <td></td>
     </tr>
   <tr>
   <tr>
     <td>FOV</td>
     <td>3” x 3”</td>
-    <td>Maximum field-of-view. Can be cropped to achieve higher frame rates.</td>
+    <td>Maximum field-of-view. Can be cropped to achieve higher frame rates in standard mode.</td>
   </tr>
   <tr>
-    <td rowspan="2">Frame rate</td>
-    <td>532 Hz (fast)</td>
-    <td rowspan="2">Frame rate at maximum FOV.</td>
-  </tr>
-  <tr>
-    <td>36 Hz (slow)</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Read noise</td>
-    <td>0.45 e- (fast)</td>
-    <td rowspan="2">RMS read noise.</td>
-  </tr>
-  <tr>
-    <td>0.25 e- (slow)</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Gain</td>
-    <td>0.10 e-/ADU (fast)<br></td>
-    <td rowspan="2">Electron conversion gain factor</td>
-  </tr>
-  <tr>
-    <td>0.11 e-/ADU (slow)</td>
+    <td>VAMPIRES setup time</td>
+    <td>3-5 minutes </td>
+    <td>This includes, fine adjustments to the focus, rotating between masks (if necessary) and setting up software for data collection. </td>
   </tr>
 </table>
 
+
+<h3>Camera Modes and Performance</h3>
+
+<table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
+  <thead>
+    <tr>
+      <th colspan=4> VAMPIRES Camera Modes</th>
+    </tr>
+    <tr>
+      <th>Camera Mode</th>
+      <th>Frame Size (px)</th>
+      <th>Readout Mode</th>
+      <th>Max. Framerate (Hz)</th>
+  </thead>
+  <tbody>
+  <tr>
+    <td rowspan=2>standard</td>
+    <td rowspan=2>536 x 536</td>
+    <td>fast</td>
+    <td>516</td>
+  </tr>
+  <tr>
+    <td>slow</td>
+    <td>16</td>
+  </tr>
+  <tr>
+    <td rowspan=2>MBI</td>
+    <td rowspan=2>2244 x 1108</td>
+    <td>fast</td>
+    <td>244</td>
+  </tr>
+  <tr>
+    <td>slow</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td rowspan=2>MBIR*</td>
+    <td rowspan=2>2244 x 592</td>
+    <td>fast</td>
+    <td>489</td>
+  </tr>
+  <tr>
+    <td>slow</td>
+    <td>15</td>
+  </tr>
+</tbody>
+</table>
+<legend>*: MBI-reduced (MBIR) mode crops out the F610 field for faster readout speeds.</legend>
+
+<br>
+
+<table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
+  <thead>
+    <tr>
+      <th colspan=4> VAMPIRES Camera Parameters</th>
+    </tr>
+    <tr>
+      <th>Camera</th>
+      <th>Readout Mode</th>
+      <th>Read noise (e-)</th>
+      <th>Gain (e-/adu)</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td rowspan=2>Cam 1</td>
+    <td>fast</td>
+    <td>0.45</td>
+    <td>0.10</td>
+  </tr>
+  <tr>
+    <td>slow</td>
+    <td>0.25</td>
+    <td>0.125</td>
+  </tr>
+  <tr>
+    <td rowspan=2>Cam 2</td>
+    <td>fast</td>
+    <td>0.45</td>
+    <td>0.10</td>
+  </tr>
+  <tr>
+    <td>slow</td>
+    <td>0.25</td>
+    <td>0.125</td>
+  </tr>
+</tbody>
+</table>
+<legend></legend>
 <p>These CMOS cameras are capable of photon counting in the low read noise "slow" mode. The plot below shows a photon counting histogram fit to an 800x256 pixel subwindow in slow mode. Being able to separate the peaks in the Poisson distribution allows a read-noise-free estimate of ultra-low signals (in this case, 0.744 e-).</p>
 
 <center>
@@ -76,7 +155,60 @@ in addition to a new multi-band imaging (MBI) mode.</p>
   </small></p>
 </center>
 
-<h3>Multi-band imaging (MBI)</h3>
+<hr>
+
+<h2>VAMPIRES Filters</h2>
+
+<p>
+<table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
+  <thead>
+    <tr>
+      <th colspan=6>VAMPIRES Standard Filters</th>
+    </tr>
+    <tr>
+    <th>Filter name</th>
+    <th>Central wavelength (nm)</th>
+    <th>Effective width (nm)</th>
+    <th>Cut-on/off wavelengths* (nm)</th>
+    <th>Zero-point** (photon/sec)</th>
+    <th>Notes</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>625-50</td><td>625</td><td>48</td><td>599 - 652</td><td></td><td>Overlaps with AO188 dichroic- poor throughput</td>
+    </tr>
+    <tr>
+      <td>675-50</td><td>675</td><td>48</td><td>649 - 702</td><td></td><td></td>
+    </tr>
+    <tr>
+      <td>725-50</td><td>725</td><td>48</td><td>699 - 751</td><td></td><td>Optimal polarimetric efficiency.</td>
+    </tr>
+    <tr>
+      <td>750-50</td><td>748</td><td>48</td><td>722 - 774</td><td>9.62e9</td><td></td>
+    </tr>
+    <tr>
+      <td>775-50</td><td>763</td><td>26</td><td>748 - 778</td><td></td><td>Overlaps with PyWFS dichroic</td>
+    </tr>
+    <tr>
+      <td>Open</td><td>678</td><td>192</td><td>566 - 778</td><td></td><td>Constrained by AO188 dichroic and PyWFS dichroic.</td>
+    </tr>
+  </tbody>
+</table>
+<legend>*: Cut-on/Cut-off wavelengths are where the filter has at least 5% transmission<br>**: Zero-point assumes no beamsplitter</legend>
+</p>
+
+<center>
+  <img border="0" src="vampires_standard_filters.png" alt="VAMPIRES filters" width="75%">
+  <p><small>
+    Throughput curves for the 5 bandpass filters in VAMPIRES. <a href="https://docs.google.com/spreadsheets/d/1FHGh3tLlDUwATP6smFGz0nk2e0NF14rywTUjFTUT1OY/edit?usp=sharing">Link to raw data</a>.
+  </small></p>
+</center>
+
+<hr>
+
+
+<h2>Multi-band Imaging (MBI)</h2>
 
 <p>In S23B we will be testing a new multi-band imaging (MBI) mode which uses a stack of dichroics at slightly offset angles of incidence to form multiple images across the detectors. A schematic of the principle is shown below. This mode will be compatible with all observing modes except the spectral differential mode.</p>
 
@@ -91,139 +223,49 @@ in addition to a new multi-band imaging (MBI) mode.</p>
 
 <p><table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
   <thead>
-    <th>Filter name</th>
-    <th>Central wavelength (nm)</th>
-    <th>Effective width (nm)</th>
-    <th>Cut-on/off wavelengths* (nm)</th>
-    <th>Notes</th>
+    <tr>
+      <th colspan=6>VAMPIRES MBI Filters</th>
+    </tr>
+    <tr>
+      <th>Filter name</th>
+      <th>Central wavelength (nm)</th>
+      <th>Effective width (nm)</th>
+      <th>Cut-on/off wavelengths* (nm)</th>
+      <th>Zero-point** (photon/sec)</th>
+      <th>Notes</th>
+    </tr>
   </thead>
   <tbody>
     <tr>
-      <td>F620</td><td>617</td><td>73</td><td>550 - 662</td><td>Overlaps with AO188 dichroic</td>
+      <td>F610</td><td>612</td><td>60</td><td>569 - 646</td><td></td><td>Overlaps with AO188 dichroic</td>
     </tr>
     <tr>
-      <td>F670</td><td>672</td><td>44</td><td>644 - 698</td><td></td>
+      <td>F670</td><td>670</td><td>43</td><td>644 - 695</td><td></td><td></td>
     </tr>
     <tr>
-      <td>F720</td><td>719</td><td>48</td><td>688 - 746</td><td></td>
+      <td>F720</td><td>719</td><td>46</td><td>693 - 744</td><td></td><td></td>
     </tr>
     <tr>
-      <td>F760</td><td>755</td><td>32</td><td>736 - 774</td><td>Overlaps with PyWFS dichroic</td>
+      <td>F760</td><td>760</td><td>32</td><td>742 - 778</td><td></td><td>Overlaps with PyWFS dichroic</td>
     </tr>
   </tbody>
 </table>
-<legend>*: Cut-on/Cut-off wavelengths are where the filter has at least 5% transmission</legend></p>
+<legend>*: Cut-on/Cut-off wavelengths are where the filter has at least 10% transmission<br>**: Zero-point assumes no beamsplitter</legend></p>
 
 <center>
   <img border="0" src="vampires_mbi_filters.png" alt="VAMPIRES MBI filters" width="75%">
   <p><small>
-    Throughput curves for the bandpasses in the MBI mode.
+    Throughput curves for the bandpasses in the MBI mode. <a href="https://docs.google.com/spreadsheets/d/1FHGh3tLlDUwATP6smFGz0nk2e0NF14rywTUjFTUT1OY/edit?usp=sharing">Link to raw data</a>.
   </small></p>
 </center>
 
 <hr>
 
-<h2>VAMPIRES Capabilities and Performance</h2>
-
-
-<table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
-  <tr>
-  <th colspan=3>VAMPIRES observational settings <br>  VAMPIRES has completed commissioning and is now available for open use. Please refer to the information below when preparing proposals. Note, VAMPIRES can operate simultaneously with certain IR instruments as the primary science instrument or as a hitchhiker (see <a href="../indexm.html"> SCExAO Instruments and Modules</a>).</th>
-  </tr>
-  <tr>
-    <td>Operating wavelength</td>
-    <td>600 - 800 nm</td>
-    <td>Five selectable 50 nm bandpass filters with central wavelengths: 625 nm, 675 nm, 725 nm, 750 nm, and 775 nm. The open filter receives the full wavelength range.</td>
-  </tr>
-  <tr>
-    <td>Spatial resolution</td>
-    <td>15.6 mas</td>
-    <td>Diffraction-limited FWHM at 600 nm.</td>
-    </tr>
-  <tr>
-  <tr>
-    <td>Plate scale</td>
-    <td>6.24 mas/px</td>
-    <td>Calibrated using binary systems.</td>
-    </tr>
-  <tr>
-  <tr>
-    <td>FOV</td>
-    <td>3” x 3”</td>
-    <td>Maximum field-of-view. Can be cropped to achieve higher frame rates.</td>
-  </tr>
-  <tr>
-    <td>Frame rate</td>
-    <td>56 Hz</td>
-    <td>Frame rate at maximum FOV.</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Read noise</td>
-    <td>82 e- (0 EM gain)</td>
-    <td rowspan="2">RMS read noise.</td>
-  </tr>
-  <tr>
-    <td>0.27 e- (300 EM gain)</td>
-  </tr>
-  <tr>
-    <td>Gain</td>
-    <td>4.5 e-/ADU<br></td>
-    <td>Electron conversion gain factor</td>
-  </tr>
-  <tr>
-    <td>VAMPIRES setup time</td>
-    <td>3-5 minutes </td>
-    <td>This includes, fine adjustments to the focus, rotating between masks (if necessary) and setting up software for data collection. </td>
-  </tr>
-</table>
-
-
-<h3>Filter information</h3>
-
-<p>
-<table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
-  <thead>
-    <th>Filter name</th>
-    <th>Central wavelength (nm)</th>
-    <th>Effective width (nm)</th>
-    <th>Cut-on/off wavelengths* (nm)</th>
-    <th>Zero-point** (photon/sec)</th>
-    <th>Notes</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>625-50</td><td>625</td><td>49</td><td>598 - 653</td><td></td><td>Overlaps with AO188 dichroic- poor throughput</td>
-    </tr>
-    <tr>
-      <td>675-50</td><td>675</td><td>49</td><td>648 - 703</td><td></td><td></td>
-    </tr>
-    <tr>
-      <td>725-50</td><td>725</td><td>49</td><td>698 - 752</td><td></td><td></td>
-    </tr>
-    <tr>
-      <td>750-50</td><td>748</td><td>48</td><td>721 - 775</td><td>9.62e9</td><td>Optimal polarimetric efficiency.</td>
-    </tr>
-    <tr>
-      <td>775-50</td><td>763</td><td>26</td><td>748 - 778</td><td></td><td>Overlaps with PyWFS dichroic</td>
-    </tr>
-    <tr>
-      <td>Open</td><td>677</td><td>198</td><td>550 - 776</td><td></td><td>Constrained by AO188 dichroic and PyWFS dichroic.</td>
-    </tr>
-  </tbody>
-</table>
-<legend>*: Cut-on/Cut-off wavelengths are where the filter has at least 5% transmission<br>**: Zero-point assumes no beamsplitter and no EM gain, and should be considered unreliable for photometric calibration</legend>
-</p>
-
-<center>
-  <img border="0" src="vampires_2022_filters.png" alt="VAMPIRES 2022 filters" width="75%">
-  <p><small>
-    Throughput curves for the 5 bandpass filters in VAMPIRES. <a href="https://docs.google.com/spreadsheets/d/1FHGh3tLlDUwATP6smFGz0nk2e0NF14rywTUjFTUT1OY/edit?usp=sharing">Link to raw data</a>.
-  </small></p>
-</center>
-
 <h2>Polarimetry</h2>
 
-<p>VAMPIRES uses a triple-differential polarization calibration methodology comprising of a polarizing beamsplitter, a fast ferroelectric liquid crystal (FLC), and an achromatic half-wave plate (HWP). The HWP switches every cube (~30-60 s), the FLC switches every other frame (~50 Hz), and the beamsplitter allows simultaneous measurement of both polarization states by each camera. Note that the HWP is in AO188, which means you cannot use other instruments on SCExAO without also using their polarimetric modes. The HWP can be synced across FastPDI and CHARIS.</p>
+<p>VAMPIRES uses a triple-differential polarization calibration methodology comprising of a polarizing beamsplitter, a fast ferroelectric liquid crystal (FLC), and an achromatic half-wave plate (HWP). The HWP switches every cube (~30-60 s), the FLC switches every other frame (~50 Hz), and the beamsplitter allows simultaneous measurement of both polarization states by each camera. Note that the HWP is upstream from AO188, which requires synchronization if you want to operate in PDI mode simultaneously with other SCExAO instruments. Currently the HWP can be synced across VAMPIRES, FastPDI, and CHARIS.</p>
+
+<hr>
 
 <h2>Coronagraphy</h2>
 
@@ -257,6 +299,8 @@ in addition to a new multi-band imaging (MBI) mode.</p>
 
 <p>Calibration is performed via artifical speckles generated by the deformable mirror which have a known angular offset and differential photometry compared to the star. This allows astrometric and photometric calibration of the star behind the focal plane mask.</p>
 
+<hr>
+
 <h2>Sparse Aperture Masking</h2>
 
 <p>Sparse aperture masking (SAM) allows the full diffraction limit of the telescope to be recovered by using selected sub-pupils of the telescope pupil as interferometer baselines. See, for example, Tuthill, et al. (2000), PASP, 112, 555; Huelamo, et al., (2011), A&A, 528, L7; Kraus & Ireland, (2012), ApJ, 745, 5.</p>
@@ -281,31 +325,50 @@ in addition to a new multi-band imaging (MBI) mode.</p>
 <h3>Calibration</h3>
 <p>Calibration is performed via the observation of a PSF calibrator star, as per the conventional sparse aperture-masking methodology. This mode is ideal for the detection of faint companions and unpolarized circumstellar structure at very close separations (10s of mas).</p>
 
-<h2>Spectral Differential Imaging</h2>
+<hr>
 
-<p>Simultaneous spectral differential imaging (SDI) using either H-alpha or SII lines can be performed. Imaging is performed simultaneously on two cameras via a non-polarizing beamsplitter, with an H-alpha (or SII) filter before one camera and an adjacent continuum filter before the other. Filters can be rapidly swapped between cameras to help calibrate non common path errors. This mode may be used with both aperture-masking and full-pupil imaging. Note this mode is in continuous development and contrast limits are expected to further improve.</p>
+<h2>Narrowband / Spectral Differential Imaging</h2>
 
-<table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
-  <tr><th colspan=3>Spectral Differential Imaging</th></tr>
-  <tr>
-    <td rowspan="2">Filters</td>
-    <td>H-alpha</td>
-    <td>Custom 656.3 ± 0.5 nm narrowband filter</td>
-  </tr>
-  <tr>
-    <td>Continuum</td>
-    <td>Custom 647.68 ± 1.025 nm narrowband filter</td>
-  </tr>
-  <tr>
-    <td>Contrast</td>
-    <td>1e-3 at 50 mas<br>1e-4 at &gt;350 mas</td>
-    <td>As of Feb. 2019.</td>
-  </tr>
+<p>Simultaneous spectral differential imaging (SDI) using either H-alpha or SII lines can be performed. Imaging is performed simultaneously on two cameras via a non-polarizing beamsplitter, with an H-alpha (or SII) filter before one camera and an adjacent continuum filter before the other. Filters can be rapidly swapped between cameras to help calibrate non common path errors. This mode may be used with both aperture-masking and full-pupil imaging.</p>
+  
+<p>Current contrast limits are 1e-3 at 50 mas and 1e-4 at &gt;350 mas (Feb. 2019). Note this mode is in continuous development and contrast limits are expected to further improve.</p>
+
+<p><table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
+  <thead>
+    <tr>
+      <th colspan=6>VAMPIRES Narrowband Filters</th>
+    </tr>
+    <tr>
+      <th>Filter name</th>
+      <th>Central wavelength (nm)</th>
+      <th>Effective width (nm)</th>
+      <th>Cut-on/off wavelengths* (nm)</th>
+      <th>Zero-point** (photon/sec)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ha</td><td>656.3</td><td>1</td><td>655.7 - 656.9</td><td></td>
+    </tr>
+    <tr>
+      <td>Ha-cont</td><td>647.7</td><td>2</td><td>646.4 - 649.1</td><td></td>
+    </tr>
+    <tr>
+      <td>SII</td><td>672.7</td><td>3</td><td>670.7 - 674.5</td><td></td>
+    </tr>
+    <tr>
+      <td>SII-cont</td><td>681.5</td><td>3</td><td>679.6 - 683.4</td><td></td>
+    </tr>
+  </tbody>
 </table>
+<legend>*: Cut-on/Cut-off wavelengths are where the filter has at least 10% transmission<br>**: Zero-point assumes no beamsplitter</legend></p>
 
-
-</td>
-  </tr>
+<center>
+  <img border="0" src="vampires_narrowband_filters.png" alt="VAMPIRES narrowband filters" width="75%">
+  <p><small>
+    Throughput curves for the narrowband filters in the differential filter wheel. <a href="https://docs.google.com/spreadsheets/d/1FHGh3tLlDUwATP6smFGz0nk2e0NF14rywTUjFTUT1OY/edit?usp=sharing">Link to raw data</a>.
+  </small></p>
+</center>
 
 <hr>
 
