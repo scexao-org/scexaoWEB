@@ -1,1 +1,1 @@
-Wavefront Control
+Wavefront Sensing and Control
