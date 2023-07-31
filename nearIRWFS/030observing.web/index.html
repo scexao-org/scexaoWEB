@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NIR WFS</title>
+</head>
+<body>
+    <table border="0" cellpadding="5">
+        <tbody><tr>
+            <!-- NAVIGATION BAR-->
+            <td class="nav" valign="top" width="135">
+            <!-- SUBARU LOGO-->
+            <center>
+            <a href="../../../index.html"><img src="../NIRWFS-logo.png" border="0" align="center" vspace="10" hspace="17"></a>
+            </center>
+            <!-- NAVIGATION-->
+            <a href="../index.html" class="path">NIR WFS</a>
+                <div class="indent">
+                    <a href="../010technicaldescr.web/index.html" class="nav" style="margin-left:5px;">System</a>
+                    <br><a href="../020performance.web/index.html" class="nav" style="margin-left:5px;">Performance</a>
+                    <br><div class="path"><span class="thispage" style="margin-left:5px;">Observing</a>
+            </div>
+              </div>
+              </div>
+        
+          <td>
+            <!-- MAIN PAGE FOLLOWS -->
+          </td>
+        
+        <!-- MAIN PAGE FOLLOWS-->
+        <td valign="top" width="100%">
+        
+        <h1 align="center">Near-IR Wavefront Sensor - Planning Observations</h1>
+
+        <font color="#FF0000">
+            <h3 align="center">Please read <a href="#info_prop">section 1</a> carefully
+                before submitting the proposal.</h3>
+            </font>
+
+        <p>
+            If you want to use the NIR WFS inside AO188, you need to find a Natural
+            Guide Star (NGS) that is bright enough at less than 10" separation from
+            your target of interest. The target of interest can be the NGS itself if
+            it is a bright enough stellar object. Non-sidereal tracking is currently
+            not available with NIR WFS.</p>
+
+        <p> Read the following instructions <i>carefully</i> if you wish to
+            apply for observing time with AO188. <b>If technical details described
+            in your proposal are incomplete, it may be rejected even if your
+            science case is great.</b></p>
+
+        <ul>
+            <li><a href="#info_prop">1. Information you have to describe in your proposal</a></li>
+            <li><a href="#ao_guide_star">2. Selecting AO guide stars</a></li>
+            <li><a href="#pl_dates">3. Planning dates of observations</a></li>
+            <li><a href="#overheads">4. Overheads</a></li>
+           </ul>
+
+        <a name="info_prop"></a>
+        <h2>1. Information you have to describe in your
+            proposal</h2>
+
+        <p> <b>The following should be clearly stated in the proposal</b>. </p>
+
+        <ul>
+            <li> <i>H-band</i> (or <i>J-band</i> if the Vis-HK Dichroic is used) magnitude of your AO
+            guide stars (see section <a href="#ao_guide_star">2</a> for details). </li>
+            <li> One or several choices for the dichroic beamsplitter used, depending on the brightness of the NGs (see section <a href="#ao_guide_star">2</a> for details). </li>
+            <li> Separation between your targets and AO guide stars (see section <a href="#ao_guide_star">2</a> for details).</li>
+            <li> Strehl ratio and/or FWHM of the point-spread function (PSF) required for your project. </li>
+            <li>Whether the AO guide star is a point source or not.<br>
+                 --- If you use an extended object, binary objects, or a star associated with
+                 nebulosity, you must describe a FWHM of its spatial
+                 distribution, their separation, or contrast between the star and
+            nebulosity, respectively (see section <a href="#ao_guide_star">2</a> for details).</li>
+            <li> Schedule requirement to avoid the moon's glare which severely
+           degrades the AO loop performance (see section <a href="#pl_dates">3</a> for details). </li>
+           <li> Other usual requirements for the science instrument used (IRCS, SCExAO). Please check their respective webpages </li>
+           </ul>
+           
+
+           <p><a name="ao_guide_star"></a></p>
+           <h2>2. Selecting AO guide stars </h2>
+
+        <h3>Throughput and Dichoic Choice</h3>
+
+        
+        
+        <table style="width:100%">
+            <tr>
+                <th><a href="NIRWFS-dichroic-transmission.png"> <img src="NIRWFS-dichroic-transmission.png" alt="NIRWFS-dichroic-transmission"
+                            width="700"> </a></th>
+                <th>
+                    NIRWFS Dichroic transmission to the science instrument.
+                </th>
+            </tr>
+        </table>
+        
+        
+        
+        
+        
+        <h3>Magnitude Limit</h3>
+        
+        
+        Magnitude limits listed in this section are for the AO correction to deliver 0.1 arcsec FWHM in median conditions.
+        AO correction perfomance at the faint limit is strongly affected by atmospheric conditions, including turbulence coherence time.
+        Magnitude values are calculated for A-type stars with flat spectra. Very red objects will be limited by the H-band magnitude
+        limit before the broadband magnitude limit.
+        
+        <table style="width:100%">
+            <tr>
+                <th><a href="NIRWFS-maglimit.png"> <img src="NIRWFS-maglimit.png" alt="NIRWFS-maglimit"
+                            width="700"> </a></th>
+                <th>
+                    Guide star magnitude limit. The frequencies listed in the legend are the AO loop frequency.
+                    Correction at 500 Hz might be worst than at 1 kHz depending on the atmospheric conditions (seeing, coherence time).
+                </th>
+            </tr>
+        </table>
+        
+        
+        
+        
+        
+        <table align="center" bgcolor="#98ffff" border="4" cellspacing="0" cellpadding="5">
+            <tbody>
+                <tr>
+                    <th>Filter </th>
+                    <th colspan="4"> Dichroic</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>K-band</td>
+                    <td>YJH50</td>
+                    <td>YJH90</td>
+                    <td>Vis-HK</td>
+                </tr>
+                <tr>
+                    <td>Y-band</td>
+                    <td>mY=11.2</td>
+                    <td>mY=10.4</td>
+                    <td>mY=8.7</td>
+                    <td>mY=11.2</td>
+                </tr>
+        
+                <tr>
+                    <td>J-band</td>
+                    <td>mJ=11.3</td>
+                    <td>mJ=10.6</td>
+                    <td>mJ=8.8</td>
+                    <td>mJ=11.3</td>
+                </tr>
+        
+                <tr>
+                    <td>H-band</td>
+                    <td>mH=11.4</td>
+                    <td>mH=10.7</td>
+                    <td>mH=8.9</td>
+                    <td>N/A</td>
+                </tr>
+        
+                <tr>
+                    <td>Y+J-band</td>
+                    <td>mJ=12.2</td>
+                    <td>mJ=11.5</td>
+                    <td>mJ=9.7</td>
+                    <td>mJ=12.2</td>
+                </tr>
+        
+                <tr>
+                    <td>J+H-band</td>
+                    <td>mH=12.3</td>
+                    <td>mH=11.6</td>
+                    <td>mH=9.8</td>
+                    <td>N/A</td>
+                </tr>
+        
+                <tr>
+                    <td>broadband</td>
+                    <td>mH=12.8</td>
+                    <td>mH=12.1</td>
+                    <td>mH=10.3</td>
+                    <td>mH=12.2</td>
+                </tr>
+        
+                <tr>
+        
+                </tr>
+            </tbody>
+        </table>
+        
+        <a name="pl_dates"></a>
+        <h2>3. Planning dates of observations  </h2>
+        
+        Evaluate possible dates of your observations based on the following tips:
+        <ul>
+            <li><b> Elevation </b> 
+            --- We recommend you to observe targets at an elevation of
+                45<sup>o</sup> or larger. Strehl ratios and/or FWHMs can
+                significantly be degraded at lower elevations. Please not that
+            the atmospheric dispersion corrector (ADC) installed at the science
+            path, or the wavefront sensor do not guarantee good correction for
+            elevations below 30<sup>o</sup>.</li>
+        
+            <li><b> Distance to the moon </b> 
+                --- We cannot perform AO correction if the sky is very
+            bright. We then recommend you to observe the target at
+            least 10<sup>o</sup> apart from the moon.
+        </ul>
+
+        <a name="overheads"></a>
+        <h2>4. Overheads </h2>
+
+        We usually need 10-15 minutes for overheads of each target. These
+        include acquisition of the AO guide star, optimization of AO, and
+        acquisition of the target. You may omit the optimization step if the
+        guide star magnitude and separation are similar to that used just
+        before your observations and the weather condition has not been
+        changed. Below is a summary of the overheads for the guide star
+        acquisition and the performance optimization. In addition to these, we need up to 12
+        minutes to slew the telescope to your target.
+
+        <p></p>
+
+    </tbody>
+</table>
+

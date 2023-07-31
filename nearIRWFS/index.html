@@ -1,140 +1,175 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>NearIR WFS</title>
+  <title>NIR WFS</title>
 </head>
 <body>
-<div id="wrapper">
-<div id="logo"><img border="0" src="../../banner.jpg" width="1070px" height="140px"></div>
+    <table border="0" cellpadding="5">
+        <tbody><tr>
+            <!-- NAVIGATION BAR-->
+            <td class="nav" valign="top" width="135">
+            <!-- SUBARU LOGO-->
+            <center>
+            <a href="../../../index.html"><img src="./NIRWFS-logo.png" border="0" align="center" vspace="10" hspace="17"></a>
+            </center>
+            <!-- NAVIGATION-->
+            <span class="thispage">NIR WFS</span>
+              <br><a href="./010technicaldescr.web/index.html" class="nav" style="margin-left:5px;">System</a>
+              <br><a href="./020performance.web/index.html" class="nav" style="margin-left:5px;">Performance</a>
+              <br><a href="./030observing.web/index.html" class="nav" style="margin-left:5px;">Observing</a>
+              </div>
+              </div>
+        
+          <td>
+            <!-- MAIN PAGE FOLLOWS -->
+          </td>
+        
+        <!-- MAIN PAGE FOLLOWS-->
+        <td valign="top" width="100%">
+        
+        <h1 align="center"> Near Infrared Wavefront Sensor (NIR WFS) </h1>
+        
+        <a name="important"></a>
+        
+        <table bgcolor="#ffff98" border="2" cellpadding="3" align="center" width="800">
+        <tbody><tr><td>
+        <p>
+        </p><h2 align="center">Information for S24A applicants</h2>
+        
+        <p> <b> <font color="#FF0000"> The Near-Infrared Wavefront Sensor (NIR WFS) is available for Open-Use observations, in shared-risk mode. </font> </b> </p>
+        
+        <p style="margin-left:15px;margin-top:-15px">
+          The NIR WFS is a PI-type module of AO188 offered starting semester S24A in shared-risk mode. Per Subaru Telescope’s rule for PI-type instruments,
+          please contact and include the PI, Julien Lozi (lozi_at_naoj.org), if you plan on submitting a proposal. If your proposal targets the galactic center, please also contact and include co-I Shogo Nishiyama (shogo-n_at_staff.miyakyo-u.ac.jp).</p>
+        
+          Before preparing the proposal, <font color="#FF0000"> please read <a href="./030observing.web/index.html">Planning Observations</a> very carefully </font>.
+        
+        
+        <p></p>
+        </td></tr>
+        </tbody></table>
+        
+        <h2> Introduction </h2>
+        
+        <p>
+        The Near Infrared Wavefront Sensor (NIR WFS) is a wavefront sensor located inside the <a href="https://www.naoj.org/Observing/Instruments/AO/performance.html">AO188</a> adaptive optics system of the Subaru Telescope. It uses most of the AO188 optics, and replaces the visible curvature wavefront sensor to control the 188-element bimoprh deformable mirror to perform the wavefront correction. It has three modes: a Pyramid WFS mode (PyWFS), a Focal Plane WFS mode (FPWFS) and a pupil imaging mode (See <a href="./010technicaldescr.web/index.html">Technical description</a> for more information about the design). Only the PyWFS mode will be offered for Open-Use observations in S24A.
+        </p>
+        
+        <p>
+        The open-use instruments that can currently benefit from the NIR WFS are <a href="http://www.naoj.org/Observing/Instruments/IRCS/index.html">IRCS</a>.
+        <a href="https://www.naoj.org/Projects/SCEXAO/scexaoWEB/000home.web/indexm.html">SCExAO</a>,
+        <a href="https://www.naoj.org/Projects/SCEXAO/scexaoWEB/030charis.web/indexm.html">
+        SCExAO+CHARIS</a> and
+        <a href="https://www.naoj.org/Projects/SCEXAO/scexaoWEB/040vampires.web/indexm.htm">
+        SCExAO+VAMPIRES</a>, although not all modes are compatible.
+        </p>
+        
+        <p>
+        The NIR WFS only operates in NGS mode. It requires a bright star within 10 arcsec from the science target.
+        A target brighter than H-mag = 9 to 13 is required to obtain a reasonable correction, depending on the spectrum of the star, and the dichroic beamsplitter pickoff selected (See <a href="./030observing.web/index.html">Planning Observations</a> for more information). We demonstrated excellent performance in above-average seeing of ~0.8", with Strehl ratios up to ~75% in K-band (See <a href="./020performance.web/index.html">Performance</a> for more details).
+        </p>
+        
+        <h2> Modes supported in S24A</h2>
 
-<div id="inner">
-<div id="maincolumn">
-<h1>Near-IR Wavefront Sensor - Basic Parameters</h1>
+                <h3>SCExAO</h3>
+                The NIR WFS can be used with the following SCExAO modes :
+                <ul>
+                    <li>CHARIS low-red broadband</li>
+                    <li>CHARIS hi-red J, H or K-band</li>
+                    <li>VAMPIRES imaging</li>
+                    <li>MEC y and J band</li>
+                    <li>REACH (Single mode fiber injection inside SCExAO feeding IRD</li>
+                </ul>
+
+                <h3>IRCS</h3>
+                The NIR WFS can be used with the following IRCS modes :
+                <ul>
+                    <li>20 mas imaging mode with Y- , J- , H- , and K-band</li>
+                    <li>Echelle mode with zJ- , J- , H- , and K-band</li>
+                </ul>
 
 
 
-<table border="1" cellspacing="0" cellpadding="10">
-    <tbody>
+        </p><p>
+        <table align="center" border="0" cellpadding="5">
+        <tbody>
         <tr>
-            <th colspan="2"> Basic Parameters</th>
+        <td><center><p><img src="./020performance.web/NIRWFS-SR_images_CHARIS.png" width="700"></p></center></td>
         </tr>
         <tr>
-            <td>Location</td>
-            <td>Nasmyth focus (IR)</td>
+            <th><center>
+                <i>Example of Strehl ratio measurements in J-, H- and K-band with CHARIS, on the target X Boo.
+                </i>
+            </center></th>
         </tr>
-        <tr>
-            <td>Spectral coverage of science path</td>
-            <td>0.6-2.4 um</td>
-        </tr>
-        <tr>
-            <td> Number of control elements</td>
-            <td> 188</td>
-        </tr>
-        <tr>
-            <td> Deformable mirror</td>
-            <td> Bimorph mirror with 188 control electrodes</td>
-        </tr>
-        <tr>
-            <td> High-order WFS</td>
-            <td> NIR Pyramid Wavefront sensor with HgCdTe detector.</td>
-        </tr>
-        <tr>
-            <td> Control bandwidth</td>
-            <td> > 100 Hz, 500 to 2000 corrections/sec</td>
-        </tr>
-        <tr>
-            <td> NGS magnitude</td>
-            <td> -3 < H < 11</td>
-        </tr>
-        <tr>
-            <td> Off-axis steering</td>
-            <td> 20 arcsec diameter</td>
-        </tr>
-        <tr>
-            <td> Wavelength range </td>
-            <td> 0.95-1.8 um (y, J and H-band)</td>
-        </tr>
-        <tr>
+        </tbody></table>
+  
+        <h2>Basic parameters</h2>
 
-        </tr>
-    </tbody>
-</table>
+        <table bgcolor="#98ffff" class="inline" align="center" border="4" cellspacing="0" cellpadding="5">
+          <tbody>
 
+              <tr>
+                  <td>Location</td>
+                  <td>Nasmyth focus (IR)</td>
+              </tr>
+              <tr>
+                  <td>Spectral coverage of science path</td>
+                  <td>0.6-2.4 um</td>
+              </tr>
+              <tr>
+                  <td> Number of control elements</td>
+                  <td> 188</td>
+              </tr>
+              <tr>
+                  <td> Deformable mirror</td>
+                  <td> Bimorph mirror with 188 control electrodes</td>
+              </tr>
+              <tr>
+                  <td> High-order WFS</td>
+                  <td> NIR Pyramid Wavefront sensor with HgCdTe detector.</td>
+              </tr>
+              <tr>
+                  <td> Control bandwidth</td>
+                  <td> > 100 Hz, 500 to 2000 corrections/sec</td>
+              </tr>
+              <tr>
+                  <td> NGS magnitude</td>
+                  <td> -3 < H < 9-13 (Depending on the selected dichroic)</td>
+              </tr>
+              <tr>
+                  <td> Off-axis steering</td>
+                  <td> 20 arcsec diameter</td>
+              </tr>
+              <tr>
+                  <td> Wavelength range </td>
+                  <td> 0.95-1.8 um (y, J and H-band)</td>
+              </tr>
+              <tr>
 
-<h1> Modes supported in S24A</h1>
+              </tr>
+          </tbody>
+      </table>
 
-<h2>SCExAO</h2>
-The nearIR WFS can be used with the following SCExAO modes :
-<ul>
-    <li>CHARIS low-red broadband</li>
-    <li>CHARIS hi-red J, H or K-band</li>
-    <li>CHARIS PDI</li>
-    <li>VAMPIRES imaging</li>
-    <li>VAMPIRES PDI</li>
-    <li>MEC y and J band</li>
-    <li>REACH</li>
-</ul>
-
-<p style="color: rgb(252, 102, 102);"> The nearIR WFS cannot be used with fast polarization imaging (FPDI)
-    FPDI cannot be co-scheduled with nearIR WFS as switching between the two modes required daytime instrument
-    reconfiguration.</p>
-
-
-<h2>IRD</h2>
-<p style="color: rgb(252, 102, 102);"> The NearIR WFS cannot be used with standard IRD operation (light extracted within
-    AO188)</p>
-
-REACH operation (light extracted within SCExAO) is supported.
-
-
-
-<h2>IRCS</h2>
-The nearIR WFS can be used with the following IRCS modes :
-<ul>
-    <li>20 mas imaging mode with Y- , J- , H- , and K - band</li>
-    <li>Echelle mode with zJ- , J- , H- , and K - band</li>
-</ul>
-
-<p style="color: rgb(252, 102, 102);"> The nearIR WFS is incompatible with IRCS operation in L and M bands, and is
-    incompatible with IRCS-polarimaetry </p>
-
-
-
-
-<h1> Additional Information </h1>
-
-
-<ul>
-    <li><a href="./010technicaldescr.web/indexm.html"> Technical Description</a> page.</li>
-    <li><a href="./020performance.web/indexm.html"> Performance</a> page.</li>
-</ul>
-
-<hr>
-File ./020instrument.web/030nearIRwfs.web/content.html last modified  26/07/2023 16:53:16 HST<br></div>
-<div id='cssmenu'>
-<ul>
-<div class="menul0"><a href="../.././000home.web/indexm.html" style="text-decoration: none"> <font color="00000"> Home </font> </a></div>
-<div class="menul0"><a href="../.././010usingSCExAO.web/indexm.html" style="text-decoration: none"> <font color="00000"> Using SCExAO > </font> </a></div>
-<div class="menul0"><a href="../.././020instrument.web/indexm.html" style="text-decoration: none"> <font color="00000"> Overview > </font> </a></div>
-<div class="menul1"><a href="../.././020instrument.web/000intro.web/indexm.html" style="text-decoration: none"> <font color="00000"> Introduction </font> </a></div>
-<div class="menul1"><a href="../.././020instrument.web/010wfsc.web/indexm.html" style="text-decoration: none"> <font color="00000"> Wavefront Sensing and Control </font> </a></div>
-<div class="menul1"><a href="../.././020instrument.web/020coronagraphs.web/indexm.html" style="text-decoration: none"> <font color="00000"> Coronagraphy </font> </a></div>
-<div class="active menul1"><b>NearIR WFS</b></div>
-<div class="menul2"><a href="../.././020instrument.web/030nearIRwfs.web/010technicaldescr.web/indexm.html" style="text-decoration: none"> <font color="00000"> Technical Description </font> </a></div>
-<div class="menul2"><a href="../.././020instrument.web/030nearIRwfs.web/020performance.web/indexm.html" style="text-decoration: none"> <font color="00000"> Performance </font> </a></div>
-<div class="menul0"><a href="../.././030openuse.web/indexm.html" style="text-decoration: none"> <font color="00000"> Open Use Modules/Instruments > </font> </a></div>
-<div class="menul0"><a href="../.././050devmodules.web/indexm.html" style="text-decoration: none"> <font color="00000"> Modules in Development > </font> </a></div>
-<div class="menul0"><a href="../.././060team.web/indexm.html" style="text-decoration: none"> <font color="00000"> Team > </font> </a></div>
-<div class="menul0"><a href="../.././080images.web/indexm.html" style="text-decoration: none"> <font color="00000"> Images > </font> </a></div>
-<br><hr><br><center><font size="5" color="white"><b>EXPERT AREA</b></font></center>
-<div class="menul0"><a href="../.././110publis.web/indexm.html" style="text-decoration: none"> <font color="00000"> Publications > </font> </a></div>
-<br><hr><br><center><font size="5" color=#ff8888><b>NEWS</b></font></center>
-<div class="menul0"><a href="../.././200hotnews.web/indexm.html" style="text-decoration: none"> <font color="00000"> Hot News > </font> </a></div>
-<div class="menul0"><a href="../.././300technical.web/indexm.html" style="text-decoration: none"> <font color="00000"> Tech Area > </font> </a></div>
-</ul>
-</div>
-
-</div>
-</div>
-</body>
-</html>
+    <h3><a href="./010technicaldescr.web/index.html"> Technical Description</a></h3>
+    <h3><a href="./020performance.web/index.html"> Performance</a></h3>
+    <h3><a href="./030observing.web/index.html">Planning Observations</a></h3>
+  
+        <h2>Instrument citation</h2>
+        <p>
+        Please cite the following paper when you refer to the NIR WFS in your publication.</p>
+        
+        <dl>
+           <dt><a href="https://arxiv.org/pdf/2209.12981.pdf">"AO3000 at Subaru: Combining for
+            the first time a NIR WFS using First Light's C-RED ONE and ALPAO's 64x64 DM"</a></dt>
+                 <dd>Lozi et al. 2022, Proc. SPIE, vol. 12185, id. 1218533</dd>
+        </dl>
+        
+        <h2>Contacts</h2>
+        <p>
+        Questions regarding this page should be directed to the primary support astronomer (Julien Lozi, lozi_at_naoj.org).
+        </p><p>
+        Please note that all numbers on these pages are subject to change as the performance of the NIR WFS is better determined.
+        
+        
+        </dl></td></tr></tbody></table>
