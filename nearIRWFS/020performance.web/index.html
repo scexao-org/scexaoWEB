@@ -1,183 +1,252 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>NIR WFS</title>
+    <title>NIR WFS</title>
 </head>
+
 <body>
     <table border="0" cellpadding="5">
-        <tbody><tr>
-            <!-- NAVIGATION BAR-->
-            <td class="nav" valign="top" width="135">
-            <!-- SUBARU LOGO-->
-            <center>
-            <a href="../../../index.html"><img src="../NIRWFS-logo.png" border="0" align="center" vspace="10" hspace="17"></a>
-            </center>
-            <!-- NAVIGATION-->
-            <a href="../index.html" class="path">NIR WFS</a>
-                <div class="indent">
-                    <a href="../010technicaldescr.web/index.html" class="nav" style="margin-left:5px;">System</a>
-                    <br><div class="path"><span class="thispage" style="margin-left:5px;">Performance</a>
-                    <br><a href="../030observing.web/index.html" class="nav" style="margin-left:5px;">Observing</a>
-            </div>
-              </div>
-              </div>
-        
-          <td>
-            <!-- MAIN PAGE FOLLOWS -->
-          </td>
-        
-        <!-- MAIN PAGE FOLLOWS-->
-        <td valign="top" width="100%">
-        
-        <h1 align="center">Near-IR Wavefront Sensor - Performance</h1>
-
-
-        <h2>Strehl Ratio Measurements</h2>
-
-        <h3>Conditions and Targets</h3>
-
-        <p>The on-sky results presented below where taken during the engineering night of May 3, 2023. We ran the AO loop at 500 Hz with the YJH50 dichroic beamsplitter (see the <a href="../010technicaldescr.web/index.html">Technical description</a> page for more details). The seeing was above average: 0.7 to 1.1". We observed several targets with similar magnitudes in J and H. Images were recorded with SCExAO's internal SWIR camera Palila (First Light Imaging C-RED 2, y- to H-band), and the CHARIS integral field spectrograph in broadband mode (J- to K-band).</p>
-
-        <table style="width:100%">
+        <tbody>
             <tr>
-                <th><a href="NIRWFS-SR_images.png"> <img src="NIRWFS-SR_images.png" alt="NIRWFS-SR_images"
-                            width="600"> </a></th>
-            </tr>
-            <tr>
-                <th><center>
-                    <i>H-band Strehl measurements obtained with SCExAO's Palila camera, over a few seconds, for targets with various magnitudes. Each image is 2x2".</i>
-                </center></th>
-            </tr>
-        </table>
+                <!-- NAVIGATION BAR-->
+                <td class="nav" valign="top" width="135">
+                    <!-- SUBARU LOGO-->
+                    <center>
+                        <a href="../index.html"><img src="../NIRWFS-logo.png" border="0" align="center" vspace="10"
+                                hspace="17"></a>
+                    </center>
+                    <!-- NAVIGATION-->
+                    <a href="../index.html" class="path">NIR WFS</a>
+                    <div class="indent">
+                        <a href="../010technicaldescr.web/index.html" class="nav" style="margin-left:5px;">System</a>
+                        <br>
+                        <div class="path"><span class="thispage" style="margin-left:5px;">Performance</a>
+                                <br><a href="../030observing.web/index.html" class="nav"
+                                    style="margin-left:5px;">Observing</a>
+                        </div>
+                    </div>
+                    </div>
 
-        <h3>Strehl Ratio vs. H-band Magnitude</h3>
 
-        <table style="width:100%">
-            <tr>
-                <th><a href="NIRWFS-SR_v_mag.png"> <img src="NIRWFS-SR_v_mag.png" alt="NIRWFS-SR_v_mag"
-                            width="800"> </a></th>
-            </tr>
-            <tr>
-                <th><center>
-                    <i>Compilation of all the Strehl measurements taken with SCExAO's Palila camera in y-, J- and H-band. This includes times where we were tuning various parameters, so some Strehl values can be much lower than optimal. The higher values for each magnitude would represent the performance of the loop in normal conditions. The Strehl ratio is over 40% until magnitude ~9, then decreases. This was done with the YJH50 dichroic, so the result would be shifted by ~+0.75 magnitude with the K-band dichroic, and ~-1.75 with the YJH90 dichroic.</i>
-                </center></th>
-            </tr>
-        </table>
-        
-        <h3>Strehl Ratio vs. wavelength</h3>
+                <td>
+                    <!-- MAIN PAGE FOLLOWS -->
+                </td>
 
-        <table style="width:100%">
-            <tr>
-                <th><a href="NIRWFS-SR_images_wavelength.png"> <img src="NIRWFS-SR_images_wavelength.png" alt="NIRWFS-SR_images_wavelength"
-                            width="800"> </a></th>
-            </tr>
-            <tr>
-                <th><center>
-                    <i>Strehl ratio measurements in y-, J- and H-band with SCExAO's Palila camera, on the target &alpha; Boo. A dark hole (control region of the deformable mirror) is visible, even at short wavelengths. This is a sign that the correction is excellent, even better than with the curvature wavefront sensor for which this dark hole was never observed.
-                    </i>
-                </center></th>
-            </tr>
-        </table>
+                <!-- MAIN PAGE FOLLOWS-->
+                <td valign="top" width="100%">
 
-        <table style="width:100%">
-            <tr>
-                <th><a href="NIRWFS-SR_images_CHARIS.png"> <img src="NIRWFS-SR_images_CHARIS.png" alt="NIRWFS-SR_images_CHARIS"
-                            width="800"> </a></th>
-            </tr>
-            <tr>
-                <th><center>
-                    <i>Strehl ratio measurements in J-, H- and K-band with CHARIS, on the target X Boo. A dark hole (control region of the deformable mirror) is visible, even at short wavelengths. This is a sign that the correction is excellent, even better than with the curvature wavefront sensor for which this dark hole was never observed.
-                    </i>
-                </center></th>
-            </tr>
-        </table>
+                    <h1 align="center">Near-IR Wavefront Sensor - Performance</h1>
 
-        <table style="width:100%">
-            <tr>
-                <th><a href="NIRWFS-Strehl_v_lambda.png"> <img src="NIRWFS-Strehl_v_lambda.png" alt="NIRWFS-Strehl_v_lambda"
-                            width="600"> </a></th>
-                <th><a href="NIRWFS-Strehl_X Boo.png"> <img src="NIRWFS-Strehl_X Boo.png" alt="NIRWFS-Strehl_X"
-                            width="600"> </a></th>
-            </tr>
-            <tr>
-                <th><center>
-                    <i>Strehl ratio measurements for the best frame of each target, for each wavelength slice of CHARIS in broadand mode. Most curves tend to plateau and even decrease after 2 &mu;m, which is probably an effect of the increased thermal background that was not subtracted properly. Otherwise, the Strehl ratio evolves pretty linearly with wavelength.
-                    </i>
-                </center></th>
-                <th><center>
-                    <i>Strehl ratio measurements on the target X Boo, for all the 30 s CHARIS frames recorded on this target.
-                    </i>
-                </center></th>
-            </tr>
-        </table>
 
-        <h3>Strehl Ratio vs. separation</h3>
+                    <h2>Strehl Ratio Measurements</h2>
 
-        <table style="width:100%">
-            <tr>
-                <th><a href="NIRWFS-SR_anisoplanetism.png"> <img src="NIRWFS-SR_anisoplanetism.png" alt="NIRWFS-SR_anisoplanetism"
-                            width="800"> </a></th>
-            </tr>
-            <tr>
-                <th><center>
-                    <i>Strehl ratio measurements on the binary &xi; Boo AB (H-mag ~5 for both stars). The loop was closed on &xi; Boo A, then the NIR WFS was steered on the companion &xi; Boo B. The seeing was about 0.8” with high altitude turbulence and relatively high wind. The Strehl ratio of &xi; Boo B is reduced by ~50% compared to &xi; Boo A, with a strong wind-driver halo visible. The effect of anisoplanetism depends strongly on the atmospheric conditions.
-                        
-                    </i>
-                </center></th>
-            </tr>
-        </table>
+                    <h3>Conditions and Targets</h3>
 
-        <h2>Latency</h2>
+                    <p>The on-sky results presented below where taken during the engineering night of May 3, 2023. We
+                        ran the AO loop at 500 Hz with the YJH50 dichroic beamsplitter (see the <a
+                            href="../010technicaldescr.web/index.html">Technical description</a> page for more details).
+                        The seeing was above average: 0.7 to 1.1". We observed several targets with similar magnitudes
+                        in J and H. Images were recorded with SCExAO's internal SWIR camera Palila (First Light Imaging
+                        C-RED 2, y- to H-band), and the CHARIS integral field spectrograph in broadband mode (J- to
+                        K-band).</p>
 
-        <p>The hardware latency is the time between receiving an image and the command being first applied to the DM. It has to be as small as possible. 
-            It is measured by sending commands to the deformable mirror with small incremental delays, and measuring changes in the sensor. The ideal response would then be a triangle function with a rising time corresponding to the integration time, and the hardware latency the time when we reach the half-way point. This latency is independant of the loop frequency. </p>
-        
-        <table style="width:100%">
-            <tr>
-                <th><a href="NIRWFS-Latency_500Hz.png"> <img src="NIRWFS-Latency_500Hz.png" alt="NIRWFS-Latency_500Hz"
-                            width="500"> </a></th>
-                <th><a href="NIRWFS-Latency_2kHz.png"> <img src="NIRWFS-Latency_2kHz.png" alt="NIRWFS-Latency_2kHz"
-                            width="500"> </a></th>
-            </tr>
-            <tr>
-                <th><center>
-                    <i>Latency measurement at 500 Hz.</i>
-                </center></th>
-                <th><center>
-                    <i>Latency measurement at 2 kHz.</i>
-                </center></th>
-            </tr>
-        </table>
-        
-        <p>We measured the hardware latency to be 0.5 ms, independantly of the loop frequency as expected. This corresponds to 1 frame at 2 kHz, 0.5 frame at 1 kHz and 0.25 frame at 500 Hz. This is good, and should help in case of high wind. But we also noticed the strong mechanical resonance of the 188 DM at ~1.2 kHz, which limits the control at 1 kHz, and makes control at 2 kHz unlikely with the current AO188 DM. </p>
+                    <table style="width:100%">
+                        <tr>
+                            <th><a href="NIRWFS-SR_images.png"> <img src="NIRWFS-SR_images.png" alt="NIRWFS-SR_images"
+                                        width="600"> </a></th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <center>
+                                    <i>H-band Strehl measurements obtained with SCExAO's Palila camera, over a few
+                                        seconds, for targets with various magnitudes. Each image is 2x2".</i>
+                                </center>
+                            </th>
+                        </tr>
+                    </table>
 
-        
-        <h2>Field of View (FoV)</h2>
-        
-        
-        <p>There are two FoVs to consider: The FoV of the wavefront sensor in a fixed position, and the FoV of the instrument as a whole, including the steering capability (the patrol FoV).
-        In both PyWFS and FPWFS, the required FoV is 2.8x2.8”, defined by the control region of the ALPAO 64x64 DM. It is much smaller for the 188 DM. The FoV of the PyWFS was measured at 5x6”, and the FoV of the FPWFS is 4x5”.
-        The patrol FoV was measured by moving the calibration source and recentering the image using the steering mirror.
-        It is over ±10” vertically, >+7 and <-20” horizontally. The range is good, but it will be centered better horizontally in the future.
-        </p>
-        
-        <table style="width:100%">
-            <tr>
-                <th><a href="NIRWFS-Capture_FoV.png"> <img src="NIRWFS-Capture_FoV.png" alt="NIRWFS-Capture_FoV"
-                            width="500"> </a></th>
-            </tr>
-            <tr>
-                <th><center>
-                    <i>PyWFS images for extreme off-axis targets, where a vignetting starts to be noticed.</i>
-                </center></th>
-            </tr>
-        </table>
+                    <h3>Strehl Ratio vs. H-band Magnitude</h3>
 
-        
-        
-        
-        
-        
-    </tbody>
-</table>
+                    <table style="width:100%">
+                        <tr>
+                            <th><a href="NIRWFS-SR_v_mag.png"> <img src="NIRWFS-SR_v_mag.png" alt="NIRWFS-SR_v_mag"
+                                        width="800"> </a></th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <center>
+                                    <i>Compilation of all the Strehl measurements taken with SCExAO's Palila camera in
+                                        y-, J- and H-band. This includes times where we were tuning various parameters,
+                                        so some Strehl values can be much lower than optimal. The higher values for each
+                                        magnitude would represent the performance of the loop in normal conditions. The
+                                        Strehl ratio is over 40% until magnitude ~9, then decreases. This was done with
+                                        the YJH50 dichroic, so the result would be shifted by ~+0.75 magnitude with the
+                                        K-band dichroic, and ~-1.75 with the YJH90 dichroic.</i>
+                                </center>
+                            </th>
+                        </tr>
+                    </table>
 
+                    <h3>Strehl Ratio vs. wavelength</h3>
+
+                    <table style="width:100%">
+                        <tr>
+                            <th><a href="NIRWFS-SR_images_wavelength.png"> <img src="NIRWFS-SR_images_wavelength.png"
+                                        alt="NIRWFS-SR_images_wavelength" width="800"> </a></th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <center>
+                                    <i>Strehl ratio measurements in y-, J- and H-band with SCExAO's Palila camera, on
+                                        the target &alpha; Boo. A dark hole (control region of the deformable mirror) is
+                                        visible, even at short wavelengths. This is a sign that the correction is
+                                        excellent, even better than with the curvature wavefront sensor for which this
+                                        dark hole was never observed.
+                                    </i>
+                                </center>
+                            </th>
+                        </tr>
+                    </table>
+
+                    <table style="width:100%">
+                        <tr>
+                            <th><a href="NIRWFS-SR_images_CHARIS.png"> <img src="NIRWFS-SR_images_CHARIS.png"
+                                        alt="NIRWFS-SR_images_CHARIS" width="800"> </a></th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <center>
+                                    <i>Strehl ratio measurements in J-, H- and K-band with CHARIS, on the target X Boo.
+                                        A dark hole (control region of the deformable mirror) is visible, even at short
+                                        wavelengths. This is a sign that the correction is excellent, even better than
+                                        with the curvature wavefront sensor for which this dark hole was never observed.
+                                    </i>
+                                </center>
+                            </th>
+                        </tr>
+                    </table>
+
+                    <table style="width:100%">
+                        <tr>
+                            <th><a href="NIRWFS-Strehl_v_lambda.png"> <img src="NIRWFS-Strehl_v_lambda.png"
+                                        alt="NIRWFS-Strehl_v_lambda" width="600"> </a></th>
+                            <th><a href="NIRWFS-Strehl_X Boo.png"> <img src="NIRWFS-Strehl_X Boo.png"
+                                        alt="NIRWFS-Strehl_X" width="600"> </a></th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <center>
+                                    <i>Strehl ratio measurements for the best frame of each target, for each wavelength
+                                        slice of CHARIS in broadand mode. Most curves tend to plateau and even decrease
+                                        after 2 &mu;m, which is probably an effect of the increased thermal background
+                                        that was not subtracted properly. Otherwise, the Strehl ratio evolves pretty
+                                        linearly with wavelength.
+                                    </i>
+                                </center>
+                            </th>
+                            <th>
+                                <center>
+                                    <i>Strehl ratio measurements on the target X Boo, for all the 30 s CHARIS frames
+                                        recorded on this target.
+                                    </i>
+                                </center>
+                            </th>
+                        </tr>
+                    </table>
+
+                    <h3>Strehl Ratio vs. separation</h3>
+
+                    <table style="width:100%">
+                        <tr>
+                            <th><a href="NIRWFS-SR_anisoplanetism.png"> <img src="NIRWFS-SR_anisoplanetism.png"
+                                        alt="NIRWFS-SR_anisoplanetism" width="800"> </a></th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <center>
+                                    <i>Strehl ratio measurements on the binary &xi; Boo AB (H-mag ~5 for both stars).
+                                        The loop was closed on &xi; Boo A, then the NIR WFS was steered on the companion
+                                        &xi; Boo B. The seeing was about 0.8” with high altitude turbulence and
+                                        relatively high wind. The Strehl ratio of &xi; Boo B is reduced by ~50% compared
+                                        to &xi; Boo A, with a strong wind-driver halo visible. The effect of
+                                        anisoplanetism depends strongly on the atmospheric conditions.
+
+                                    </i>
+                                </center>
+                            </th>
+                        </tr>
+                    </table>
+
+                    <h2>Latency</h2>
+
+                    <p>The hardware latency is the time between receiving an image and the command being first applied
+                        to the DM. It has to be as small as possible.
+                        It is measured by sending commands to the deformable mirror with small incremental delays, and
+                        measuring changes in the sensor. The ideal response would then be a triangle function with a
+                        rising time corresponding to the integration time, and the hardware latency the time when we
+                        reach the half-way point. This latency is independant of the loop frequency. </p>
+
+                    <table style="width:100%">
+                        <tr>
+                            <th><a href="NIRWFS-Latency_500Hz.png"> <img src="NIRWFS-Latency_500Hz.png"
+                                        alt="NIRWFS-Latency_500Hz" width="500"> </a></th>
+                            <th><a href="NIRWFS-Latency_2kHz.png"> <img src="NIRWFS-Latency_2kHz.png"
+                                        alt="NIRWFS-Latency_2kHz" width="500"> </a></th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <center>
+                                    <i>Latency measurement at 500 Hz.</i>
+                                </center>
+                            </th>
+                            <th>
+                                <center>
+                                    <i>Latency measurement at 2 kHz.</i>
+                                </center>
+                            </th>
+                        </tr>
+                    </table>
+
+                    <p>We measured the hardware latency to be 0.5 ms, independantly of the loop frequency as expected.
+                        This corresponds to 1 frame at 2 kHz, 0.5 frame at 1 kHz and 0.25 frame at 500 Hz. This is good,
+                        and should help in case of high wind. But we also noticed the strong mechanical resonance of the
+                        188 DM at ~1.2 kHz, which limits the control at 1 kHz, and makes control at 2 kHz unlikely with
+                        the current AO188 DM. </p>
+
+
+                    <h2>Field of View (FoV)</h2>
+
+
+                    <p>There are two FoVs to consider: The FoV of the wavefront sensor in a fixed position, and the FoV
+                        of the instrument as a whole, including the steering capability (the patrol FoV).
+                        In both PyWFS and FPWFS, the required FoV is 2.8x2.8”, defined by the control region of the
+                        ALPAO 64x64 DM. It is much smaller for the 188 DM. The FoV of the PyWFS was measured at 5x6”,
+                        and the FoV of the FPWFS is 4x5”.
+                        The patrol FoV was measured by moving the calibration source and recentering the image using the
+                        steering mirror.
+                        It is over ±10” vertically, >+7 and <-20” horizontally. The range is good, but it will be
+                            centered better horizontally in the future. </p>
+
+                            <table style="width:100%">
+                                <tr>
+                                    <th><a href="NIRWFS-Capture_FoV.png"> <img src="NIRWFS-Capture_FoV.png"
+                                                alt="NIRWFS-Capture_FoV" width="500"> </a></th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <center>
+                                            <i>PyWFS images for extreme off-axis targets, where a vignetting starts to
+                                                be noticed.</i>
+                                        </center>
+                                    </th>
+                                </tr>
+                            </table>
+
+
+
+
+
+
+        </tbody>
+    </table>
