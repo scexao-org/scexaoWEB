@@ -51,11 +51,11 @@
 
                                     <p style="margin-left:15px;margin-top:-15px">
                                         The NIR WFS is a PI-type module of AO188 offered starting semester S24A in
-                                        shared-risk mode. According to Subaru Telescope's rules for PI-type instruments,
-                                        please contact and include the PI, Julien Lozi (lozi_at_naoj.org), if you plan
-                                        on submitting a proposal. If your proposal targets the galactic center, please
-                                        also contact and include co-I Shogo Nishiyama
-                                        (shogo-n_at_staff.miyakyo-u.ac.jp).</p>
+                                        shared-risk mode. Service observations are not offered with the NIR WFS.
+                                        According to Subaru Telescope's rules for PI-type instruments, please contact
+                                        and include the PI, Julien Lozi (lozi_at_naoj.org), if you plan on submitting a
+                                        proposal. If your proposal targets the galactic center, please also contact and
+                                        include co-I Shogo Nishiyama (shogo-n_at_staff.miyakyo-u.ac.jp).</p>
 
                                     Before preparing the proposal, <font color="#FF0000"> please read <a
                                             href="./030observing.web/index.html">Planning Observations</a> very
@@ -74,7 +74,8 @@
                         The Near Infrared Wavefront Sensor (NIR WFS) is a wavefront sensor located inside the <a
                             href="https://www.naoj.org/Observing/Instruments/AO/performance.html">AO188</a> adaptive
                         optics system of the Subaru Telescope. It uses most of the AO188 optics, and replaces the
-                        visible curvature wavefront sensor to control the 188-element bimoprh deformable mirror to
+                        visible curvature wavefront sensor (CWFS) to control the 188-element bimoprh deformable mirror
+                        to
                         perform the wavefront correction. It has three modes: a Pyramid WFS mode (PyWFS), a Focal Plane
                         WFS mode (FPWFS) and a pupil imaging mode (See <a
                             href="./010technicaldescr.web/index.html">Technical description</a> for more information
@@ -98,35 +99,17 @@
 
                     <p>
                         The NIR WFS only operates in NGS mode. It requires a bright star within 10 arcsec from the
-                        science target.
-                        A target brighter than H-mag = 9 to 13 is required to obtain a reasonable correction, depending
-                        on the spectrum of the star, and the dichroic beamsplitter pickoff selected (See <a
-                            href="./030observing.web/index.html">Planning Observations</a> for more information). We
-                        demonstrated excellent performance in above-average seeing of ~0.8", with Strehl ratios up to
-                        ~75% in K-band (See <a href="./020performance.web/index.html">Performance</a> for more details).
+                        science target. A target brighter than H-mag = 9 to 13 is required to obtain a reasonable
+                        correction, depending on the spectrum of the star, and the dichroic beamsplitter pickoff
+                        selected.
+                        <b>We cannot switch between dichroics during the same night. We cannot switch between
+                            the NIR WFS and the current visible CWFS during the same night either.</b>
+                        See <a href="./030observing.web/index.html">Planning Observations</a> for more information.
                     </p>
 
-                    <h2> Modes supported in S24A</h2>
-
-                    <h3>SCExAO</h3>
-                    The NIR WFS can be used with the following SCExAO modes :
-                    <ul>
-                        <li>CHARIS low-red broadband</li>
-                        <li>CHARIS hi-red J, H or K-band</li>
-                        <li>VAMPIRES imaging</li>
-                        <li>MEC y and J band</li>
-                        <li>REACH (Single mode fiber injection inside SCExAO feeding IRD</li>
-                    </ul>
-
-                    <h3>IRCS</h3>
-                    The NIR WFS can be used with the following IRCS modes :
-                    <ul>
-                        <li>20 mas imaging mode with Y- , J- , H- , and K-band</li>
-                        <li>Echelle mode with zJ- , J- , H- , and K-band</li>
-                    </ul>
-
-
-
+                    <p>
+                        We demonstrated excellent performance in above-average seeing of ~0.8", with Strehl ratios up to
+                        ~75% in K-band (See <a href="./020performance.web/index.html">Performance</a> for more details).
                     </p>
                     <p>
                     <table align="center" border="0" cellpadding="5">
@@ -149,6 +132,154 @@
                             </tr>
                         </tbody>
                     </table>
+
+                    <h2> Modes supported in S24A</h2>
+
+                    <h3>SCExAO</h3>
+                    The NIR WFS can be used with the following SCExAO modes :
+                    <ul>
+                        <li>CHARIS low-red broadband</li>
+                        <li>CHARIS hi-red J, H or K-band</li>
+                        <li>VAMPIRES imaging</li>
+                        <li>MEC y and J band</li>
+                        <li>REACH (Single mode fiber injection inside SCExAO feeding IRD</li>
+                    </ul>
+
+                    <h3>IRCS</h3>
+                    The NIR WFS can be used with the following IRCS modes :
+                    <ul>
+                        <li>20 mas imaging mode with Y- , J- , H- , and K-band</li>
+                        <li>Echelle mode with zJ- , J- , H- , and K-band</li>
+                    </ul>
+
+                    <h3>Dichroics availability for each mode</h3>
+                    <table align="center" bgcolor="#98ffff" border="4" cellspacing="0" cellpadding="3">
+                        <tbody>
+                            <tr>
+                                <th>Dichroics </th>
+                                <th colspan="4">SCExAO/<br>CHARIS</th>
+                                <th>SCExAO/<br>VAMPIRES</th>
+                                <th colspan="2">SCExAO/<br>MEC</th>
+                                <th>SCExAO/<br>REACH</th>
+                                <th colspan="8">IRCS</th>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>lo-res</th>
+                                <th colspan="3">hi-res</th>
+                                <th>imaging</th>
+                                <th colspan="2">spectro-imaging</th>
+                                <th>spectro</th>
+                                <th colspan="4">imaging</th>
+                                <th colspan="4">echelle spectro</th>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>J+H+K</th>
+                                <th>J</th>
+                                <th>H</th>
+                                <th>K</th>
+                                <th>I</th>
+                                <th>Y</th>
+                                <th>Y+J</th>
+                                <th>Y+J+H</th>
+                                <th>Y</th>
+                                <th>J</th>
+                                <th>H</th>
+                                <th>K</th>
+                                <th>zJ</th>
+                                <th>J</th>
+                                <th>H</th>
+                                <th>K</th>
+                            </tr>
+                            <tr>
+                                <td>K-band</td>
+                                <td>Yes*</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>Yes</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>Yes</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>Yes</td>
+                            </tr>
+
+                            <tr>
+                                <td>YJH50</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                            </tr>
+
+                            <tr>
+                                <td>YJH90</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                            </tr>
+
+                            <tr>
+                                <td>Vis-HK</td>
+                                <td>Yes&dagger;</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>Yes&Dagger;</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                            </tr>
+
+                            <tr>
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <center>* No J and H-band. &dagger; No J-band. &Dagger; No Y- and J-band.</center>
+
 
                     <h2>Basic parameters</h2>
 
