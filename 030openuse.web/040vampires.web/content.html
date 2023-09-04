@@ -111,13 +111,14 @@ in addition to a new multi-band imaging (MBI) mode.</p>
 <table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
   <thead>
     <tr>
-      <th colspan=4> VAMPIRES Camera Parameters</th>
+      <th colspan=5> VAMPIRES Camera Parameters</th>
     </tr>
     <tr>
       <th>Camera</th>
       <th>Readout Mode</th>
       <th>Read noise (e-)</th>
       <th>Gain (e-/adu)</th>
+      <th>DC (e-/px/s)</th>
     </tr>
   </thead>
   <tbody>
@@ -126,6 +127,7 @@ in addition to a new multi-band imaging (MBI) mode.</p>
     <td>fast</td>
     <td>0.403</td>
     <td>0.103</td>
+    <td rowspan=2>3.58e-3</td>
   </tr>
   <tr>
     <td>slow</td>
@@ -137,6 +139,7 @@ in addition to a new multi-band imaging (MBI) mode.</p>
     <td>fast</td>
     <td>0.399</td>
     <td>0.103</td>
+    <td rowspan=2>3.50e-3</td>
   </tr>
   <tr>
     <td>slow</td>
@@ -145,7 +148,7 @@ in addition to a new multi-band imaging (MBI) mode.</p>
   </tr>
 </tbody>
 </table>
-<legend>Data for these calibrations can be found <a href="https://drive.google.com/file/d/1OCrzQZ2RWxgiij6FqE9k0Pfh7kfPQBKV/view?usp=sharing">here</a>.</legend>
+<legend>Data for these calibrations can be found <a href="https://drive.google.com/file/d/1jcuePNK8vq-Hh9-g09YmR7sKa_00N_KS/view?usp=sharing">here</a>.</legend>
 <p>These CMOS cameras are capable of photon counting in the low read noise "slow" mode. The plot below shows a photon counting histogram fit to an 800x256 pixel subwindow in slow mode. Being able to separate the peaks in the Poisson distribution allows a read-noise-free estimate of ultra-low signals (in this case, 0.744 e-).</p>
 
 <center>
@@ -163,39 +166,43 @@ in addition to a new multi-band imaging (MBI) mode.</p>
 <table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
   <thead>
     <tr>
-      <th colspan=6>VAMPIRES Standard Filters</th>
+      <th colspan=7>VAMPIRES Standard Filters</th>
     </tr>
     <tr>
-    <th>Filter name</th>
-    <th>Central wavelength (nm)</th>
-    <th>Effective width (nm)</th>
-    <th>Cut-on/off wavelengths* (nm)</th>
-    <th>Zero-point** (photon/sec)</th>
-    <th>Notes</th>
+    <th rowspan=2>Filter name</th>
+    <th rowspan=2>Central wavelength (nm)</th>
+    <th rowspan=2>Effective width (nm)</th>
+    <th rowspan=2>Cut-on/off wavelengths* (nm)</th>
+    <th colspan=2>Zero point**</th>
+    <th rowspan=2>Notes</th>
+  </tr>
+  <tr>
+    <th>e-/s</th>
+    <th>mag</th>
   </tr>
   </thead>
   <tbody>
     <tr>
-      <td>625-50</td><td>625</td><td>48</td><td>599 - 652</td><td></td><td>Overlaps with AO188 dichroic- poor throughput</td>
+      <td>625-50</td><td>625</td><td>48</td><td>599 - 652</td><td>4.56e10</td><td>26.6</td><td>Poor calibration source throughput</td>
     </tr>
     <tr>
-      <td>675-50</td><td>675</td><td>48</td><td>649 - 702</td><td></td><td></td>
+      <td>675-50</td><td>675</td><td>48</td><td>649 - 702</td><td>6.47e10</td><td>27.0</td><td></td>
     </tr>
     <tr>
-      <td>725-50</td><td>725</td><td>48</td><td>699 - 751</td><td></td><td>Optimal polarimetric efficiency.</td>
+      <td>725-50</td><td>725</td><td>48</td><td>699 - 751</td><td>7.10e10</td><td>27.1</td><td>Optimal polarimetric efficiency.</td>
     </tr>
     <tr>
-      <td>750-50</td><td>748</td><td>48</td><td>722 - 774</td><td>9.62e9</td><td></td>
+      <td>750-50</td><td>748</td><td>48</td><td>722 - 774</td><td>5.96e10</td><td>26.9</td><td></td>
     </tr>
     <tr>
-      <td>775-50</td><td>763</td><td>26</td><td>748 - 778</td><td></td><td>Overlaps with PyWFS dichroic</td>
+      <td>775-50</td><td>763</td><td>26</td><td>748 - 778</td><td>1.91e10</td><td>25.7</td><td>Overlaps with PyWFS dichroic</td>
     </tr>
     <tr>
-      <td>Open</td><td>678</td><td>192</td><td>566 - 778</td><td></td><td>Constrained by AO188 dichroic and PyWFS dichroic.</td>
+      <td>Open</td><td>678</td><td>192</td><td>566 - 778</td><td>2.27e11</td><td>28.4</td><td>Constrained by AO188 dichroic and PyWFS dichroic.</td>
     </tr>
   </tbody>
 </table>
-<legend>*: Cut-on/Cut-off wavelengths are where the filter has at least 10% transmission<br>**: Zero-point assumes no beamsplitter</legend>
+<legend>*: Cut-on/Cut-off wavelengths are where the filter has at least 10% transmission<br>**: Zero-point assumes no beamsplitter (<a href="https://drive.google.com/file/d/1A6PO9VOo1hF8PwlPYcq0mMDhDy-48cyD/view?usp=drive_link">Link to raw data</a>).</legend>
 </p>
 
 <center>
@@ -224,33 +231,37 @@ in addition to a new multi-band imaging (MBI) mode.</p>
 <p><table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
   <thead>
     <tr>
-      <th colspan=6>VAMPIRES MBI Filters</th>
+      <th colspan=7>VAMPIRES MBI Filters</th>
     </tr>
     <tr>
-      <th>Filter name</th>
-      <th>Central wavelength (nm)</th>
-      <th>Effective width (nm)</th>
-      <th>Cut-on/off wavelengths* (nm)</th>
-      <th>Zero-point** (photon/sec)</th>
-      <th>Notes</th>
+      <th rowspan=2>Filter name</th>
+      <th rowspan=2>Central wavelength (nm)</th>
+      <th rowspan=2>Effective width (nm)</th>
+      <th rowspan=2>Cut-on/off wavelengths* (nm)</th>
+      <th colspan=2>Zero point**</th>
+      <th rowspan=2>Notes</th>
+    </tr>
+    <tr>
+      <th>e-/s</th>
+      <th>mag</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>F610</td><td>612</td><td>60</td><td>569 - 646</td><td></td><td>Overlaps with AO188 dichroic</td>
+      <td>F610</td><td>612</td><td>60</td><td>569 - 646</td><td></td><td></td><td>Overlaps with AO188 dichroic; poor calibration source throughput</td>
     </tr>
     <tr>
-      <td>F670</td><td>670</td><td>43</td><td>644 - 695</td><td></td><td></td>
+      <td>F670</td><td>670</td><td>43</td><td>644 - 695</td><td></td><td></td><td></td>
     </tr>
     <tr>
-      <td>F720</td><td>719</td><td>46</td><td>693 - 744</td><td></td><td></td>
+      <td>F720</td><td>719</td><td>46</td><td>693 - 744</td><td></td><td></td><td></td>
     </tr>
     <tr>
-      <td>F760</td><td>760</td><td>32</td><td>742 - 778</td><td></td><td>Overlaps with PyWFS dichroic</td>
+      <td>F760</td><td>760</td><td>32</td><td>742 - 778</td><td></td><td></td><td>Overlaps with PyWFS dichroic</td>
     </tr>
   </tbody>
 </table>
-<legend>*: Cut-on/Cut-off wavelengths are where the filter has at least 10% transmission<br>**: Zero-point assumes no beamsplitter</legend></p>
+<legend>*: Cut-on/Cut-off wavelengths are where the filter has at least 10% transmission<br>**: Zero point assumes no beamsplitter (<a href="https://drive.google.com/file/d/1A6PO9VOo1hF8PwlPYcq0mMDhDy-48cyD/view?usp=drive_link">Link to raw data</a>)</legend></p>
 
 <center>
   <img border="0" src="vampires_mbi_filters.png" alt="VAMPIRES MBI filters" width="75%">
@@ -352,7 +363,7 @@ in addition to a new multi-band imaging (MBI) mode.</p>
 
 <h2>Narrowband / Spectral Differential Imaging</h2>
 
-<p>Simultaneous spectral differential imaging (SDI) using either H-alpha or SII lines can be performed. Imaging is performed simultaneously on two cameras via a non-polarizing beamsplitter, with an H-alpha (or SII) filter before one camera and an adjacent continuum filter before the other. Filters can be rapidly swapped between cameras to help calibrate non common path errors. This mode may be used with both aperture-masking and full-pupil imaging.</p>
+<p>Simultaneous spectral differential imaging (SDI) using either H-alpha or SII lines can be performed. Imaging is performed simultaneously on two cameras via a non-polarizing beamsplitter, with an H-alpha (or SII) filter before one camera and an adjacent continuum filter before the other. Filters can be rapidly swapped between cameras to help calibrate non common path errors. This mode may be used with both aperture-masking and full-pupil imaging and is compatible with polarimetry.</p>
   
 <p>Current contrast limits are 1e-3 at 50 mas and 1e-4 at &gt;350 mas (Feb. 2019). Note this mode is in continuous development and contrast limits are expected to further improve.</p>
 
@@ -362,29 +373,33 @@ in addition to a new multi-band imaging (MBI) mode.</p>
       <th colspan=6>VAMPIRES Narrowband Filters</th>
     </tr>
     <tr>
-      <th>Filter name</th>
-      <th>Central wavelength (nm)</th>
-      <th>Effective width (nm)</th>
-      <th>Cut-on/off wavelengths* (nm)</th>
-      <th>Zero-point** (photon/sec)</th>
+      <th rowspan=2>Filter name</th>
+      <th rowspan=2>Central wavelength (nm)</th>
+      <th rowspan=2>Effective width (nm)</th>
+      <th rowspan=2>Cut-on/off wavelengths* (nm)</th>
+      <th colspan=2>Zero point**</th>
+    </tr>
+    <tr>
+      <th>e-/s</th>
+      <th>mag</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Ha</td><td>656.3</td><td>1</td><td>655.7 - 656.9</td><td></td>
+      <td>Ha</td><td>656.3</td><td>1</td><td>655.7 - 656.9</td><td>6.87e8</td><td>22.1</td>
     </tr>
     <tr>
-      <td>Ha-cont</td><td>647.7</td><td>2</td><td>646.4 - 649.1</td><td></td>
+      <td>Ha-Cont</td><td>647.7</td><td>2</td><td>646.4 - 649.1</td><td>2.82e9</td><td>23.6</td>
     </tr>
     <tr>
-      <td>SII</td><td>672.7</td><td>3</td><td>670.7 - 674.5</td><td></td>
+      <td>SII</td><td>672.7</td><td>3</td><td>670.7 - 674.5</td><td>4.29e9</td><td>24.1</td>
     </tr>
     <tr>
-      <td>SII-cont</td><td>681.5</td><td>3</td><td>679.6 - 683.4</td><td></td>
+      <td>SII-Cont</td><td>681.5</td><td>3</td><td>679.6 - 683.4</td><td>4.05e9</td><td>24.0</td>
     </tr>
   </tbody>
 </table>
-<legend>*: Cut-on/Cut-off wavelengths are where the filter has at least 10% transmission<br>**: Zero-point assumes no beamsplitter</legend></p>
+<legend>*: Cut-on/Cut-off wavelengths are where the filter has at least 10% transmission<br>**: Zero point assumes no beamsplitter (<a href="https://drive.google.com/file/d/1A6PO9VOo1hF8PwlPYcq0mMDhDy-48cyD/view?usp=drive_link">Link to raw data</a>)</legend></p>
 
 <center>
   <img border="0" src="vampires_narrowband_filters.png" alt="VAMPIRES narrowband filters" width="75%">
