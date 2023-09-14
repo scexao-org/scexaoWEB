@@ -4,7 +4,7 @@
 
 <hr>
 
-<h2>Note for observers: VAMPIRES Upgrades (S23B)</h2>
+<h2>Note for observers: 2023 VAMPIRES Upgrades</h2>
 
 <p>VAMPIRES underwent significant upgrades in June 2023, prior to the 23B observing semester. These upgrades improved the sensitivity, speed, and dynamic range of the instrument along with the addition of a multi-band imaging mode. The core of the VAMPIRES upgrade were the switch from <a href="https://andor.oxinst.com/products/ixon-emccd-camera-series/ixon-ultra-897">EM-CCD detectors</a> to <a href="https://www.hamamatsu.com/us/en/product/cameras/qcmos-cameras/C15550-20UP.html">ultra-low read noise CMOS detectors</a>.</p>
 
@@ -18,7 +18,7 @@
 </ul>
 in addition to a new multi-band imaging (MBI) mode.</p>
 
-<p>New calibrations will be done to fully characterize the system, including zero-points, contrast curves, polarimetric efficiency, and astrometric calibration. Observers are recommended to get in contact with the SCExAO team if proposing for VAMPIRES in S23B (cc <a href="mailto:mdlucas@hawaii.edu">Miles Lucas</a>).</p>
+<p>New calibrations will be done to fully characterize the system, including zero-points, contrast curves, polarimetric efficiency, and astrometric calibration. Observers are recommended to get in contact with the SCExAO team if proposing for VAMPIRES (cc <a href="mailto:mdlucas@hawaii.edu">Miles Lucas</a>).</p>
 
 <hr>
 
@@ -63,13 +63,57 @@ in addition to a new multi-band imaging (MBI) mode.</p>
 <table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
   <thead>
     <tr>
+      <th colspan=5> VAMPIRES Camera Parameters</th>
+    </tr>
+    <tr>
+      <th>Camera</th>
+      <th>Readout mode</th>
+      <th>Read noise (e-)</th>
+      <th>Gain (e-/adu)</th>
+      <th>DC (e-/px/s)</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td rowspan=2>Cam 1</td>
+    <td>fast</td>
+    <td>0.403</td>
+    <td>0.103</td>
+    <td rowspan=2>3.58e-3</td>
+  </tr>
+  <tr>
+    <td>slow</td>
+    <td>0.245</td>
+    <td>0.105</td>
+  </tr>
+  <tr>
+    <td rowspan=2>Cam 2</td>
+    <td>fast</td>
+    <td>0.399</td>
+    <td>0.103</td>
+    <td rowspan=2>3.50e-3</td>
+  </tr>
+  <tr>
+    <td>slow</td>
+    <td>0.220</td>
+    <td>0.105</td>
+  </tr>
+</tbody>
+</table>
+<legend>Data for these calibrations can be found <a href="https://drive.google.com/file/d/1jcuePNK8vq-Hh9-g09YmR7sKa_00N_KS/view?usp=sharing">here</a>.</legend>
+
+<br>
+
+<table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
+  <thead>
+    <tr>
       <th colspan=4> VAMPIRES Camera Modes</th>
     </tr>
     <tr>
-      <th>Camera Mode</th>
-      <th>Frame Size (px)</th>
-      <th>Readout Mode</th>
-      <th>Max. Framerate (Hz)</th>
+      <th>Mode</th>
+      <th>Size (px)</th>
+      <th>Readout mode</th>
+      <th>Max. framerate (Hz)</th>
   </thead>
   <tbody>
   <tr>
@@ -106,49 +150,6 @@ in addition to a new multi-band imaging (MBI) mode.</p>
 </table>
 <legend>*: MBI-reduced (MBIR) mode crops out the F610 field for faster readout speeds.</legend>
 
-<br>
-
-<table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
-  <thead>
-    <tr>
-      <th colspan=5> VAMPIRES Camera Parameters</th>
-    </tr>
-    <tr>
-      <th>Camera</th>
-      <th>Readout Mode</th>
-      <th>Read noise (e-)</th>
-      <th>Gain (e-/adu)</th>
-      <th>DC (e-/px/s)</th>
-    </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td rowspan=2>Cam 1</td>
-    <td>fast</td>
-    <td>0.403</td>
-    <td>0.103</td>
-    <td rowspan=2>3.58e-3</td>
-  </tr>
-  <tr>
-    <td>slow</td>
-    <td>0.245</td>
-    <td>0.105</td>
-  </tr>
-  <tr>
-    <td rowspan=2>Cam 2</td>
-    <td>fast</td>
-    <td>0.399</td>
-    <td>0.103</td>
-    <td rowspan=2>3.50e-3</td>
-  </tr>
-  <tr>
-    <td>slow</td>
-    <td>0.220</td>
-    <td>0.105</td>
-  </tr>
-</tbody>
-</table>
-<legend>Data for these calibrations can be found <a href="https://drive.google.com/file/d/1jcuePNK8vq-Hh9-g09YmR7sKa_00N_KS/view?usp=sharing">here</a>.</legend>
 <p>These CMOS cameras are capable of photon counting in the low read noise "slow" mode. The plot below shows a photon counting histogram fit to an 800x256 pixel subwindow in slow mode. Being able to separate the peaks in the Poisson distribution allows a read-noise-free estimate of ultra-low signals (in this case, 0.744 e-).</p>
 
 <center>
@@ -303,14 +304,24 @@ in addition to a new multi-band imaging (MBI) mode.</p>
 
 <h2>Coronagraphy</h2>
 
-<p>VAMPIRES is equipped with a classic Lyot coronagraph with the combination of a focal-plane mask and a pupil stop. The coronagraph can be used with any full-pupil observing mode (i.e., cannot be used with the sparse aperture masks). For moderately bright targets (6 &lt I &lt 8 mag) the coronagraph can be deployed without the Lyot stop to maximize the signal-to-noise ratio at the cost of diffraction control (e.g., protoplanetary disk imaging). See the <a href="./100vampcoronagraph.web/indexm.html">coronagraph section</a> for more details.</p>
+<p>VAMPIRES is equipped with a classic Lyot coronagraph with the combination of a focal-plane mask and a pupil stop. The coronagraph can be used with any full-pupil observing mode (i.e., cannot be used with the sparse aperture masks). For moderately faint targets (9 &lt I &lt 11 mag) the coronagraph can be deployed without the Lyot stop to maximize the signal-to-noise ratio at the cost of diffraction control (e.g., protoplanetary disk imaging).</p>
+
+<p>
+  For a more detailed description of the design, deployment, and characterization of the coronagraph, please refer to this SPIE proceedings paper-
+</p>
+<blockquote cite="https://ui.adsabs.harvard.edu/abs/2022arXiv220802380L/abstract">
+  <a href="https://ui.adsabs.harvard.edu/abs/2022arXiv220802380L/abstract">A Visible-light Lyot Coronagraph for SCExAO/VAMPIRES</a>
+</blockquote>
+<p>
+  This also serves as the primary reference for the coronagraph.
+</p>
 
 <table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
-  <tr><th colspan=3> VAMPIRES Coronagraph</th></tr>
+  <tr><th colspan=3> VAMPIRES Coronagraphy</th></tr>
   <tr>
     <td>IWA</td>
-    <td>36, 55, 92, and 129 mas</td>
-    <td>Focal plane mask inner working angle. Roughly 2, 3, 5, and 7 lambda/D at 750 nm.</td>
+    <td>37, 59, 104, and 150 mas</td>
+    <td>Focal plane mask inner working angles. Roughly 2, 3, 5, and 7 λ/D at 750 nm.</td>
   </tr>
   <tr>
     <td>Lyot throughput</td>
@@ -332,6 +343,57 @@ in addition to a new multi-band imaging (MBI) mode.</p>
 <h3>Calibration</h3>
 
 <p>Calibration is performed via artifical speckles generated by the deformable mirror which have a known angular offset and differential photometry compared to the star. This allows astrometric and photometric calibration of the star behind the focal plane mask.</p>
+
+<h3>Focal plane masks</h3>
+
+<table border="1px" cellpadding="10px" cellspacing="0px" style="text-align:center;">
+  <thead>
+    <tr>
+      <th colspan="4">VAMPIRES Focal Plane Masks</th>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <th>Mask radius (μm)</th>
+      <th>IWA* (mas)</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CLC-2</td>
+      <td>46</td>
+      <td>37</td>
+      <td>Lots of leakage</td>
+    </tr>
+    <tr>
+      <td>CLC-3</td>
+      <td>69</td>
+      <td>59</td>
+      <td>Typical mask for polarimetric observations or good wavefront correction</td>
+    </tr>
+    <tr>
+      <td>CLC-5</td>
+      <td>116</td>
+      <td>104</td>
+      <td>Typical mask for mediocre wavefront correction</td>
+    </tr>
+    <tr>
+      <td>CLC-7</td>
+      <td>148</td>
+      <td>150</td>
+      <td>Not super well-matched to Lyot stop</td>
+    </tr>
+  </tbody>
+</table>
+<legend>*: Inner working angle (IWA) is the angular radius where 50% throughput is measured.</legend>
+<br>
+<center>
+  <img border="0" src="20230913_vampires_iwa.png" alt="VAMPIRES IWA" width="60%">
+  <p><small>
+    Normalized throughput curves using the internal calibration source. 50% throughput is marked with black horizontal line and the mask IWAs are marked with vertical dashed lines.
+  </small></p>
+</center>
+
 
 <hr>
 
