@@ -1,6 +1,374 @@
-<h1> AO3k </h1>
+<!DOCTYPE html>
+<html>
 
-<p> some text </p>
+<head>
+    <title>AO3k/NIRWFS</title>
+</head>
 
-blabla
+<body>
+    <table border="0" cellpadding="5">
+        <tbody>
+            <tr>
+                <!-- NAVIGATION BAR-->
+                <td class="nav" valign="top" width="10%">
+                    <!-- SUBARU LOGO-->
+                    <center>
+                        <a href="./index.html"><img src="./AO3k-logo.png" width="100%" border="0" align="center" vspace="10"
+                                hspace="17"></a>
+                    </center>
+                    <!-- NAVIGATION-->
+                    <span class="thispage">NIR WFS</span>
+                    <br><a href="./010technicaldescr.web/index.html" class="nav" style="margin-left:5px;">System</a>
+                    <br><a href="./020performance.web/index.html" class="nav" style="margin-left:5px;">Performance</a>
+                    <br><a href="./030observing.web/index.html" class="nav" style="margin-left:5px;">Observing</a>
+                    </div>
+                    </div>
 
+                <td>
+                    <!-- MAIN PAGE FOLLOWS -->
+                </td>
+
+
+                <!-- MAIN PAGE FOLLOWS-->
+                <td valign="top" width="100%">
+
+                    <h1 align="center"> AO3k-NIRWFS </h1>
+
+                    <a name="important"></a>
+
+                    <table bgcolor="#ffff98" border="2" cellpadding="3" align="center" width="80%">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>
+                                    </p>
+                                    <h2 align="center">Information for S25A observers</h2>
+
+                                    <p> <b>
+                                            <font color="#FF0000"> AO3k with NIR WFS is available to all observers in S25A. </font>
+                                        </b> </p>
+
+                                    <p style="margin-left:15px;margin-top:-15px">
+                                        The deformable mirror (DM) in Subaru Telescope's facility AO system (AO188) has been upgraded 
+                                        from a 188-element bimorph mirror to a 3228-actuator magnetic mirror. All observers
+                                        using the AO system will be using the new DM.
+                                        Three modes are available to observers: AO188/NGS, AO188/LGS and AO3k/NIRWFS. 
+                                        When using visible wavefront sensing (AO188/NGS and AO188/LGS), the wavefront correction 
+                                        is limited to the 188 modes sensed by the WFS, so the performance is unchanged from the 
+                                        previous (pre-S25A) AO system. When using the NIR WFS (AO3k/NIRWFS mode), the near-IR pyramid
+                                        wavefront sensor can control all illuminated actuators, providing high performance AO correction.
+                                        <br>
+                                        <b> AO observers may choose AO3k/NIRWFS instead of AO188/NGS for improved image quality. 
+                                        For science observations in J and H band, this will incur 
+                                        a 2x loss in NIR throughput, as 50% of the NIR light will be used for wavefront sensing with the YJH50 dichroic. 
+                                        For science observations in K-band, there is no loss in throughput with the K-band dichroic.
+                                        </b>
+                                        
+                                        
+                                        <br><hr><br>
+                                        
+                                        The NIR WFS is a PI-type module. Service observations are not offered with the NIR WFS.
+                                        According to Subaru Telescope's rules for PI-type instruments, please contact
+                                        and include the PI, Julien Lozi (lozi_at_naoj.org), if you plan on submitting a
+                                        proposal. If your proposal targets the galactic center, please also contact and
+                                        include co-I Shogo Nishiyama (shogo-n_at_staff.miyakyo-u.ac.jp)
+                                        </p>
+
+                                    Before preparing the proposal, <font color="#FF0000"> please read <a
+                                            href="./030observing.web/index.html">Planning Observations</a> very
+                                        carefully </font>.
+
+
+                                    <p></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2> Introduction </h2>
+
+                    <p>
+                        The Near Infrared Wavefront Sensor (NIR WFS) is a wavefront sensor located inside the <a
+                            href="https://www.naoj.org/Observing/Instruments/AO/performance.html">AO188</a> adaptive
+                        optics system of the Subaru Telescope. It uses most of the AO188 optics, and replaces the
+                        visible curvature wavefront sensor (CWFS) to control the 3228-element magnetic deformable mirror
+                        to
+                        perform the wavefront correction. It has three modes: a Pyramid WFS mode (PyWFS), a Focal Plane
+                        WFS mode (FPWFS) and a pupil imaging mode (See <a
+                            href="./010technicaldescr.web/index.html">Technical description</a> for more information
+                        about the design). Only the PyWFS mode will be offered for Open-Use observations in S25A.
+                    </p>
+
+                    <p>
+                        The open-use instruments that can currently benefit from the NIR WFS are <a
+                            href="http://www.naoj.org/Observing/Instruments/IRCS/index.html">IRCS</a>.
+                        <a href="https://www.naoj.org/Projects/SCEXAO/scexaoWEB/000home.web/indexm.html">SCExAO</a>,
+                        <a
+                            href="https://www.naoj.org/Projects/SCEXAO/scexaoWEB/030openuse.web/030charis.web/indexm.html">
+                            SCExAO+CHARIS</a>,
+                        <a
+                            href="https://www.naoj.org/Projects/SCEXAO/scexaoWEB/030openuse.web/040vampires.web/indexm.html">
+                            SCExAO+VAMPIRES</a>,
+                        <a href="https://www.naoj.org/Projects/SCEXAO/scexaoWEB/030openuse.web/042mec.web/indexm.html">
+                            SCExAO+MEC</a> and <a href="https://secondearths.sakura.ne.jp/reach/">
+                            SCExAO+REACH</a>, although not all modes are compatible.
+                    </p>
+
+                    <p>
+                        The NIR WFS only operates in NGS mode. It requires a bright star within 10 arcsec from the
+                        science target. A target brighter than H-mag = 9 to 13 is required to obtain a reasonable
+                        correction, depending on the spectrum of the star, and the dichroic beamsplitter pickoff
+                        selected.
+                        <b>The dichroic cannot be switched during the same night.</b>
+                        See <a href="./030observing.web/index.html">Planning Observations</a> for more information.
+                    </p>
+
+                    <p>
+                        Strehl ratios above 80% in H-band were demonstrated under good seeing conditions.
+                        (See <a href="./020performance.web/index.html">Performance</a> for more details).
+                    </p>
+                    <p>
+                    <table align="center" border="0" cellpadding="5">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <center>
+                                        <p><img src="./020performance.web/AO3kNIRWFS-CHARIS-EpsBoo.png" width="80%"></p>
+                                    </center>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <center>
+                                        <i>AO3k/NIRWFS observation of star Eps Boo with CHARIS. Left: images and estimated Strehl ratios, Right: Radial profiles.
+                                        </i>
+                                    </center>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2> Modes supported in S25A</h2>
+
+                    <h3>SCExAO</h3>
+                    The NIR WFS can be used with the following SCExAO modes :
+                    <ul>
+                        <li>CHARIS low-red broadband</li>
+                        <li>CHARIS hi-red J, H or K-band</li>
+                        <li>VAMPIRES imaging</li>
+                        <li>MEC y and J band</li>
+                        <li>REACH (Single mode fiber injection inside SCExAO feeding IRD</li>
+                    </ul>
+
+                    <h3>IRCS</h3>
+                    The NIR WFS can be used with the following IRCS modes :
+                    <ul>
+                        <li>20 mas imaging mode with Y- , J- , H- , and K-band</li>
+                        <li>Echelle mode with zJ- , J- , H- , and K-band</li>
+                    </ul>
+
+                    <h3>Dichroics availability for each mode</h3>
+                    <table align="center" bgcolor="#98ffff" border="4" cellspacing="0" cellpadding="3">
+                        <tbody>
+                            <tr>
+                                <th>Dichroics </th>
+                                <th colspan="4">SCExAO/<br>CHARIS</th>
+                                <th>SCExAO/<br>VAMPIRES</th>
+                                <th colspan="2">SCExAO/<br>MEC</th>
+                                <th>SCExAO/<br>REACH</th>
+                                <th colspan="8">IRCS</th>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>lo-res</th>
+                                <th colspan="3">hi-res</th>
+                                <th>imaging</th>
+                                <th colspan="2">spectro-imaging</th>
+                                <th>spectro</th>
+                                <th colspan="4">imaging</th>
+                                <th colspan="4">echelle spectro</th>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>J+H+K</th>
+                                <th>J</th>
+                                <th>H</th>
+                                <th>K</th>
+                                <th>I</th>
+                                <th>Y</th>
+                                <th>Y+J</th>
+                                <th>Y+J+H</th>
+                                <th>Y</th>
+                                <th>J</th>
+                                <th>H</th>
+                                <th>K</th>
+                                <th>zJ</th>
+                                <th>J</th>
+                                <th>H</th>
+                                <th>K</th>
+                            </tr>
+                            <tr>
+                                <td>K-band</td>
+                                <td>Yes*</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>Yes</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>Yes</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>Yes</td>
+                            </tr>
+
+                            <tr>
+                                <td>YJH50</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                            </tr>
+
+                            <tr>
+                                <td>YJH90</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                            </tr>
+
+                            <tr>
+                                <td>Vis-HK</td>
+                                <td>Yes&dagger;</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>Yes&Dagger;</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                            </tr>
+
+                            <tr>
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <center>* No J and H-band. &dagger; No J-band. &Dagger; No Y- and J-band.</center>
+
+
+                    <h2>Basic parameters</h2>
+
+                    <table bgcolor="#98ffff" class="inline" align="center" border="4" cellspacing="0" cellpadding="5">
+                        <tbody>
+
+                            <tr>
+                                <td>Location</td>
+                                <td>Nasmyth focus (IR)</td>
+                            </tr>
+                            <tr>
+                                <td>Spectral coverage of science path</td>
+                                <td>0.6-2.4 um</td>
+                            </tr>
+                            <tr>
+                                <td> Number of control elements</td>
+                                <td> 3228 (device), ~2700 (illuminated), ~2000 modes controlled</td>
+                            </tr>
+                            <tr>
+                                <td> Deformable mirror</td>
+                                <td> Magnetic actuation, model ALPAO3228</td>
+                            </tr>
+                            <tr>
+                                <td> High-order WFS</td>
+                                <td> NIR Pyramid Wavefront sensor with HgCdTe detector.</td>
+                            </tr>
+                            <tr>
+                                <td> Control bandwidth</td>
+                                <td> > 100 Hz, 500 to 2000 corrections/sec</td>
+                            </tr>
+                            <tr>
+                                <td> NGS magnitude</td>
+                                <td> -3 < H < 9-13 (Depending on the selected dichroic)</td>
+                            </tr>
+                            <tr>
+                                <td> Off-axis steering</td>
+                                <td> 20 arcsec diameter</td>
+                            </tr>
+                            <tr>
+                                <td> Wavelength range </td>
+                                <td> 0.95-1.8 um (y, J and H-band)</td>
+                            </tr>
+                            <tr>
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3><a href="./010technicaldescr.web/index.html"> Technical Description</a></h3>
+                    <h3><a href="./020performance.web/index.html"> Performance</a></h3>
+                    <h3><a href="./030observing.web/index.html">Planning Observations</a></h3>
+
+                    <h2>Instrument citation</h2>
+                    <p>
+                        Please cite the following paper when you refer to the NIR WFS in your publication.</p>
+
+                    <dl>
+                        <dt><a href="https://arxiv.org/pdf/2209.12981.pdf">"AO3000 at Subaru: Combining for
+                                the first time a NIR WFS using First Light's C-RED ONE and ALPAO's 64x64 DM"</a></dt>
+                        <dd>Lozi et al. 2022, Proc. SPIE, vol. 12185, id. 1218533</dd>
+                    </dl>
+
+                    <h2>Contacts</h2>
+                    <p>
+                        Questions regarding this page should be directed to the primary support astronomer (Julien Lozi,
+                        lozi_at_naoj.org).
+                    </p>
+                    <p>
+                        Please note that all numbers on these pages are subject to change as the performance of the NIR
+                        WFS is better determined.
+
+
+                        </dl>
+                </td>
+            </tr>
+        </tbody>
+    </table>
