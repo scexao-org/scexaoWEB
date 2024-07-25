@@ -9,47 +9,17 @@
 
 <hr />
 
-<h2>Note for observers: 2023 VAMPIRES Upgrades</h2>
+<h2>Notes for observers</h2>
 
-<div>
-  <p>
-    VAMPIRES underwent significant upgrades in June 2023, prior to the 23B
-    observing semester. These upgrades improved the sensitivity, speed, and
-    dynamic range of the instrument along with the addition of a multi-band
-    imaging mode. The core of the VAMPIRES upgrade were the switch from
-    <a
-      href="https://andor.oxinst.com/products/ixon-emccd-camera-series/ixon-ultra-897"
-      >EM-CCD detectors</a
-    >
-    to
-    <a
-      href="https://www.hamamatsu.com/us/en/product/cameras/qcmos-cameras/C15550-20UP.html"
-      >ultra-low read noise CMOS detectors</a
-    >.
-  </p>
-
-  <p>
-    All current modes of VAMPIRES, in addition to a new multi-band imaging (MBI)
-    mode, are supported in shared-risk mode for 23B, and open-use in 24A:
-  </p>
-  <ul>
-    <li>Normal imaging (speckle imaging) / single- or dual-cam</li>
-    <li>Sparse aperture mask interferometry / single- or dual-cam</li>
-    <li>Polarimetric differential imaging</li>
-    <li>Spectral differential imaging</li>
-    <li>Polarimetric spectral differential imaging</li>
-  </ul>
-</div>
-
+<h3 style="color: red">S25A NIRWFS PDI</h3>
 <p>
-  New calibrations will be done to fully characterize the system, including
-  zero-points, contrast curves, polarimetric efficiency, and astrometric
-  calibration. Observers are recommended to get in contact with the SCExAO team
-  if proposing for VAMPIRES (cc
-  <a href="mailto:mdlucas@hawaii.edu">Miles Lucas</a>).
+In S25A we are opening VAMPIRES polarimetry for shared-risk use with the AO3k near-infrared wavefront sensor (<a href="https://www.naoj.org/Projects/SCEXAO/scexaoWEB/nearIRWFS/index.html">NIRWFS</a>). <a href="figures/nirwfs_polarization.png">Internal polarization calibrations</a> indicate the NIRWFS pickoff affects polarimetry up to ~5%. Observers must consult with the SCExAO team for their proposals to discuss instrument polarization calibrations.
 </p>
 
-<br />
+<hr />
+
+<h2>General Information</h2>
+
 
 <table
   border="1px"
@@ -70,13 +40,13 @@
   </tr>
   <tr>
     <td>Spatial resolution</td>
-    <td>15.6 mas</td>
-    <td>Diffraction-limited FWHM at 600 nm.</td>
+    <td>16 - 22 mas</td>
+    <td>Diffraction-limited FWHM</td>
   </tr>
   <tr></tr>
   <tr>
     <td>Plate scale</td>
-    <td>6.0 mas/px</td>
+    <td>5.9 mas/px</td>
     <td></td>
   </tr>
   <tr></tr>
@@ -89,24 +59,47 @@
     </td>
   </tr>
   <tr>
-    <td>Polarimetry</td>
-    <td>Linear Stokes</td>
+    <td>Exposure times</td>
+    <td>7.2 us - 1800 s</td>
     <td>
-      Polarimetry enabled with polarizing beamsplitter and upstream HWP
-      modulation
+      Maximum framerate depends on readout mode, crop, and trigger mode. Short exposure times have rolling shutter.
     </td>
   </tr>
   <tr>
-    <td>Coronagraph</td>
+    <td>Polarimetry</td>
+    <td>Linear Stokes</td>
+    <td>
+      Polarimetry enabled with polarizing beamsplitter, optional ferro-electric liquid crystal, and HWP
+    </td>
+  </tr>
+  <tr>
+    <td rowspan=3>Coronagraphy</td>
     <td>Lyot</td>
     <td>Classic Lyot coronagraph with 4 focal plane mask sizes</td>
+  </tr>
+  <tr>
+    <td>Vortex</td>
+    <td><b>(Not available for open-use)</b> double-grating vector vortex coronagraph</td>
+  </tr>
+  <tr>
+    <td>RAP</td>
+    <td><b>(Not available for open-use)</b> shaped pupil mask resilient to &lt;1 rad of LWE error</td>
+  </tr>
+  <tr>
+    <td rowspan=2>Spectral differential imaging</td>
+    <td>MBI</td>
+    <td>Multiband imaging allows SDI and ADI+SDI with four 50-nm bandpasses</td>
+  </tr>
+  <tr>
+    <td>NB</td>
+    <td>Narrowband differential imaging with Halpha or SII filter pairs</td>
   </tr>
   <tr>
     <td>Aperture masking</td>
     <td>NRM</td>
     <td>
       Four non-redundant sparse aperture masks for sub-diffraction-limited
-      interferometry
+      interferometry (7-hole, 9-hole, 18-hole, annulus)
     </td>
   </tr>
   <tr>
@@ -119,6 +112,27 @@
   </tr>
 </table>
 
+<h3 style="color: orange">Multi-instrument Observing</h3>
+
+<p>
+  VAMPIRES can be used simultaneously with FastPDI, MEC, and/or CHARIS. PDI can be done simultaneously with VAMPIRES, FastPDI (y-band), and CHARIS (JHK). See <a href="../indexm.html">Instruments and Modules</a> for more information.
+</p>
+
+<h3 style="color: orange">Data Processing</h3>
+
+<p>
+An experimental data-processing pipeline is available on <a href="https://github.com/scexao-org/vampires_dpp">GitHub</a>. This pipeline can calibrate, register, and coadd frames with additional support for imaging polarimetry. It is compatible with the previous generation of VAMPIRES and the upgraded VAMPIRES. It is not compatible with narrowband SDI or NRM, yet.
+</p>
+
+<h3 style="color: orange">Citing VAMPIRES</h3>
+
+The following papers are primary citations for VAMPIRES and some of its observing modes
+<ul>
+  <li><a href="https://ui.adsabs.harvard.edu/abs/2015MNRAS.447.2894N">The VAMPIRES instrument: imaging the innermost regions of protoplanetary discs with polarimetric interferometry</a></li>
+  <li><a href="https://ui.adsabs.harvard.edu/abs/2020JATIS...6d5004U">High-contrast Hα imaging with Subaru/SCExAO + VAMPIRES</a></li>
+  <li><a href="https://ui.adsabs.harvard.edu/abs/2022arXiv220802380L">A Visible-light Lyot Coronagraph for SCExAO/VAMPIRES</a></li>
+  <li><a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12680/126800S/Characterizing-the-instrumental-polarization-of-SCExAO-VAMPIRES/10.1117/12.2677599.full">Characterizing the instrumental polarization of SCExAO VAMPIRES</a></li>
+</ul>
 <br />
 <hr />
 
@@ -246,15 +260,11 @@
 </legend>
 
 <p>
-  These CMOS cameras are capable of photon counting in the low read noise "slow"
-  mode. The plot below shows a photon counting histogram fit to an 800x256 pixel
-  subwindow in slow mode. Being able to separate the peaks in the Poisson
-  distribution allows a read-noise-free estimate of ultra-low signals (in this
-  case, 0.744 e-).
+ The CMOS cameras are capable of photon number resolving; unambiguously resolving the flux rate free from read noise by modeling the Poisson statistics, directly. The histogram below shows a long exposure with signal peaks from dark current. 
 </p>
 
 <center>
-  <img border="0" src="pch.png" alt="photon counting histogram" width="70%" />
+  <img border="0" src="figures/pch.png" alt="photon counting histogram" width="60%" />
   <p>
     <small>
       Photon counting histogram fit to an 800x256 subwindow of low-signal data.
@@ -357,9 +367,9 @@
 <center>
   <img
     border="0"
-    src="vampires_standard_filters.png"
+    src="figures/vampires_standard_filters.png"
     alt="VAMPIRES filters"
-    width="75%"
+    width="60%"
   />
   <p>
     <small>
@@ -387,18 +397,22 @@
 <center>
   <img
     border="0"
-    src="MBI_schematic.png"
+    src="figures/mbi_schematic.png"
     alt="VAMPIRES MBI schematic"
-    width="75%"
+    width="60%"
   />
   <p><small> Schematic of the MBI mode. </small></p>
 </center>
 
-<p>
-  The spectral coverage for each field is carved out by each dichroic, creating
-  the following effective filters:
-</p>
-
+<center>
+  <img
+    border="0"
+    src="figures/mbi_binary_mosaic.png"
+    alt="VAMPIRES MBI binary observations"
+    width="95%"
+  />
+  <p><small>High-strehl observations of a 75 mas separation binary with multiband imaging.</small></p>
+</center>
 <h3>MBI Filter information</h3>
 
 <table
@@ -474,9 +488,9 @@
 <center>
   <img
     border="0"
-    src="vampires_mbi_filters.png"
+    src="figures/vampires_mbi_filters.png"
     alt="VAMPIRES MBI filters"
-    width="75%"
+    width="60%"
   />
   <p>
     <small>
@@ -554,20 +568,6 @@
   cost of diffraction control (e.g., protoplanetary disk imaging).
 </p>
 
-<p>
-  For a more detailed description of the design, deployment, and
-  characterization of the coronagraph, please refer to this SPIE proceedings
-  paper-
-</p>
-<blockquote
-  cite="https://ui.adsabs.harvard.edu/abs/2022arXiv220802380L/abstract"
->
-  <a href="https://ui.adsabs.harvard.edu/abs/2022arXiv220802380L/abstract"
-    >A Visible-light Lyot Coronagraph for SCExAO/VAMPIRES</a
-  >
-</blockquote>
-<p>This also serves as the primary reference for the coronagraph.</p>
-
 <table
   border="1px"
   cellpadding="10px"
@@ -579,7 +579,7 @@
   </tr>
   <tr>
     <td>IWA</td>
-    <td>37, 59, 104, and 150 mas</td>
+    <td>37, 59, 105, and 150 mas</td>
     <td>
       Focal plane mask inner working angles. Roughly 2, 3, 5, and 7 λ/D at 750
       nm.
@@ -592,7 +592,7 @@
   </tr>
   <tr>
     <td>Raw contrast ratio</td>
-    <td>1e-3 at 0.1"<br />1e-5 at &gt;0.8"</td>
+    <td>1e-4 at 0.1"<br />1e-6 at &gt;0.6"</td>
     <td>
       Contrast measured without PSF subtraction which is limited by residual
       wavefront errors. Read noise limited beyond 0.2".
@@ -608,6 +608,22 @@
   </tr>
 </table>
 
+<br/>
+
+<center>
+  <img
+    border="0"
+    src="figures/CLC5_contrast_curve.png"
+    alt="VAMPIRES CLC-5 5sigma contrast curves"
+    width="60%"
+  />
+  <p>
+    <small>
+      Throughput-corrected 5sigma contrast curves in multiband imaging mode with the CLC-5 coronagraph. SDI processing improves contrast in the control region, reaching 10e-6 at 0.6"
+    </small>
+  </p>
+</center>
+
 <h3>Calibration</h3>
 
 <p>
@@ -616,6 +632,20 @@
   to the star. This allows astrometric and photometric calibration of the star
   behind the focal plane mask.
 </p>
+
+<center>
+  <img
+    border="0"
+    src="figures/coronagraph_mosaic.png"
+    alt="VAMPIRES coronagraph images"
+    width="60%"
+  />
+  <p>
+    <small>
+      On-sky coronagraphic images with astrogrid calibration speckles
+    </small>
+  </p>
+</center>
 
 <h3>Focal plane masks</h3>
 
@@ -673,7 +703,7 @@
 <center>
   <img
     border="0"
-    src="20230913_vampires_iwa.png"
+    src="figures/coronagraph_iwa.png"
     alt="VAMPIRES IWA"
     width="60%"
   />
@@ -827,7 +857,7 @@
     border="0"
     src="vampires_narrowband_filters.png"
     alt="VAMPIRES narrowband filters"
-    width="75%"
+    width="60%"
   />
   <p>
     <small>
@@ -843,7 +873,22 @@
 
 <hr />
 
-<h2>VAMPIRES instrument description</h2>
+<h2>VAMPIRES Instrument Description</h2>
+<center>
+  <img
+    border="0"
+    src="figures/VAMPIRES_diagram.png"
+    alt="VAMPIRES layout schematic"
+    width="90%"
+    style="background-color: white;"
+  />
+  <p>
+    <small>
+      Diagram of the VAMPIRES light path.
+    </small>
+  </p>
+</center>
+
 <p>
   The Visible Aperture Masking Polarimetric Interferometer for Resolving
   Exoplanetary Signatures (VAMPIRES) instrument draws on the established success
@@ -907,7 +952,7 @@
 <center>
   <img
     border="0"
-    src="VAMPIRES_info_pic900.jpg"
+    src="figures/VAMPIRES_info_pic900.jpg"
     alt="Pulpit rock"
     width="100%"
   />
