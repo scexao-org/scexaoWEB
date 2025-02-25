@@ -2,9 +2,7 @@
 
 <p>
   The Visible Aperture Masking Polarimetric Imager for Resolved Exoplanetary
-  Structures (VAMPIRES) is a visible-light instrument on the SCExAO system. See
-  <a href="2018_VAMPIRES.pdf">this presentation</a> for an overview of VAMPIRES
-  (2018).
+  Structures (VAMPIRES) is a visible-light, dual-camera instrument on the SCExAO platform.
 </p>
 
 <hr />
@@ -16,6 +14,34 @@
 In S25A we are opening VAMPIRES polarimetry for shared-risk use with the AO3k near-infrared wavefront sensor (<a href="https://www.naoj.org/Projects/SCEXAO/scexaoWEB/nearIRWFS/index.html">NIRWFS</a>). <a href="figures/nirwfs_polarization.png">Internal polarization calibrations</a> indicate the NIRWFS pickoff affects polarimetry up to ~5%. Observers must consult with the SCExAO team for their proposals to discuss instrument polarization calibrations.
 </p>
 
+<hr />
+
+<h3 style="color: orange">Data Processing</h3>
+
+<p>
+An experimental data-processing pipeline is available on <a href="https://github.com/scexao-org/vampires_dpp">GitHub</a>. This pipeline can calibrate, register, and coadd frames with additional support for imaging polarimetry. It is compatible with the previous generation of VAMPIRES and the upgraded VAMPIRES. It is not compatible with NRM, yet.
+</p>
+
+<h3 style="color: orange">Citing VAMPIRES</h3>
+
+Please cite the following if you use VAMPIRES:
+<ul>
+  <li><a href="https://ui.adsabs.harvard.edu/abs/2015MNRAS.447.2894N">The VAMPIRES instrument: imaging the innermost regions of protoplanetary discs with polarimetric interferometry</a></li>
+  <li><a href="https://ui.adsabs.harvard.edu/abs/2024PASP..136k4504L">Visible-light High-contrast Imaging and Polarimetry with SCExAO/VAMPIRES</a></li>
+</ul>
+<p>If you use the spectral-differential imaging mode, please also cite:</p>
+<ul>
+  <li><a href="https://ui.adsabs.harvard.edu/abs/2020JATIS...6d5004U">High-contrast Hα imaging with Subaru/SCExAO + VAMPIRES</a></li>
+</ul>
+<p>If you use the polarimetric mode, please also cite:</p>
+<ul>
+  <li><a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12680/126800S/Characterizing-the-instrumental-polarization-of-SCExAO-VAMPIRES/10.1117/12.2677599.full">Characterizing the instrumental polarization of SCExAO VAMPIRES</a></li>
+</ul>
+
+Other relevant citations:
+<ul>
+  <li><a href="https://ui.adsabs.harvard.edu/abs/2022arXiv220802380L">A Visible-light Lyot Coronagraph for SCExAO/VAMPIRES</a></li>
+</ul>
 <hr />
 
 <h2>General Information</h2>
@@ -99,15 +125,14 @@ In S25A we are opening VAMPIRES polarimetry for shared-risk use with the AO3k ne
     <td>NRM</td>
     <td>
       Four non-redundant sparse aperture masks for sub-diffraction-limited
-      interferometry (7-hole, 9-hole, 18-hole, annulus)
+      interferometry (7-hole, 9-hole, 18-hole, annulus).
     </td>
   </tr>
   <tr>
     <td>VAMPIRES setup time</td>
     <td>3-5 minutes</td>
     <td>
-      This includes, fine adjustments to the focus, rotating between masks (if
-      necessary) and setting up software for data collection.
+      This includes any optics changes and preparations for data logging.
     </td>
   </tr>
 </table>
@@ -118,22 +143,6 @@ In S25A we are opening VAMPIRES polarimetry for shared-risk use with the AO3k ne
   VAMPIRES can be used simultaneously with FastPDI, MEC, and/or CHARIS. PDI can be done simultaneously with VAMPIRES, FastPDI (y-band), and CHARIS (JHK). See <a href="../indexm.html">Instruments and Modules</a> for more information.
 </p>
 
-<h3 style="color: orange">Data Processing</h3>
-
-<p>
-An experimental data-processing pipeline is available on <a href="https://github.com/scexao-org/vampires_dpp">GitHub</a>. This pipeline can calibrate, register, and coadd frames with additional support for imaging polarimetry. It is compatible with the previous generation of VAMPIRES and the upgraded VAMPIRES. It is not compatible with narrowband SDI or NRM, yet.
-</p>
-
-<h3 style="color: orange">Citing VAMPIRES</h3>
-
-The following papers are primary citations for VAMPIRES and some of its observing modes
-<ul>
-  <li><a href="https://ui.adsabs.harvard.edu/abs/2015MNRAS.447.2894N">The VAMPIRES instrument: imaging the innermost regions of protoplanetary discs with polarimetric interferometry</a></li>
-  <li><a href="https://ui.adsabs.harvard.edu/abs/2020JATIS...6d5004U">High-contrast Hα imaging with Subaru/SCExAO + VAMPIRES</a></li>
-  <li><a href="https://ui.adsabs.harvard.edu/abs/2022arXiv220802380L">A Visible-light Lyot Coronagraph for SCExAO/VAMPIRES</a></li>
-  <li><a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12680/126800S/Characterizing-the-instrumental-polarization-of-SCExAO-VAMPIRES/10.1117/12.2677599.full">Characterizing the instrumental polarization of SCExAO VAMPIRES</a></li>
-</ul>
-<br />
 <hr />
 
 <h2>Camera Modes and Performance</h2>
@@ -873,7 +882,7 @@ The following papers are primary citations for VAMPIRES and some of its observin
 
 <hr />
 
-<h2>VAMPIRES Instrument Description</h2>
+<h2>VAMPIRES Instrument Diagram</h2>
 <center>
   <img
     border="0"
@@ -888,6 +897,11 @@ The following papers are primary citations for VAMPIRES and some of its observin
     </small>
   </p>
 </center>
+
+<hr />
+<h2>Old Information</h2>
+
+<p><a href="2018_VAMPIRES.pdf"> 2018 VAMPIRES presentation</a></p>
 
 <p>
   The Visible Aperture Masking Polarimetric Interferometer for Resolving
@@ -966,8 +980,3 @@ The following papers are primary citations for VAMPIRES and some of its observin
     </small>
   </p>
 </center>
-
-<p>
-  For more technical details please refer to the
-  <a href="../110publis.web/030scexao.web/indexm.html"> publications</a> page.
-</p>
