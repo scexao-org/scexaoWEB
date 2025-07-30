@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>NIR WFS</title>
+    <title>NIRWFS</title>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
                                 hspace="17"></a>
                     </center>
                     <!-- NAVIGATION-->
-                    <a href="../index.html" class="path">NIR WFS</a>
+                    <a href="../index.html" class="path">NIRWFS</a>
                     <div class="indent">
                         <span class="thispage" style="margin-left:5px;">System</span>
                         <br><a href="../020performance.web/index.html" class="nav"
@@ -36,59 +36,96 @@
 
                     <h1 align="center"> Near-IR Wavefront Sensor - Technical Description</h1>
 
-                    <h2>Position inside AO188</h2>
+                    <h2>Upgrade of AO188 to AO3k</h2>
 
-                    The deployment of the NIR WFS will hapen in two phases:
-                    <li><b>Phase Ia:</b> In this phase, the NIR WFS was mounted inside AO188, and controlled AO188's
-                        188-element bimorph deformable mirror (DM).</li>
-                    <li><b>Phase Ib:</b> In this phase, the NIR WFS doesn't move, but we upgraded AO188's DM with an
+                    The deployment of the NIRWFS happened in phases:
+                    <li><b>Phase Ia:</b> In this phase, the NIRWFS was mounted inside AO188, and controlled AO188's
+                        188-element bimorph deformable mirror (DM). This phase was implemented from May 2023 to May 2024.</li>
+                    <li><b>Phase Ib:</b> In this phase, the NIRWFS is in the same place, but we upgraded AO188's DM with an
                         ALPAO 64x64 DM, increasing the number of actuators in the pupil to about 3000. AO188 then
-                        became AO3k. <b>This is the current phase offered for Open-Use
-                            observations in S25A.</b></li>
-                    <li><b>Phase II:</b> In this phase, A new Nasmyth Beam Switcher (NBS) will be installed behind
+                        became AO3k. This phse was implemented from May 2024 to July 2025.</li>
+                    <li><b>Phase II:</b> In this phase, A new Nasmyth Beam Switcher (NBS) is installed behind
                         AO188/AO3k, allowing to send the light to any available instrument on the Nasmyth IR platform of
-                        Subaru. At that point, a new LTAO mode will also be added between AO188 and the NBS, and the NIR
-                        WFS will migrate outside the AO188 enclosure to a shared platform with the LTAO mode.</li>
-                    <p></p>
-                    In Phase I of the deployment of the NIR WFS, the optics fit inside AO188, while the C-RED
-                    ONE camera is mounted on the side of the instrument. This was due to a lack of space inside AO188.
-                    The camera has to be removable, since a collision is possible with SCExAO's own C-RED ONE camera
-                    used for the FPDI mode. Therefore, in phase I, it will not be possible to have both cameras at the
-                    same time. Figure 5 presents the current suggested position for the optics and the camera. The
-                    dichroic beamsplitter sending some light to the NIR PyWFS is designed to be compatible with science
-                    observation with IRCS, especially K-band spectroscopy. Finally, it will not impact other observing
-                    modes with IRCS, SCExAO or IRD.
-                    <p></p>
+                        Subaru. At that point, a new LTAO mode is also added between AO188 and the NBS, and the NIR
+                        WFS migrates outside the AO188 enclosure to a shared platform with the LTAO mode.</li>
+                    <p>
+
+                    <h2>Description of the NIRWFS in Phase II</h2>
+
+                    <p>
+                        In Phase II, the NIRWFS is installed at the output port of AO188/AO3k, on the LTAO platform. Compared 
+                        to the phase I design (described below), the phase II design has more space to utilize, allowing to 
+                        add a few usueful features:
+                    </p>
+                    <ul>
+                        <li><b>A dichroic beamsplitter wheel:</b> this motorized wheel allows us to change dichroics when 
+                            needed, even between targets in the same observation. This is an improvement from the previous
+                        design, where only one dichroic was available per observating night.</li>
+                        <li><b>A NIR acquisition camera:</b> A small NIR camera is added inside the instrument, to aquire the
+                        taregts more efficiently. This camera reduces the overhead between targets, and allows to measure
+                        the seeing routinely between targets.</li>
+                        <li><b>An adaptive field stop:</b> The NIRWFS struggles to close the loop if one or several other
+                        bright stars are preseent in the field of view of the sensor. This field stop will block the light
+                        from these stars to reach the camera. Its size can be adjusted depending on the position on the other
+                        stars. </li>
+                        <li><b>An optical binning mode:</b> Another pupil lens configuration is added to reduce the size of the
+                        four pupils on the camera by a factor two. This means that the light is more concentrated on each 
+                        pupil, which should increase the magnitude limit by almost two magnitudes. However, in this mode, we
+                        cannot control as many modes, so the performance will not be as high as the regular PyWFS mode.</li>
+                    </ul>
 
                     <table style="width:100%">
                         <tr>
-                            <th><a href="NIRWFS-position.png"> <img src="NIRWFS-position.png" alt="NIRWFS-position.png"
-                                        width="500"> </a></th>
+                            <th><a href="NIRWFS-v2wAO3k.PNG"> <img src="NIRWFS-v2wAO3k.PNG"
+                                alt="NIRWFS-v2wAO3k.png" width="1000"> </a></th>
                         </tr>
                         <tr>
                             <th>
-                                <center><i>Position of the optics and the C-RED ONE in AO188.</i></center>
+                                <center><i>CAD model of the AO3k instrument, including the LTAO platform (gray boxes and frame 
+                                    on the right). The NIRWFS is located on the LTAO platform, next to their truth sensor.</i></center>
                             </th>
                         </tr>
                     </table>
 
-                    <h2>Optical path</h2>
-
-
-                    The NIR WFS is designed to have two modes:
+                    <table style="width:100%">
+                        <tr>
+                            <th><a href="NIRWFS-v2cad.PNG"> <img src="NIRWFS-v2cad.PNG"
+                                alt="NIRWFS-v2cad.png" width="1000"> </a></th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <center><i>CAD model of the NIRWFS in phase II.</i></center>
+                            </th>
+                        </tr>
+                    </table>
 
                     <h3>Pyramid Wavefront Sensing (PyWFS) mode</h3>
 
-                    <p>This mode uses a pyramid-type optics to split the focal plane light into four, and reimage the
-                        four
-                        beams in the pupil plane. The PyWFS is used to control the wavefront with the deformable mirror
-                        of
-                        AO188.</p>
-                    <p></p>
+
+                    <p>The PyWFS mode is the main mode of the NIRWFS, and the only one offered for Open-Use observations for
+                        now. The light coming from the AO3k bench is partly reflected by the dichroic beamsplitter right after
+                        the focal plane while the rest of the light goes towards the science instruments. In the wavefront
+                        sensor, the reflected light goes through a collimator, with a focal length of 150 mm. A first fold
+                        mirror sends the light to a small 1/2 mirror located in a pupil plane, glued on a 3-axis piezo-electric
+                        mount use to modulate the beam at several hundred hertz. The mount is itself attached to two rotation
+                        mounts used to steer the guide star in the wavefront sensor. The light is then reflected by a second
+                        fold mirror and goes through a filter wheel. The filter wheel can select what band or combination of 
+                        bands go to the camera, with an open slot as the default position. The light is reflected again by a 
+                        third fold mirror towards focusing optics. The first lens is a concave lens with a 150 mm focal length,
+                        identical to the collimation lens. The second lens is a convex lens with a focal length of -50 mm,
+                        creating a F/40 beam on the pyramid optics. A pickoff mirror can be inserted between the two lenses to
+                        send the light to the NIR acquisition camera, a First Light Imaging C-RED2. The beam on the camera is
+                        F/13.9, the same as the output of AO3k. The plate scale is then ~56 mas per pixel, and the field of
+                        view is then 36x28 arcsec. With the pickoff out, the light focuses on the tip of the pyramid optics, a 
+                        double roof prism design. It splits the light into four beams. The new adaptive field stop is placed 
+                        right after the prisms, as it was not possible to put it in the focal plane. Finaly, a 80 mm pupil
+                        lens image the four pupils on the First Light Imaging C-RED ONE camera. A second set of lenses (two
+                        100 mm lenses) can be inserted instead, for the optical binning mode.</p>
+
                     <table style="width:100%">
                         <tr>
-                            <th><a href="NIRWFS-opticalpath.png"> <img src="NIRWFS-opticalpath.png"
-                                        alt="NIRWFS-opticalpath.png" width="500"> </a></th>
+                            <th><a href="NIRWFS-PyWFSv2.png"> <img src="NIRWFS-PyWFSv2.png" alt="NIRWFS-PyWFSv2.png"
+                                        width="700"> </a></th>
                         </tr>
                         <tr>
                             <th>
@@ -96,40 +133,19 @@
                             </th>
                         </tr>
                     </table>
-
-                    <p>A dichroic beamsplitter pickoff is placed in the output beam of AO188, selecting some of the
-                        light
-                        that goes to the NIR WFS. The light is reflected by a first fold mirror, then collimated by a
-                        collimation lens. The pupil of the telescope is then reimaged on a small mirror acting both as
-                        the
-                        modulator (using piezo actuators to move the PSF in a circular motion around the tip of the
-                        pyrmaid
-                        optics) and the steering mirror to control off-axis NGSs. The light is then reflected a couple
-                        more
-                        times, goes through a filter wheel that selects which band will be used, then goes through
-                        compact
-                        focusing optics, composed of a converging and a diverging lens. Another fold mirror sends the
-                        focusing light on a pair of roof prisms, acting as a pyramid optic. This is the same concept
-                        validated by the PyWFS of SCExAO. Once split into four beams, a pupil lens (and a last fold
-                        mirror)
-                        reimages the pupil on the detector of the C-RED ONE camera.</p>
-
-                    <p>A pupil viewing mode is also available (in open-loop), simply by removing the pyramid optics from
-                        the beam.</p>
-
                     <h3>Focal Plane Wavefront Sensing (FPWFS) mode</h3>
 
 
-                    <p>This mode is still in an experimental phase, so notavaiable for open-use observations. The NGS is
+                    <p>This mode is still in an experimental phase, so not avaiable for open-use observations. The NGS is
                         reimaged on the camera, with a small defocus.This creates a phase diversity that allow us to
-                        control low-order modes. This oculd be used in the future to extend the range of magntiudes
+                        control low-order modes. This could be used in the future to extend the range of magntiudes
                         available, with limited performance, since we will not be albe to correct as many modes as the
-                        PyWFS. It could also be used as a trut hWFS for the LGS mode, or the new LTAO instrument.</p>
+                        PyWFS. It could also be used as a truth hWFS for the new LTAO instrument.</p>
 
                     <table style="width:100%">
                         <tr>
-                            <th><a href="NIRWFS-IRFPWFS.png"> <img src="NIRWFS-IRFPWFS.png" alt="NIRWFS-IRFPWFS.png"
-                                        width="500"> </a></th>
+                            <th><a href="NIRWFS-FPWFSv2.png"> <img src="NIRWFS-FPWFSv2.png" alt="NIRWFS-FPWFSv2.png"
+                                        width="700"> </a></th>
                         </tr>
                         <tr>
                             <th>
@@ -144,39 +160,13 @@
                     <p> If the source is focused on the detector, this mode can be used to look at the image quality (in
                         open-loop), measure the seeing or calibrate the radius of the modulation applied for the PyWFS
                         mode.</p>
-
-                    <h2>NIR WFS dichroic beamsplitter</h2>
-
-                    <p>The dichroic beamsplitter (DBS) for the NIR WFS is placed at the output of AO188, inside a
-                        flip mount attached upside-down. It is placed at a shallow angle of 9 degree to send the light
-                        to the NIR WFS. The flip mount allow to move the beamsplitter out of the way without colliding
-                        with the IRD injection, but the flip mount can also be removed entirely thanks to the locating
-                        pins.</p>
-
-                    <table style="width:100%">
-                        <tr>
-                            <th>
-                                <a href="NIRWFS-dichroic.png"> <img src="NIRWFS-dichroic.png" alt="SP" width="300">
-                                </a>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th>
-                                <center><i>Mounting solution for the NIR WFS dichroic beamsplitter at the output of
-                                        AO188 (the optics mount on the right shows the stored position, but only one
-                                        optics mount is attached to the flip mount at a time).</i></center>
-                            </th>
-                        </tr>
-                    </table>
-
-
-
-
+                    
+                    <h3>Dichroic beamsplitters</h3>
                     <p>
                         Several beamsplitters are available, depending on the instrument and science case. Since the
                         flip mount only accommodates one optic at a time, a choice has to be made before each observing
                         run on what beamsplitter to use. Once the Nasmyth Beam Switcher is installed, version 2 of the
-                        NIR WFS will move to the LTAO WFS platform, and we will have enough space to include a mechanism
+                        NIRWFS will move to the LTAO WFS platform, and we will have enough space to include a mechanism
                         (wheel or linear actuator) to switch between the different options.
                     </p>
 
@@ -187,118 +177,26 @@
                     </center>
 
 
-                    We currently offer 4 beamsplitters, which spectra in reflectance shown above :
+                    We currently offer 4 beamsplitters, which spectra in reflectance shown above:
                     <ul>
                         <li><b>K-band dichroic:</b> DBS originally designed for IRCS, but can also be used for high-res
-                            K-band CHARIS observations. It sends 100% of y-, J- and H-band to the NIR WFS, 100% of
+                            K-band CHARIS observations. It sends 100% of y-, J- and H-band to the NIRWFS, 100% of
                             K-band to the science instrument.</li>
-                        <li><b>YJH50 dichroic:</b> This DBS is sending 50% of y-, J- and H-band to the NIR WFS, 50% to
+                        <li><b>YJH50 dichroic:</b> This DBS is sending 50% of y-, J- and H-band to the NIRWFS, 50% to
                             the science instrument, in addition to 100% of visible light (600-900 nm, for SCExAO only)
                             and K-band.</li>
                         <li><b>YJH90 dichroic:</b> This DBS has the same characteristics as the previous one, but
-                            sending only 10% of y-, J- and H-band to the NIR WFS, 90% to the science instrument. This is
+                            sending only 10% of y-, J- and H-band to the NIRWFS, 90% to the science instrument. This is
                             the most efficient option for brighter targets, without compromizing too much the efficiency
                             of the science instrument.</li>
-                        <li><b>Vis-HK dichroic:</b> This DBS is sending 100% of y- and J- band to the NIR WFS, 100% of
+                        <li><b>Vis-HK dichroic:</b> This DBS is sending 100% of y- and J- band to the NIRWFS, 100% of
                             the visible (for SCExAO only) and H- and K-band to the science instrument. This option
                             requires sources bright enough in J-band, instead of H-band.</li>
                     </ul>
 
 
-                    <h2>Core optics</h2>
-
-                    <p>The core optics were designed to fit the narrow space available inside AO188. Due to the small
-                        field-of-view required for the instrument, we can have a small beam size and small optics. This
-                        is crucial to have the propoer modulation for the PyWFS. Indeed it is harder to move a 1-inch
-                        mirror at kilo-hertz speed than a ½-inch mirror. The compromize is then that the capture
-                        field-of-view is not big: we can only use off-axis NGs up to 10" from the target of interest.
-                    </p>
-
-                    <table style="width:100%">
-                        <tr>
-                            <th>
-                                <a href="NIRWFS-optomech.png"> <img src="NIRWFS-optomech.png" alt="NIRWFS-optomech.png"
-                                        width="700"> </a>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th>
-                                <center><i>The core optics were designed to fit in the small space available inside
-                                        AO188. Two platforms installed on 1.5” posts reduce the beam height from 250 mm
-                                        to 106 mm, and allow to use compact and stable mounts.</i></center>
-                            </th>
-                        </tr>
-                    </table>
-
-                    <br>
-
-                    <p>The optics are mounted on two platforms, a narrow platform and a large plateform. The narrow
-                        platform contains:</p>
-
-                    <ul>
-                        <li>A first 2-inch fold mirror.</li>
-                        <li>A 150 mm collimation lens. The lens is on a motorized translation stage to change the focus.
-                        </li>
-                        <li>A ½-inch modulation mirror where the pupil is reimaged. The modulation mirror is on a
-                            motorized tip/tilt mount, to use off-axis stars as guide stars.</li>
-                        <li>A second 1-inch fold mirror.</li>
-                    </ul>
-
-                    <br>
-
-                    The large platform contains the rest of the optics :
-                    <ul>
-                        <li>A filter wheel that can reduce the bandwidth of the WFS. It contains 3 band filters (y, K or
-                            H-band), 2 dual-band filters (y+J and J+H) and an open slot.</li>
-                        <li>A third 1-inch fold mirror.</li>
-                        <li>A converging+diverging lens combination allows one to focus on the pyramid optics with the
-                            right F/ratio while keeping a compact configuration. The diverging lens is on a motorized
-                            mount to change the distance between the lenses (therefore the F/ratio), while the
-                            combination is on a motorized translation stage to focus precisely on the tip of the pyramid
-                            optics.</li>
-                        <li>A fourth 1-inch fold mirror.</li>
-                        <li>The dual roof prism pyramid optics splitting the light for the wavefront sensor. The optics
-                            are on a motorized vertical translation stage, which allows to move it out of the way for a
-                            focal plane imaging mode.
-                        </li>
-                        <li>Two lenses on a motorized X/Ystage: one 80 mm lens reimaging the 4 pupils on the detector
-                            for the PyWFS mode, and one 150 mm lens reimaging the focal plane for the FPWFS mode.</li>
-                        <li>A fifth 1-inch fold mirror.</li>
-                    </ul>
-
-
-                    <h2>Camera</h2>
-
-                    <table style="width:100%">
-                        <tr>
-                            <th>
-                                <a href="NIRWFS-cameramounting.png"> <img src="NIRWFS-cameramounting.png"
-                                        alt="NIRWFS-cameramounting.png" width="700"> </a>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th>
-                                <center><i>C-RED ONE camera mount design for the NIR WFS. Due to the limited space
-                                        inside AO188, the camera is mounted on the edge of the instrument.</i></center>
-                            </th>
-                        </tr>
-                    </table>
-
-
-                    <br>
-
-                    <p>The camera is mounted on a platform hanging on the side of AO188, supported by brackets resting
-                        against the side of the AO188 bench. This was the only possible solution due to the optical
-                        path, the lack of space inside AO188, and the constraint on the shared use of the camera with
-                        SCExAO FPDI mode (although this constraint will not exist once the Nasmyth Beam Switcher is
-                        installed in Phase II). For alignments, the camera is mounted on a high-load lab jack for
-                        vertical alignment, as well as a high-load 2-axis stage, for horizontal and focus alignment.
-                        This is a duplication of the alignment mount of the FPDI, which performs very well.</p>
-
-
-
-
-
+                    
+                    
                     <h3>Camera Settings</h3>
 
                     <p>The default window size is 160x160 pixels, although the full frame (320x256 pixels) could be used
@@ -391,6 +289,184 @@
                         </tbody>
                     </table>
                     <p></p>
+
+                    <h2>Description of the NIRWFS in Phases Ia & Ib</h2>
+
+                    In Phase I of the deployment of the NIRWFS, the optics fit inside AO188, while the C-RED
+                    ONE camera was mounted on the side of the instrument. This was due to a lack of space inside AO188.
+                    The camera had to be removable, since a collision is possible with SCExAO's own C-RED ONE camera
+                    used for the FPDI mode. Therefore, in phase I, it wwas not be possible to have both cameras at the
+                    same time. Figure 5 presents the position for the optics and the camera. The
+                    dichroic beamsplitter sending some light to the NIR PyWFS was designed to be compatible with science
+                    observation with IRCS, especially K-band spectroscopy.
+                    </p>
+
+                    <table style="width:100%">
+                        <tr>
+                            <th><a href="NIRWFS-position.png"> <img src="NIRWFS-position.png" alt="NIRWFS-position.png"
+                                        width="500"> </a></th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <center><i>Position of the optics and the C-RED ONE in AO188.</i></center>
+                            </th>
+                        </tr>
+                    </table>
+
+                    <h3>Optical path</h3>
+
+                    <p>This mode uses a pyramid-type optics to split the focal plane light into four, and reimage the
+                        four
+                        beams in the pupil plane. The PyWFS is used to control the wavefront with the deformable mirror
+                        of
+                        AO188/AO3k.</p>
+                    <p></p>
+                    <table style="width:100%">
+                        <tr>
+                            <th><a href="NIRWFS-opticalpath.png"> <img src="NIRWFS-opticalpath.png"
+                                        alt="NIRWFS-opticalpath.png" width="500"> </a></th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <center><i>Optical path of the PyWFS mode.</i></center>
+                            </th>
+                        </tr>
+                    </table>
+
+                    <p>
+                    A dichroic beamsplitter pickoff is placed in the output beam of AO188, selecting some of the light
+                    that goes to the NIRWFS. The light is reflected by a first fold mirror, then collimated by a
+                    collimation lens. The pupil of the telescope is then reimaged on a small mirror acting both as the
+                    modulator (using piezo actuators to move the PSF in a circular motion around the tip of the pyrmaid
+                    optics) and the steering mirror to control off-axis NGSs. The light is then reflected a couple more
+                    times, goes through a filter wheel that selects which band will be used, then goes through compact
+                    focusing optics, composed of a converging and a diverging lens. Another fold mirror sends the
+                    focusing light on a pair of roof prisms, acting as a pyramid optic. This is the same concept
+                    validated by the PyWFS of SCExAO. Once split into four beams, a pupil lens (and a last fold mirror)
+                    reimages the pupil on the detector of the C-RED ONE camera.</p>
+
+                    <p>A pupil viewing mode is also available (in open-loop), simply by removing the pyramid optics from
+                        the beam.</p>
+
+                    <h3>NIRWFS dichroic beamsplitter</h3>
+
+                    <p>The dichroic beamsplitter (DBS) for the NIRWFS is placed at the output of AO188, inside a
+                        flip mount attached upside-down. It is placed at a shallow angle of 12 degree to send the light
+                        to the NIRWFS. The flip mount allow to move the beamsplitter out of the way without colliding
+                        with the IRD injection, but the flip mount can also be removed entirely thanks to locating
+                        pins.</p>
+
+                    <table style="width:100%">
+                        <tr>
+                            <th>
+                                <a href="NIRWFS-dichroic.png"> <img src="NIRWFS-dichroic.png" alt="SP" width="300">
+                                </a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <center><i>Mounting solution for the NIRWFS dichroic beamsplitter at the output of
+                                        AO188 (the optics mount on the right shows the stored position, but only one
+                                        optics mount is attached to the flip mount at a time).</i></center>
+                            </th>
+                        </tr>
+                    </table>
+
+
+                    <h2>Core optics</h2>
+
+                    <p>The core optics were designed to fit the narrow space available inside AO188. Due to the small
+                        field-of-view required for the instrument, we can have a small beam size and small optics. This
+                        is crucial to have the propoer modulation for the PyWFS. Indeed it is harder to move a 1-inch
+                        mirror at kilo-hertz speed than a ½-inch mirror. The compromize is then that the capture
+                        field-of-view is not big: we can only use off-axis NGs up to 14" from the target of interest.
+                    </p>
+
+                    <table style="width:100%">
+                        <tr>
+                            <th>
+                                <a href="NIRWFS-optomech.png"> <img src="NIRWFS-optomech.png" alt="NIRWFS-optomech.png"
+                                        width="700"> </a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <center><i>The core optics were designed to fit in the small space available inside
+                                        AO188. Two platforms installed on 1.5” posts reduce the beam height from 250 mm
+                                        to 106 mm, and allow to use compact and stable mounts.</i></center>
+                            </th>
+                        </tr>
+                    </table>
+
+                    <br>
+
+                    <p>The optics are mounted on two platforms, a narrow platform and a large plateform. The narrow
+                        platform contains:</p>
+
+                    <ul>
+                        <li>A first 2-inch fold mirror.</li>
+                        <li>A 150 mm collimation lens. The lens is on a motorized translation stage to change the focus.
+                        </li>
+                        <li>A ½-inch modulation mirror where the pupil is reimaged. The modulation mirror is on a
+                            motorized tip/tilt mount, to use off-axis stars as guide stars.</li>
+                        <li>A second 1-inch fold mirror.</li>
+                    </ul>
+
+                    <br>
+
+                    The large platform contains the rest of the optics :
+                    <ul>
+                        <li>A filter wheel that can reduce the bandwidth of the WFS. It contains 3 band filters (y, K or
+                            H-band), 2 dual-band filters (y+J and J+H) and an open slot.</li>
+                        <li>A third 1-inch fold mirror.</li>
+                        <li>A converging+diverging lens combination allows one to focus on the pyramid optics with the
+                            right F/ratio while keeping a compact configuration. The diverging lens is on a motorized
+                            mount to change the distance between the lenses (therefore the F/ratio), while the
+                            combination is on a motorized translation stage to focus precisely on the tip of the pyramid
+                            optics.</li>
+                        <li>A fourth 1-inch fold mirror.</li>
+                        <li>The dual roof prism pyramid optics splitting the light for the wavefront sensor. The optics
+                            are on a motorized vertical translation stage, which allows to move it out of the way for a
+                            focal plane imaging mode.
+                        </li>
+                        <li>Two lenses on a motorized X/Ystage: one 80 mm lens reimaging the 4 pupils on the detector
+                            for the PyWFS mode, and one 150 mm lens reimaging the focal plane for the FPWFS mode.</li>
+                        <li>A fifth 1-inch fold mirror.</li>
+                    </ul>
+
+
+                    <h2>Camera</h2>
+
+                    <table style="width:100%">
+                        <tr>
+                            <th>
+                                <a href="NIRWFS-cameramounting.png"> <img src="NIRWFS-cameramounting.png"
+                                        alt="NIRWFS-cameramounting.png" width="700"> </a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <center><i>C-RED ONE camera mount design for the NIRWFS. Due to the limited space
+                                        inside AO188, the camera is mounted on the edge of the instrument.</i></center>
+                            </th>
+                        </tr>
+                    </table>
+
+
+                    <br>
+
+                    <p>The camera is mounted on a platform hanging on the side of AO188, supported by brackets resting
+                        against the side of the AO188 bench. This was the only possible solution due to the optical
+                        path, the lack of space inside AO188, and the constraint on the shared use of the camera with
+                        SCExAO FPDI mode (although this constraint will not exist once the Nasmyth Beam Switcher is
+                        installed in Phase II). For alignments, the camera is mounted on a high-load lab jack for
+                        vertical alignment, as well as a high-load 2-axis stage, for horizontal and focus alignment.
+                        This is a duplication of the alignment mount of the FPDI, which performs very well.</p>
+
+
+
+
+
                 </td>
             </tr>
         </tbody>

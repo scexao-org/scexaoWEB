@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>NIR WFS</title>
+    <title>NIRWFS</title>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
                                 hspace="17"></a>
                     </center>
                     <!-- NAVIGATION-->
-                    <a href="../index.html" class="path">NIR WFS</a>
+                    <a href="../index.html" class="path">NIRWFS</a>
                     <div class="indent">
                         <a href="../010technicaldescr.web/index.html" class="nav" style="margin-left:5px;">System</a>
                         <br><a href="../020performance.web/index.html" class="nav"
@@ -44,11 +44,11 @@
                     </font>
 
                     <p>
-                        If you want to use the NIR WFS inside AO188, you need to find a Natural
-                        Guide Star (NGS) that is bright enough at less than 10" separation from
+                        If you want to use the AO3k/NIRWFS, you need to find a Natural
+                        Guide Star (NGS) that is bright enough at less than 14" separation from
                         your target of interest. The target of interest can be the NGS itself if
                         it is a bright enough stellar object. Non-sidereal tracking is currently
-                        not available with NIR WFS.</p>
+                        not available with NIRWFS.</p>
 
                     <p> Read the following instructions <i>carefully</i> if you wish to
                         apply for observing time with AO188. <b>If technical details described
@@ -72,8 +72,7 @@
                         <li> <i>H-band</i> (or <i>J-band</i> if the Vis-HK Dichroic is used) magnitude of your AO
                             guide stars (see section <a href="#ao_guide_star">2</a> for details). </li>
                         <li> One or several choices for the dichroic beamsplitter used, depending on the brightness of
-                            the NGs (see section <a href="#ao_guide_star">2</a> for details). We cannot change dichroics
-                            during a single night, so only one dichroic will be selected per night.</li>
+                            the NGs (see section <a href="#ao_guide_star">2</a> for details).</li>
                         <li> Separation between your targets and AO guide stars (see section <a
                                 href="#ao_guide_star">2</a> for details).</li>
                         <li> Strehl ratio and/or FWHM of the point-spread function (PSF) required for your project.
@@ -120,6 +119,7 @@
                     Magnitude values are calculated for A-type stars with flat spectra. Very red objects will be limited
                     by the H-band magnitude
                     limit before the broadband magnitude limit.
+                    <p><b>The values presented here were measured with the first design of the NIRWFS. The upgrade in S25B will change these values, and a new binning mode should improve the magnitude limit to about one magnitude, but this mode might not yet be available in S26A.</b></p>
 
                     <table style="width:100%">
                         <tr>
@@ -214,7 +214,7 @@
 
                     <p>
                         If the science target is too faint, then you need to select a bright NGS that is no more than
-                        10" away from it. This limitation is due to the capture field-of-view of the NIR WFS (See <a
+                        14" away from it. This limitation is due to the capture field-of-view of the NIRWFS (See <a
                             href="../020performance.web/index.html">Performance</a> for more details).
                     </p>
 
@@ -231,6 +231,8 @@
                         wavefront sensor. If the separation is closer, we have more chances to close the loop, although
                         the performances might be affected.
                     </p>
+
+                    <p><b>A new adaptive field stop will be added in S25B, and should improve the capacity to close the loop for binaries and crowded fields.</b></p>
 
                     <a name="pl_dates"></a>
                     <h2>3. Planning dates of observations </h2>

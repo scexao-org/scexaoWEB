@@ -17,7 +17,7 @@
                                 hspace="17"></a>
                     </center>
                     <!-- NAVIGATION-->
-                    <span class="thispage">NIR WFS</span>
+                    <span class="thispage">NIRWFS</span>
                     <br><a href="./010technicaldescr.web/index.html" class="nav" style="margin-left:5px;">System</a>
                     <br><a href="./020performance.web/index.html" class="nav" style="margin-left:5px;">Performance</a>
                     <br><a href="./030observing.web/index.html" class="nav" style="margin-left:5px;">Observing</a>
@@ -42,32 +42,27 @@
                                 <td>
                                     <p>
                                     </p>
-                                    <h2 align="center">Information for S25A observers</h2>
+                                    <h2 align="center">Information for S26A observers</h2>
 
                                     <p> <b>
-                                            <font color="#FF0000"> AO3k with NIR WFS is available to all observers in S25A. </font>
+                                            <font color="#FF0000"> AO3k with NIRWFS is available to all observers in S26A. </font>
                                         </b> </p>
 
                                     <p style="margin-left:15px;margin-top:-15px">
-                                        The deformable mirror (DM) in Subaru Telescope's facility AO system (AO188) has been upgraded 
-                                        from a 188-element bimorph mirror to a 3228-actuator magnetic mirror. All observers
-                                        using the AO system will be using the new DM.
-                                        Three modes are available to observers: AO188/NGS, AO188/LGS and AO3k/NIRWFS. 
+                                        Since the upgrade of the deformable mirror inside AO188, three modes are available to observers: AO188/NGS, AO188/LGS and AO3k/NIRWFS. 
                                         When using visible wavefront sensing (AO188/NGS and AO188/LGS), the wavefront correction 
                                         is limited to the 188 modes sensed by the WFS, so the performance is unchanged from the 
-                                        previous (pre-S25A) AO system. When using the NIR WFS (AO3k/NIRWFS mode), the near-IR pyramid
+                                        previous (pre-S25A) AO system. When using the NIRWFS (AO3k/NIRWFS mode), the near-IR pyramid
                                         wavefront sensor can control all illuminated actuators, providing high performance AO correction.
                                         <br>
                                         <b> AO observers may choose AO3k/NIRWFS instead of AO188/NGS for improved image quality. 
-                                        For science observations in J and H band, this will incur 
-                                        a 2x loss in NIR throughput, as 50% of the NIR light will be used for wavefront sensing with the YJH50 dichroic. 
-                                        For science observations in K-band, there is no loss in throughput with the K-band dichroic.
+                                        For visible and NIR science observations, please check the throughput of the various pickoff mirrors that can be use, as some of the NIR light will be used for wavefront sensing. 
                                         </b>
                                         
                                         
                                         <br><hr><br>
                                         
-                                        The NIR WFS is a PI-type module. Service observations are not offered with the NIR WFS.
+                                        The NIRWFS is a PI-type module. Service observations are not offered with the NIRWFS.
                                         According to Subaru Telescope's rules for PI-type instruments, please contact
                                         and include the PI, Julien Lozi (lozi_at_naoj.org), if you plan on submitting a
                                         proposal. If your proposal targets the galactic center, please also contact and
@@ -88,19 +83,19 @@
                     <h2> Introduction </h2>
 
                     <p>
-                        The Near Infrared Wavefront Sensor (NIR WFS) is a wavefront sensor located inside the <a
-                            href="https://www.naoj.org/Observing/Instruments/AO/performance.html">AO188</a> adaptive
+                        The Near Infrared Wavefront Sensor (NIRWFS) is a wavefront sensor for the <a
+                            href="https://www.naoj.org/Observing/Instruments/AO/performance.html">AO188/AO3k</a> adaptive
                         optics system of the Subaru Telescope. It uses most of the AO188 optics, and replaces the
                         visible curvature wavefront sensor (CWFS) to control the 3228-element magnetic deformable mirror
                         to
                         perform the wavefront correction. It has three modes: a Pyramid WFS mode (PyWFS), a Focal Plane
                         WFS mode (FPWFS) and a pupil imaging mode (See <a
                             href="./010technicaldescr.web/index.html">Technical description</a> for more information
-                        about the design). Only the PyWFS mode will be offered for Open-Use observations in S25A.
+                        about the design). Only the PyWFS mode is currently offered for Open-Use observations.
                     </p>
 
                     <p>
-                        The open-use instruments that can currently benefit from the NIR WFS are <a
+                        The open-use instruments that can currently benefit from the NIRWFS are <a
                             href="http://www.naoj.org/Observing/Instruments/IRCS/index.html">IRCS</a>.
                         <a href="https://www.naoj.org/Projects/SCEXAO/scexaoWEB/000home.web/indexm.html">SCExAO</a>,
                         <a
@@ -110,15 +105,15 @@
                             href="https://www.naoj.org/Projects/SCEXAO/scexaoWEB/030openuse.web/040vampires.web/indexm.html">
                             SCExAO+VAMPIRES</a>,
                        and <a href="https://secondearths.sakura.ne.jp/reach/">
-                            SCExAO+REACH</a>, although not all modes are compatible.
+                            SCExAO+REACH</a>.
                     </p>
 
                     <p>
-                        The NIR WFS only operates in NGS mode. It requires a bright star within 10 arcsec from the
+                        The NIRWFS only operates in NGS mode. It requires a bright star within 14 arcsec from the
                         science target. A target brighter than H-mag = 9 to 13 is required to obtain a reasonable
                         correction, depending on the spectrum of the star, and the dichroic beamsplitter pickoff
                         selected.
-                        <b>The dichroic cannot be switched during the same night.</b>
+                        <b>The upgraded system now allows to swap dichroic pickoffs during the night.</b>
                         See <a href="./030observing.web/index.html">Planning Observations</a> for more information.
                     </p>
 
@@ -147,23 +142,24 @@
                         </tbody>
                     </table>
 
-                    <h2> Modes supported in S25A</h2>
+                    <h2> Modes supported since S25A:</h2>
 
                     <h3>SCExAO</h3>
-                    The NIR WFS can be used with the following SCExAO modes :
+                    The NIRWFS can be used with the following SCExAO modes :
                     <ul>
                         <li>CHARIS low-red broadband</li>
-                        <li>CHARIS hi-red J, H or K-band</li>
+                        <li>CHARIS hi-res J, H or K-band</li>
                         <li>VAMPIRES imaging</li>
                         <li>REACH (Single mode fiber injection inside SCExAO feeding IRD)</li>
                         <li>CHARIS PDI</li>
                         <li>VAMPIRES PDI</li>
                         <li>Fast PDI</li>
                     </ul>
-                    Please consult the SCExAO instrument team prior to submitting observing proposals if using the Near-IR WFS.
+                    <p><b>TIn S26A: The impact of the polarization of the NBS will be characterized in S25B, so PDI modes are available in shared risk mode.</b></p>
+                    Please consult the SCExAO instrument team prior to submitting observing proposals if using the NIRWFS.
 
                     <h3>IRCS</h3>
-                    The IRCS observation modes that can use NIR WFS are below:
+                    The IRCS observation modes that can use NIRWFS are below:
                     <ul>
 						<li> 20 mas imaging (Y- to K-band) </li>
 						<li> Grism spectroscopy (zJ- to K-band) </li>
@@ -171,9 +167,9 @@
 						<li> 20 mas imaging polarimetry (Y- to K-band)</li>
 						<li> Grism spectropolarimetry (NIR settings) </li>
 						</ul>
-						L- and M- band observations, 52 mas imaging, and grism spectroscopy are NOT available due to the limitation of NIR WFS (vignetting, accuracy of the steering mirror movement, throughput of the dichroic, etc.).
+						L- and M- band observations, 52 mas imaging, and grism spectroscopy are NOT available due to the limitation of NIRWFS (vignetting, accuracy of the steering mirror movement, throughput of the dichroic, etc.).
                     
-						See <a href="https://www.subaru.nao.ac.jp/Observing/Instruments/IRCS/nirwfs.html"> IRCS observation with NIR WFS</a> for details.
+						See <a href="https://www.subaru.nao.ac.jp/Observing/Instruments/IRCS/nirwfs.html"> IRCS observation with NIRWFS</a> for details.
 
                     <h3>Dichroics availability for each mode</h3>
                     <table align="center" bgcolor="#98ffff" border="4" cellspacing="0" cellpadding="3">
@@ -345,12 +341,12 @@
 
                     <h2>Instrument citation</h2>
                     <p>
-                        Please cite the following papers when you refer to the NIR WFS in your publication.</p>
+                        Please cite the following papers when you refer to the NIRWFS in your publication.</p>
 
                     <ul>
 						<li>
                         <a href="https://arxiv.org/pdf/2209.12981.pdf">"AO3000 at Subaru: Combining for
-                                the first time a NIR WFS using First Light's C-RED ONE and ALPAO's 64x64 DM"</a>
+                                the first time a NIRWFS using First Light's C-RED ONE and ALPAO's 64x64 DM"</a>
                         Lozi et al. 2022, Proc. SPIE, vol. 12185, id. 1218533</li>
                         <a href="https://arxiv.org/pdf/2407.19188">"AO3k at Subaru: First on-sky results of the facility extreme-AO"</a>
                         Lozi et al. 2024, Proc. SPIE, vol. 13097</li>                        
