@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIRST-PL - Fibered Imager foR a Single Telescope</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            color: #444;
+            margin-top: 30px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        h3 {
+            text-align: center;
+            color: #666;
+            font-weight: normal;
+        }
+        h4 {
+            color: #555;
+            margin-top: 25px;
+        }
+        hr {
+            margin: 20px 0;
+        }
+        center {
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #333;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+        small {
+            font-size: 0.85em;
+            color: #666;
+        }
+        .logo-table {
+            margin: 30px auto;
+        }
+        .logo-table td {
+            text-align: center;
+            border: none;
+            padding: 20px;
+        }
+        .mode-section {
+            margin: 30px 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #666;
+        }
+        strong {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<h1>FIRST-PL</h1>
+<h3>Fibered Imager foR a Single Telescope - Photonic Lantern</h3>
+<center>
+<p><a href="https://scexao-org.github.io/first_control/Intro.html" target="_blank">Instrument Website</a></p>
+</center>
+<hr>
+
+<h2>Instrument Overview</h2>
+
+<p>
+The FIRST-PL instrument is a spectro-interferometer operating at visible wavelengths, installed on the SCExAO instrument on the 8m SUBARU telescope (Hawaii). FIRST was developed in collaboration with the Paris Observatory.
+</p>
+
+<center>
+    <img src="FIRST-PL_drawing.png" alt="FIRST-PL Drawing" height="350">
+</center>
+
+<p>
+FIRST feeds a Photonic Lantern device from a focal plane. The Photonic Lantern consists of a multi-mode input slowly transitioning into 19 single-mode fibers. The multi-mode input's core has a diameter of 25 micrometers.
+</p>
+
+<center>
+    <img src="PL_img_hardware.png" alt="Photonic Lantern hardware" height="350">
+    <p><small>Figure 1: Photonic Lantern hardware. The input is a multi-mode fiber, and the outputs are 19 single mode fibers spliced into a V-groove</small></p>
+</center>
+
+<p>
+The 19 outputs of the Photonic Lantern feed a mid-resolution spectrograph (R~3,000), optimized for wavelengths ranging from 600 nm to 780 nm. The spectrograph is equipped with a Wollaston prism, allowing polarization splitting for each output, providing a total of 38 spectra. More information on the instrument and its integration on SCExAO are available <a href="https://arxiv.org/abs/2407.15412">here</a>.
+</p>
+
+<center>
+    <img src="Betelgeuse_mean_img.png" alt="Betelgeuse imaging example" height="350">
+    <p><small>Figure 2: Example of imaging of ʻAua (Betelgeuse) using the Photonic Lantern. This image is averaged from 200,000 frames, and displays 38 spectra, corresponding to the two polarizations from each of the 19 outputs of the Photonic Lantern.</small></p>
+</center>
+
+<h2>Key Capabilities</h2>
+
+<p>
+The instrument is based on a 'photonic lantern' component. In simplified terms, it is an integrated field spectrograph, providing information on both the spatial and wavelength distribution of the astronomical source.
+</p>
+
+<p>
+The advantages are twofold:<br>
+1) It enables diffraction-limited imaging at visible wavelengths, with a spectral resolution of approximately 3000.<br>
+2) It allows spectro-astrometric measurements below the diffraction limit of the telescope.
+</p>
+
+<p>
+The main disadvantage is a very narrow field of view, which can be partially mitigated by moving the photonic lantern.
+</p>
+
+<h2>Technical Parameters</h2>
+
+<table>
+    <tr>
+        <th>FIRST Parameters</th>
+        <th>Value</th>
+        <th>Notes</th>
+    </tr>
+    <tr>
+        <td>Operating wavelength</td>
+        <td>620 - 780 nm</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Spectral resolution</td>
+        <td>R~3,000</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Spatial resolution</td>
+        <td>25 mas</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Field of view</td>
+        <td>80 mas @ f/8</td>
+        <td>Optimal injection efficiency is for a focal ratio of 8, providing a field of view of 80 mas. The field of view is defined as the area where the injection efficiency drops to 50% compared to the center of the field.</td>
+    </tr>
+    <tr>
+        <td>Exposure times</td>
+        <td>7.2µs - 1800 s</td>
+        <td>Fast or Slow readout modes possible</td>
+    </tr>
+</table>
+
+<h2>Observing Modes</h2>
+
+<p>
+If your science case could benefit from these capabilities, read below...
+</p>
+
+<p>
+Three modes are currently offered. In 30 minutes of observations, the following performances can be expected:
+</p>
+
+<table>
+    <tr>
+        <th>Mode</th>
+        <th>Spectral Resolution</th>
+        <th>Bandwidth</th>
+        <th>Spatial/Astrometric Parameter</th>
+        <th>Field of View</th>
+        <th>Contrast</th>
+        <th>R mag (typical)</th>
+    </tr>
+    <tr>
+        <td><strong>Spectro-astrometry</strong></td>
+        <td>3000</td>
+        <td>630-780 nm</td>
+        <td>100 µas (astrometric accuracy)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>4 mag</td>
+    </tr>
+    <tr>
+        <td><strong>Imaging on-axis</strong></td>
+        <td>Broadband</td>
+        <td>630-780 nm</td>
+        <td>20 mas (spatial resolution)</td>
+        <td>130 mas</td>
+        <td>10</td>
+        <td>11 mag</td>
+    </tr>
+    <tr>
+        <td><strong>High contrast off-axis imaging</strong></td>
+        <td>Broadband</td>
+        <td>630-780 nm</td>
+        <td>100 mas (inner working angle)</td>
+        <td>1000 mas</td>
+        <td>1000</td>
+        <td>6 mag</td>
+    </tr>
+</table>
+
+<p>
+Performance decreases for fainter targets. The plot below shows the achievable astrometric accuracy and contrast dynamic range as a function of R magnitude. These results are based on a combination of analytical models and empirical measurements:
+</p>
+
+<center>
+    <img src="astrometric_contrast_vs_Rmag.png" alt="Astrometric contrast vs R magnitude" height="350">
+</center>
+
+<div class="mode-section">
+<h4>Mode 1: Spectro-astrometry</h4>
+
+<p><strong>Capability:</strong> Sub-λ/D measurement of photocenter position as a function of wavelength, enabling spatial information retrieval at scales well below the diffraction limit.</p>
+
+<p><strong>Science applications:</strong><br>
+-- Mapping accretion signatures on protoplanets via Hα emission<br>
+-- Detecting asymmetries in stellar environments<br>
+-- Measuring spatial distribution of spectral features</p>
+
+<p><strong>Data requirements:</strong><br>
+-- <strong>Primary:</strong> FIRST-PL camera acquisition<br>
+-- <strong>Auxiliary (required):</strong> Focal plane images from at least 1 of 2 additional cameras (SCExAO/VAMPIRES and/or SCExAO internal IR camera)</p>
+
+<p><strong>On-sky calibration requirements:</strong><br>
+-- Self-calibrating via tip-tilt telemetry from auxiliary cameras<br>
+-- No separate calibrator star observation required</p>
+
+<p><strong>Off-sky calibration requirements:</strong><br>
+-- Wavelength calibration (Neon lamp)<br>
+-- Flat field calibration (Halogen lamp)<br>
+-- Dark frames</p>
+</div>
+
+<div class="mode-section">
+<h4>Mode 2: On-Axis Imaging</h4>
+
+<p><strong>Capability:</strong> λ/D spatial resolution within the field of view of the photonic lantern (~130 mas), with modest contrast capabilities (contrast ~10).</p>
+
+<p><strong>Science applications:</strong><br>
+-- Resolving stellar surfaces and features<br>
+-- Detecting close companions within the field of view<br>
+-- Characterizing compact circumstellar environments</p>
+
+<p><strong>Data requirements:</strong><br>
+-- <strong>Primary:</strong> FIRST-PL camera acquisition<br>
+-- <strong>Auxiliary (optional):</strong> Telemetry from SCExAO for additional wavefront/PSF monitoring</p>
+
+<p><strong>On-sky calibration requirements:</strong><br>
+-- Calibrator star observation (similar magnitude to target or brighter)</p>
+
+<p><strong>Off-sky calibration requirements:</strong><br>
+-- Wavelength calibration (Neon lamp)<br>
+-- Flat field calibration (Halogen lamp)<br>
+-- Dark frames</p>
+</div>
+
+<div class="mode-section">
+<h4>Mode 3: Off-Axis Imaging</h4>
+
+<p><strong>Capability:</strong> Extended field of view beyond the Photonic Lantern's intrinsic ±20 mas, enabling observations at separations up to ~1000 mas. Achieves contrast ratios >1000 at separations ≥100 mas.</p>
+
+<p><strong>Science applications:</strong><br>
+-- Characterizing faint companions<br>
+-- Wide binary systems<br>
+-- High contrast imaging</p>
+
+<p><strong>Data requirements:</strong><br>
+-- <strong>Primary:</strong> FIRST-PL camera acquisition<br>
+-- <strong>Auxiliary (optional):</strong> Telemetry from SCExAO for additional wavefront/PSF monitoring</p>
+
+<p><strong>On-sky calibration requirements:</strong><br>
+-- On-axis pointing on primary star (serves as calibration)<br>
+-- Interleaved on-axis/off-axis observations recommended</p>
+
+<p><strong>Off-sky calibration requirements:</strong><br>
+-- Wavelength calibration (Neon lamp)<br>
+-- Flat field calibration (Halogen lamp)<br>
+-- Dark frames</p>
+</div>
+
+<h2>FIRST-PL Team</h2>
+
+<p>
+The project is the result of a collaboration between the University of Hawai'i, the Paris Observatory, and the Subaru Telescope. The team is responsible for ensuring that the instrument remains in good condition and fully operational for observations. The team will also help with data reduction and maintain a working pipeline. It is currently composed of:
+</p>
+
+<table>
+    <tr>
+        <th>Role</th>
+        <th>Name</th>
+        <th>Institut</th>
+    </tr>
+    <tr>
+        <td>PI</td>
+        <td>S. Vievard</td>
+        <td>U. of Hawaii</td>
+    </tr>
+    <tr>
+        <td>PI</td>
+        <td>E. Huby</td>
+        <td>Paris Observatory</td>
+    </tr>
+    <tr>
+        <td>AO scientist</td>
+        <td>O. Guyon</td>
+        <td>SUBARU telescope</td>
+    </tr>
+    <tr>
+        <td>Instrument scientist</td>
+        <td>S. Lacour</td>
+        <td>Paris Observatory</td>
+    </tr>
+    <tr>
+        <td>System scientist</td>
+        <td>M. Nowak</td>
+        <td>Paris Observatory</td>
+    </tr>
+    <tr>
+        <td>Spectrometer</td>
+        <td>M. Lallement</td>
+        <td>IPAG / CNRS</td>
+    </tr>
+    <tr>
+        <td>Electronics</td>
+        <td>T. Lemoult</td>
+        <td>Paris Observatory</td>
+    </tr>
+    <tr>
+        <td>Data reduction & Software</td>
+        <td>A. Walk</td>
+        <td>U. of Hawaii</td>
+    </tr>
+    <tr>
+        <td>Data reduction & Software</td>
+        <td>Y. J. Kim</td>
+        <td>UCLA</td>
+    </tr>
+    <tr>
+        <td>Data reduction & Software</td>
+        <td>J. Sarrazin</td>
+        <td>Paris Observatory</td>
+    </tr>
+</table>
+
+<center>
+<table class="logo-table">
+    <tr>
+        <td><strong>University of Hawai'i</strong></td>
+        <td><strong>LIRA / Paris Observatory</strong></td>
+        <td><strong>Subaru Telescope</strong></td>
+    </tr>
+    <tr>
+        <td><img src="logo_uh.png" alt="UH Logo" height="100"></td>
+        <td><img src="logo_lira.png" alt="Paris Observatory Logo" height="100"></td>
+        <td><img src="logo_subaru.png" alt="Subaru Logo" height="100"></td>
+    </tr>
+</table>
+</center>
+
+</body>
+</html>
