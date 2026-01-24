@@ -1,89 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FIRST-PL - Fibered Imager foR a Single Telescope</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        h2 {
-            color: #444;
-            margin-top: 30px;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
-        }
-        h3 {
-            text-align: center;
-            color: #666;
-            font-weight: normal;
-        }
-        h4 {
-            color: #555;
-            margin-top: 25px;
-        }
-        hr {
-            margin: 20px 0;
-        }
-        center {
-            text-align: center;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        table, th, td {
-            border: 1px solid #333;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #f0f0f0;
-            font-weight: bold;
-        }
-        small {
-            font-size: 0.85em;
-            color: #666;
-        }
-        .logo-table {
-            margin: 30px auto;
-        }
-        .logo-table td {
-            text-align: center;
-            border: none;
-            padding: 20px;
-        }
-        .mode-section {
-            margin: 30px 0;
-            padding: 15px;
-            background-color: #f9f9f9;
-            border-left: 4px solid #666;
-        }
-        strong {
-            color: #333;
-        }
-    </style>
-</head>
-<body>
 
 <h1>FIRST-PL</h1>
-<h3>Fibered Imager foR a Single Telescope - Photonic Lantern</h3>
+<h3 style="color: whitesmoke" >Fibered Imager foR a Single Telescope - Photonic Lantern</h3>
 <center>
 <p><a href="https://scexao-org.github.io/first_control/Intro.html" target="_blank">Instrument Website</a></p>
 </center>
@@ -125,7 +42,9 @@ The main disadvantage is a very narrow field of view, which can be partially mit
 
 <h2>Technical Parameters</h2>
 
-<table>
+<table
+    border="1px"
+    >
     <tr>
         <th>FIRST Parameters</th>
         <th>Value</th>
@@ -168,7 +87,9 @@ If your science case could benefit from these capabilities, read below...
 Three modes are currently offered. In 30 minutes of observations, the following performances can be expected:
 </p>
 
-<table>
+<table
+    border="1px"
+    >
     <tr>
         <th>Mode</th>
         <th>Spectral Resolution</th>
@@ -215,76 +136,112 @@ Performance decreases for fainter targets. The plot below shows the achievable a
     <img src="astrometric_contrast_vs_Rmag.png" alt="Astrometric contrast vs R magnitude" height="350">
 </center>
 
-<div class="mode-section">
-<h4>Mode 1: Spectro-astrometry</h4>
 
-<p><strong>Capability:</strong> Sub-λ/D measurement of photocenter position as a function of wavelength, enabling spatial information retrieval at scales well below the diffraction limit.</p>
+<h3 style="color: orange">Mode 1: Spectro-astrometry</h3>
 
-<p><strong>Science applications:</strong><br>
--- Mapping accretion signatures on protoplanets via Hα emission<br>
--- Detecting asymmetries in stellar environments<br>
--- Measuring spatial distribution of spectral features</p>
+<table
+    border="1px"
+    >
+    <tr>
+        <td><strong>Capability</strong> </td>
+        <td>Sub-λ/D measurement of photocenter position as a function of wavelength, enabling spatial information retrieval at scales well below the diffraction limit.</td>
+    </tr>
+    <tr>
+        <td><strong>Science applications</strong></td>
+        <td>- Mapping accretion signatures on protoplanets via Hα emission<br>
+            - Detecting asymmetries in stellar environments<br>
+            - Measuring spatial distribution of spectral features</td>
+    </tr>
+    <tr>
+        <td><strong>Data requirements</strong></td>
+        <td>- <strong>Primary:</strong> FIRST-PL camera acquisition<br>
+            - <strong>Auxiliary (required):</strong> Focal plane images from at least 1 of 2 additional cameras (SCExAO/VAMPIRES and/or SCExAO internal IR camera)</td>
 
-<p><strong>Data requirements:</strong><br>
--- <strong>Primary:</strong> FIRST-PL camera acquisition<br>
--- <strong>Auxiliary (required):</strong> Focal plane images from at least 1 of 2 additional cameras (SCExAO/VAMPIRES and/or SCExAO internal IR camera)</p>
+    </tr>
+    <tr>
+        <td><strong>On-sky calibration requirements</strong></td>
+        <td>- Self-calibrating via tip-tilt telemetry from auxiliary cameras<br>
+            - No separate calibrator star observation required</td>
+    </tr>
+    <tr>
+        <td><strong>Off-sky calibration requirements</strong></td>
+        <td>- Wavelength calibration (Neon lamp)<br>
+            - Flat field calibration (Halogen lamp)<br>
+            - Dark frames</td>
+    </tr>
+</table>
 
-<p><strong>On-sky calibration requirements:</strong><br>
--- Self-calibrating via tip-tilt telemetry from auxiliary cameras<br>
--- No separate calibrator star observation required</p>
 
-<p><strong>Off-sky calibration requirements:</strong><br>
--- Wavelength calibration (Neon lamp)<br>
--- Flat field calibration (Halogen lamp)<br>
--- Dark frames</p>
-</div>
 
-<div class="mode-section">
-<h4>Mode 2: On-Axis Imaging</h4>
+<h3 style="color: orange">Mode 2: On-Axis Imaging</h3>
 
-<p><strong>Capability:</strong> λ/D spatial resolution within the field of view of the photonic lantern (~130 mas), with modest contrast capabilities (contrast ~10).</p>
 
-<p><strong>Science applications:</strong><br>
--- Resolving stellar surfaces and features<br>
--- Detecting close companions within the field of view<br>
--- Characterizing compact circumstellar environments</p>
+<table
+    border="1px"
+    >
+    <tr>
+        <td><strong>Capability</strong> </td>
+        <td>λ/D spatial resolution within the field of view of the photonic lantern (~130 mas), with modest contrast capabilities (contrast ~10).</td>
+    </tr>
+    <tr>
+        <td><strong>Science applications</strong></td>
+        <td>- Resolving stellar surfaces and features<br>
+            - Detecting close companions within the field of view<br>
+            - Characterizing compact circumstellar environments</td>
+    </tr>
+    <tr>
+        <td><strong>Data requirements</strong></td>
+        <td>- <strong>Primary:</strong> FIRST-PL camera acquisition<br>
+            - <strong>Auxiliary (optional):</strong> Telemetry from SCExAO for additional wavefront/PSF monitoring</td>
 
-<p><strong>Data requirements:</strong><br>
--- <strong>Primary:</strong> FIRST-PL camera acquisition<br>
--- <strong>Auxiliary (optional):</strong> Telemetry from SCExAO for additional wavefront/PSF monitoring</p>
+    </tr>
+    <tr>
+        <td><strong>On-sky calibration requirements</strong></td>
+        <td>- Calibrator star observation (similar magnitude to target or brighter)</td>
+    </tr>
+    <tr>
+        <td><strong>Off-sky calibration requirements</strong></td>
+        <td>- Wavelength calibration (Neon lamp)<br>
+            - Flat field calibration (Halogen lamp)<br>
+            - Dark frames</td>
+    </tr>
+</table>
 
-<p><strong>On-sky calibration requirements:</strong><br>
--- Calibrator star observation (similar magnitude to target or brighter)</p>
 
-<p><strong>Off-sky calibration requirements:</strong><br>
--- Wavelength calibration (Neon lamp)<br>
--- Flat field calibration (Halogen lamp)<br>
--- Dark frames</p>
-</div>
+<h3 style="color: orange">Mode 3: Off-Axis Imaging</h3>
+<table
+    border="1px"
+    >
+    <tr>
+        <td><strong>Capability</strong> </td>
+        <td>Extended field of view beyond the Photonic Lantern's intrinsic ±20 mas, enabling observations at separations up to ~1000 mas. Achieves contrast ratios >1000 at separations ≥100 mas.</td>
+    </tr>
+    <tr>
+        <td><strong>Science applications</strong></td>
+        <td>- Characterizing faint companions<br>
+            - Wide binary systems<br>
+            - High contrast imaging</td>
+    </tr>
+    <tr>
+        <td><strong>Data requirements</strong></td>
+        <td>- <strong>Primary:</strong> FIRST-PL camera acquisition<br>
+            - <strong>Auxiliary (optional):</strong> Telemetry from SCExAO for additional wavefront/PSF monitoring</td>
 
-<div class="mode-section">
-<h4>Mode 3: Off-Axis Imaging</h4>
+    </tr>
+    <tr>
+        <td><strong>On-sky calibration requirements</strong></td>
+        <td>- On-axis pointing on primary star (serves as calibration)<br>
+            - Interleaved on-axis/off-axis observations recommended</td>
+    </tr>
+    <tr>
+        <td><strong>Off-sky calibration requirements</strong></td>
+        <td>- Wavelength calibration (Neon lamp)<br>
+            - Flat field calibration (Halogen lamp)<br>
+            - Dark frames</td>
+    </tr>
+</table>
 
-<p><strong>Capability:</strong> Extended field of view beyond the Photonic Lantern's intrinsic ±20 mas, enabling observations at separations up to ~1000 mas. Achieves contrast ratios >1000 at separations ≥100 mas.</p>
 
-<p><strong>Science applications:</strong><br>
--- Characterizing faint companions<br>
--- Wide binary systems<br>
--- High contrast imaging</p>
-
-<p><strong>Data requirements:</strong><br>
--- <strong>Primary:</strong> FIRST-PL camera acquisition<br>
--- <strong>Auxiliary (optional):</strong> Telemetry from SCExAO for additional wavefront/PSF monitoring</p>
-
-<p><strong>On-sky calibration requirements:</strong><br>
--- On-axis pointing on primary star (serves as calibration)<br>
--- Interleaved on-axis/off-axis observations recommended</p>
-
-<p><strong>Off-sky calibration requirements:</strong><br>
--- Wavelength calibration (Neon lamp)<br>
--- Flat field calibration (Halogen lamp)<br>
--- Dark frames</p>
-</div>
 
 <h2>FIRST-PL Team</h2>
 
@@ -292,7 +249,9 @@ Performance decreases for fainter targets. The plot below shows the achievable a
 The project is the result of a collaboration between the University of Hawai'i, the Paris Observatory, and the Subaru Telescope. The team is responsible for ensuring that the instrument remains in good condition and fully operational for observations. The team will also help with data reduction and maintain a working pipeline. It is currently composed of:
 </p>
 
-<table>
+<table
+    border="1px"
+    >
     <tr>
         <th>Role</th>
         <th>Name</th>
