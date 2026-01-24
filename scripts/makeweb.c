@@ -48,7 +48,7 @@ int main(int argc, char **argv)
     FILE *fp;
     FILE *fp1;
     char *token;
-    char fname[200];
+    char fname[600];
     char fnamemd[200];
     WEBDIR webdir[2000];
     char line[200];
@@ -58,7 +58,7 @@ int main(int argc, char **argv)
     char *sep = "./";
     long webdirnb = 0;
     long webdirnb1;
-    char command[200];
+    char command[2000];
     long level,level1;
     long i,l;
     long wd,wd1;
@@ -337,8 +337,8 @@ int main(int argc, char **argv)
     for(wd=0; wd<webdirnb; wd++)
         if(webdir[wd].update == 1)
         {
-			char fnamemenu[500];
-			char fname1[500];
+			char fnamemenu[600];
+			char fname1[600];
 			
 			int toggleindex100 = 0;
 			int toggleindex200 = 0;
@@ -451,7 +451,7 @@ int main(int argc, char **argv)
                         for(i=0; i<webdir[wd].level+1; i++)
                             strcat(str1,"../");
                         
-                        char titlestring[200];
+                        char titlestring[600];
                         if(webdir[wd1].nbchild>0)
 							sprintf(titlestring, "%s >", webdir[wd1].title);
 						else
