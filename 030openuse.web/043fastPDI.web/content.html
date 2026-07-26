@@ -6,7 +6,6 @@
 <ul>
 <li>Half-waveplate (HWP) for slow modulation</li>
 <li>Field stop</li>
-<li>Ferro-electric Liquid Crystal (FLC) modulator</li>
 <li>Wollaston prism</li>
 <li>High speed NIR camera</li>
 </ul>
@@ -14,11 +13,10 @@
 
 <p>Much of the optical train is shared with the CHARIS-PDI mode. The Wollaston prism is a duplicate of the CHARIS-PDI Wollaston.</p>
 
-<p>Two modes are offered:</p>
-<ul>
-<li><b>Mode #1: Double-differential imaging</b>. In this mode, we use the HWP for slow modulation, the field stop and the Wollaston prism. </li>
-<li><b>Mode #2: Triple-differential imaging</b>. In this mode, we add the FLC modulator, synchronized with the camera acquisition.
-</li>
+<p>Starting in S27A, only one mode is offered: <b>Double-differential imaging</b>. In this mode, we use the HWP for slow modulation, the field stop and the Wollaston prism. </p>
+
+<p><b>Triple-differential imaging</b> using the FLC modulator synchronized with the camera acquisition was offered until S26B.
+</p>
 
 <h2>Capabilities - Overview</h2>
 
@@ -38,63 +36,48 @@
     <td> See <a href="https://www.first-light-imaging.com/product/c-red-one/">Camera description</a></td>
     </tr>
   <tr>
-    <td rowspan="5"> Wavelength coverage</td>
+    <td rowspan="4"> Wavelength coverage</td>
     <td>Broadband (950-1860 nm)</td>
-    <td> Mode #1. CHARIS PDI can be used simultaneously in high-res K-band.</td>
+    <td> CHARIS PDI can be used simultaneously in high-res K-band.</td>
     </tr>
   <tr>
     <td>y-band</td>
-    <td> Mode #1. CHARIS PDI can be used simultaneously in low-res broadband or high-res with band filter.</td>
+    <td> CHARIS PDI can be used simultaneously in low-res broadband or high-res with band filter.</td>
     </tr>
   <tr>
     <td>J-band</td>
-    <td> Mode #1. CHARIS PDI can be used simultaneously in high-res H- or K-band.</td>
+    <td> CHARIS PDI can be used simultaneously in high-res H- or K-band.</td>
     </tr>
   <tr>
     <td>H-band</td>
-    <td> Mode #1. CHARIS PDI can be used simultaneously in K-band.</td>
+    <td> CHARIS PDI can be used simultaneously in K-band.</td>
     </tr>
   <tr>
-    <td>H-band with FLC</td>
-    <td> Mode #2. CHARIS PDI can be used simultaneously in K-band.</td>
+    <td> SCExAO PDI throughput</td>
+    <td> 46-54%</td>
+    <td> ~15% from atmosphere to detector </td>
     </tr>
-  <tr>
-    <td rowspan="2"> SCExAO PDI throughput</td>
-    <td> Mode #1: 46-54%</td>
-    <td rowspan="2"> ~15% from atmosphere to detector </td>
-    </tr>
-  <tr>
-    <td> Mode #2: 41-48%</td>
-    </tr>
+
   <tr>
     <td> Camera gain</td>
-    <td> x1 to x50</td>
+    <td> x1 to x109</td>
     <td> </td>
     </tr>
   <tr>
-    <td rowspan="2"> Frame rate</td>
-    <td> 1 Hz to 3.5 kHz</td>
-    <td> mode #1, Full frame. Limited by the frame rate of the camera.</td>
-    </tr>
-  <tr>
-    <td> 1 Hz to ~1 kHz</td>
-    <td> mode #2, Full frame. Limited by the switching time of the FLC.</td>
+    <td> Frame rate</td>
+    <td> up to 5 kHz</td>
+    <td> 160x160 window. Limited by the frame rate of the camera.</td>
     </tr>
   <tr>
     <td> Zero-point magnitude</td>
     <td> 1ADU = 23.2 H-mag</td>
-    <td> mode #1, gain 1, 1.75 kHz, no coronagraph</td>
+    <td> gain 1, 1.75 kHz, no coronagraph</td>
     </tr>
   <tr>
-    <td rowspan="2"> Observation efficiency</td>
+    <td> Observation efficiency</td>
     <td> ~90%</td>
-    <td> mode #1. Limited by the rotation of AO188's HWP (few seconds every 1-2 minutes)</td>
+    <td> Limited by the rotation of AO188's HWP (few seconds every 1-2 minutes)</td>
     </tr>
-  <tr>
-    <td> 40 to 90%</td>
-    <td> mode #2. Depending on the frame rate, limited by the switching time of the FLC.</td>
-    </tr>
-  <tr>
 	</tr></tbody></table>
 
 	<hr>
@@ -102,9 +85,9 @@
 
 <h2>Throughput</h2>
 
-<p style="font-size:30px border:3px; border-style:solid; border-color:#AA8866; padding: 1em;">
+<p style="font-size:30px; border:3px; border-style:solid; border-color:#AA8866; padding: 1em;">
 <b>
-Fast-PDI is optimized for H-band, but can be used in broadband or y- and J-band without the FLC.<br>
+Fast-PDI is optimized for H-band, but can be used in broadband or y- and J-band.<br>
 </b>
 </p>
 
@@ -114,9 +97,9 @@ Fast-PDI is optimized for H-band, but can be used in broadband or y- and J-band 
 	<th colspan="5"> Fast-PDI Imaging Throughput (relative to non-PDI observations)</th> 
 	</tr>
 	
-	<tr> <td>Band</td> <td>HWP</td>   <td>Wollaston</td>         <td>FLC</td>    <td>total</td></tr>    
-	<tr> <td>J (1.24um)</td>    <td>96.1%</td> <td>93.2%</td>    <td>88.7%</td>  <td>79.4%</td> </tr>
-	<tr> <td>H (1.63um)</td>    <td>94.3%</td> <td>95.7%</td>    <td>88.5%</td>  <td>79.9%</td> </tr>
+	<tr> <td>Band</td> <td>HWP</td>   <td>Wollaston</td>         <td>total</td></tr>    
+	<tr> <td>J (1.24um)</td>    <td>96.1%</td> <td>93.2%</td>    <td>89.6%</td> </tr>
+	<tr> <td>H (1.63um)</td>    <td>94.3%</td> <td>95.7%</td>    <td>90.2%</td> </tr>
 	
 </tbody></table>
 
@@ -125,11 +108,11 @@ Fast-PDI is optimized for H-band, but can be used in broadband or y- and J-band 
 
 <p>Contrast curves were calculated on two targets observe during engineering nights with excellent seeing conditions (~0.4''): the unpolarized standard star psi01 Aqr, and the polarization target R Aqr.</p>
 
-<p>A raw contrast curve was calculated using only one minute of data on the unpolarized standard star psi01 Aqr, showing that we achieve ~1e-4 raw contrast at ~0.15 arcsec separations, before double-differential processing. The contrast for stokes Q and U were also calculated, showing that we achieve a contrast of a few 1e-6 at 0.15 arcsec with double-differential processing (mode #1, H-band). The addition of a third differential processing (mode #2) should improve this further.</p>
+<p>A raw contrast curve was calculated using only one minute of data on the unpolarized standard star psi01 Aqr, showing that we achieve ~1e-4 raw contrast at ~0.15 arcsec separations, before double-differential processing. The contrast for stokes Q and U were also calculated, showing that we achieve a contrast of a few 1e-6 at 0.15 arcsec with double-differential processing (H-band).</p>
 
 <center>
 	<img src="psi01Aqr_contrast.jpg" alt="psi01 Aqr Contrast curve" width="636" height="621">
-	<p>Contrast curve calculated from 1 minute of non-coronagraphic data on the unpolarized standard star psi01 Aqr. The contrast of stokes Q and U was also estimated after double-differential processing (mode #1).</p>
+	<p>Contrast curve calculated from 1 minute of non-coronagraphic data on the unpolarized standard star psi01 Aqr. The contrast of stokes Q and U was also estimated after double-differential processing.</p>
 	<br></center>
 
 <p>We also produced contrast curves using  the non-coronagraphic and coronagraphic images of R Aqr (one minute datasets). The raw contrast is similar in this case without coronagraphic mask, and goes down significantly with the coronagraph, especially at small separations. The green curve was obtained by subtracting two datasets ~5 minutes apart. It shows that the contrast stability over a short timescale is on the order of 1e-6.</p>
