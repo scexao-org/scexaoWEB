@@ -109,7 +109,21 @@
                         </tr>
                     </table>
 
-                    <h3>Magnitude Limit</h3>
+                    <table style="width:100%">
+                        <tr>
+                            <th><a href="NIRWFS-dichroic-transmission.png"> <img src="NIRWFS-dichroic-transmission-L.png"
+                                        alt="NIRWFS-dichroic-transmission" width="700"> </a></th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <center>
+                                    <i>Transmission to the science instrument for the L-band dichroic.
+                                    </i>
+                                </center>
+                            </th>
+                        </tr>
+                    </table>
+                    <h3>Magnitude Limits</h3>
 
 
                     Magnitude limits listed in this section are for the AO correction to deliver 0.1 arcsec FWHM in
@@ -119,7 +133,7 @@
                     Magnitude values are calculated for A-type stars with flat spectra. Very red objects will be limited
                     by the H-band magnitude
                     limit before the broadband magnitude limit.
-                    <p><b>The values presented here were measured with the first design of the NIRWFS. The upgrade in S25B will change these values, and a new binning mode should improve the magnitude limit to about one magnitude, but this mode might not yet be available in S26A.</b></p>
+                    <p><b>The values presented here were measured with the first design of the NIRWFS (hight-resolution or HR mode), and interpolated to include the optical binning (Low-resolution or LR) mode. </b></p>
 
                     <table style="width:100%">
                         <tr>
@@ -131,7 +145,7 @@
                                 <center>
                                     <i>Guide star magnitude limit. The frequencies listed in the legend are the AO loop
                                         frequency. Correction at 500 Hz might be worst than at 1 kHz depending on the
-                                        atmospheric conditions (seeing, coherence time).
+                                        atmospheric conditions (seeing, coherence time). High-resolution modes (HR) were measured on-sky, and low-resolution modes (LR) were extrapolated from that.
                                     </i>
                                 </center>
                             </th>
@@ -146,7 +160,7 @@
                         <tbody>
                             <tr>
                                 <th>Filter </th>
-                                <th colspan="4"> Dichroic</th>
+                                <th colspan="5"> Dichroic</th>
                             </tr>
                             <tr>
                                 <td></td>
@@ -154,6 +168,7 @@
                                 <td>YJH50</td>
                                 <td>YJH90</td>
                                 <td>Vis-HK</td>
+                                <td>L-band</td>
                             </tr>
                             <tr>
                                 <td>Y-band</td>
@@ -161,6 +176,7 @@
                                 <td>mY=10.4</td>
                                 <td>mY=8.7</td>
                                 <td>mY=11.2</td>
+                                <td>N/A</td>
                             </tr>
 
                             <tr>
@@ -168,6 +184,7 @@
                                 <td>mJ=11.3</td>
                                 <td>mJ=10.6</td>
                                 <td>mJ=8.8</td>
+                                <td>mJ=11.3</td>
                                 <td>mJ=11.3</td>
                             </tr>
 
@@ -177,6 +194,7 @@
                                 <td>mH=10.7</td>
                                 <td>mH=8.9</td>
                                 <td>N/A</td>
+                                <td>mH=11.4</td>
                             </tr>
 
                             <tr>
@@ -185,6 +203,7 @@
                                 <td>mJ=11.5</td>
                                 <td>mJ=9.7</td>
                                 <td>mJ=12.2</td>
+                                <td>mJ=11.3</td>
                             </tr>
 
                             <tr>
@@ -193,6 +212,7 @@
                                 <td>mH=11.6</td>
                                 <td>mH=9.8</td>
                                 <td>N/A</td>
+                                <td>mH=12.3</td>
                             </tr>
 
                             <tr>
@@ -201,6 +221,7 @@
                                 <td>mH=12.1</td>
                                 <td>mH=10.3</td>
                                 <td>mJ=12.2</td>
+                                <td>mH=12.3</td>
                             </tr>
 
                             <tr>
@@ -221,18 +242,13 @@
                     <h3>Extended objects and binaries</h3>
 
                     <p>
-                        The pyramid WFS design is not ideal for extended objects and binaries. For extended sources, if
+                        The pyramid WFS design is not ideal for extended objects and binaries. If
                         the source is too extended (more than a few arcseconds), the loop cannot close. For smaller
                         objects, we can close the loop, but with degraded performances. For binaries, results can vary
-                        depending on the separation and H-band contrast between the two stars. Separations over ~3"
-                        should have no impact whatever the contrast is, and similarly, contrasts over ~5 should also
-                        have no impact whatever the separation is. For separations between 1 and 3", a low-contrast
+                        depending on the separation and H-band contrast between the two stars. For separations below 2", a low-contrast
                         binary will be difficult to observe, due to the added light of the companion inside the
-                        wavefront sensor. If the separation is closer, we have more chances to close the loop, although
-                        the performances might be affected.
+                        wavefront sensor. A field stop can be used for larger separations.
                     </p>
-
-                    <p><b>A new adaptive field stop will be added in S25B, and should improve the capacity to close the loop for binaries and crowded fields.</b></p>
 
                     <a name="pl_dates"></a>
                     <h2>3. Planning dates of observations </h2>

@@ -730,13 +730,22 @@ Other relevant citations:
 <h2>Sparse Aperture Masking</h2>
 
 <p>
-  Sparse aperture masking (SAM) allows the full diffraction limit of the
-  telescope to be recovered by using selected sub-pupils of the telescope pupil
-  as interferometer baselines. See, for example, Tuthill, et al. (2000), PASP,
-  112, 555; Huelamo, et al., (2011), A&A, 528, L7; Kraus & Ireland, (2012), ApJ,
-  745, 5.
+  Sparse aperture masking (SAM) allows the full diffraction limit of the telescope 
+  to be recovered by using selected sub-pupils of the telescope pupil as interferometer 
+  baselines. See, for example, Tuthill, et al. (2000), PASP, 112, 555; Huelamo, et al., 
+  (2011), A&A, 528, L7; Kraus & Ireland, (2012), ApJ, 745, 5. 
+</p>
+<p>
+  <b>As of S26B, two new SAM optics are available for open-use; the Jewel 4x5 and Jewel
+    7x6 optics. Jewel is a novel technology that tessellates the entire telescope pupil
+    with non-redundant arrays (Taras, et al. 2025). By imposing custom phase tilts aligned 
+    with selected sub-apertures, multiple non-redundant patterns are encoded onto a single 
+    1” optic, sampling multiple interferograms simultaneously. SCExAO offers 
+    the first on-sky operation of this new optic.  
+  </b>
 </p>
 
+<center>
 <table
   border="1px"
   cellpadding="10px"
@@ -748,25 +757,85 @@ Other relevant citations:
   </tr>
   <tr>
     <td>Sub pupil configurations</td>
-    <td>7 hole, 9 hole, 18 hole and annulus masks</td>
+    <td>7 hole, 9 hole, 18 hole, annulus masks, Jewel 4x5 and Jewel 7x6 optics</td>
     <td>
-      Masks are selectable depending on brightness of target. See figure below
-      for mask options.
+      Masks are selectable depending on brightness of target. See Figures below for SAM mask options and Jewel options.
     </td>
   </tr>
   <tr>
-    <td rowspan="2">Limiting magnitudes</td>
+    <td rowspan="5">Limiting magnitudes</td>
     <td>18 hole (I ~2-3 mags)</td>
-    <td rowspan="2">
+    <td rowspan="5">
       A function of the size and number of holes in the mask (i.e. Fourier
-      coverage). However ongoing upgrades are pushing the detection limit
-      fainter.
+      coverage).
     </td>
   </tr>
   <tr>
     <td>7 hole (I ~ 7)</td>
   </tr>
+  <tr>
+    <td>9 hole (I ~ 6-7)</td>
+  </tr>
+  <tr>
+    <td>Jewel 4x5 (I ~ 8-9)</td>
+  </tr>
+  <tr>
+    <td>Jewel 7x6 (I ~ 8-9)</td>
+  </tr>
 </table>
+
+</center>
+
+<p></p>
+
+<center>
+<table
+  border="1px"
+  cellpadding="10px"
+  cellspacing="0px"
+  style="text-align: center"
+>
+  <tr>
+    <th>Optic</th>
+    <th>Fring period (mas)</th>
+    <th>Fringe period (pix)</th>
+  </tr>
+  <tr>
+    <td>SAM-7</td>
+    <td>21.9</td>
+    <td>3.7</td>
+  </tr>
+  <tr>
+    <td>SAM-9</td>
+    <td>19.3</td>
+    <td>3.3</td>
+  </tr>
+  <tr>
+    <td>SAM-18</td>
+    <td>17.7</td>
+    <td>3.0</td>
+  </tr>
+  <tr>
+    <td>Jewel 4x5</td>
+    <td>21.1</td>
+    <td>3.6</td>
+  </tr>
+  <tr>
+    <td>Jewel 7x6</td>
+    <td>20.7</td>
+    <td>3.5</td>
+  </tr>
+</table>
+
+  <p>
+    <small>
+      Smallest, on-sky, fringe period (λmin/Bmax) for each Jewel design on VAMPIRES.
+      Minimum wavelength (λmin) is the smallest operating VAMPIRES wavelength, 614nm, 
+      taken as lambda average from table 5 in Lucas et al., 2024. Maximum baseline 
+      (Bmax) calculated from mask coordinates. 
+    </small>
+  </p>
+</center>
 
 <h3>Calibration</h3>
 <p>
@@ -776,7 +845,72 @@ Other relevant citations:
   very close separations (10s of mas).
 </p>
 
+<center>
+  <img
+    border="0"
+    src="figures/sams.png"
+    alt="VAMPIRES narrowband filters"
+    width="60%"
+  />
+  <p>
+    <small>
+      Pupil geometries for the non-redundant aperture masks in the VAMPIRES pupil wheel. 
+      By name, from left to right are the 7-hole sparse aperture mask (SAM-7), the SAM-9 
+      and the SAM-18. The figure titles provide the sub-aperture radius for each mask at 
+      M1, given in meters and also relative to the telescope diameter, D. Percentages on 
+      the bottom left corner of the figure image indicate the theoretical throughput of 
+      each mask, as calculated geometrically.
+    </small>
+  </p>
+</center>
+
+<center>
+  <img
+    border="0"
+    src="figures/jewel4x5_scex.png"
+    alt="VAMPIRES narrowband filters"
+    width="60%"
+  />
+  <img
+    border="0"
+    src="figures/jewel7x6_scex.png"
+    alt="VAMPIRES narrowband filters"
+    width="60%"
+  />
+  <p>
+    <small>
+      Summary of Jewel optics design for VAMPIRES. Columns from left to right, in order,
+      show (1) the pupil geometry for each Jewel optic (at M1, with SCExAO pupil) with 
+      the title indicating the estimated sub-aperture radius at M1 (and relative to telescope 
+      diameter D) and estimated throughput (including wedge transmission losses) in the 
+      bottom left in white text. Different colours correspond to separate encoded sparse 
+      aperture patterns. (2) the Fourier coverage from each Jewel pattern with colour of the 
+      top right spot indicating which pupil pattern (left column) it belongs to and (3) focal 
+      plane laboratory data taken with final fabricated Jewel optics using a 635nm laser, 
+      with dimensions of interferogram distribution as seen on the detector, measured in 
+      angular separation on-sky. (Top row) Jewel 4x5 pattern containing four patterns (three 
+      fully non-redundant and one partially redundant, being the purple coded pattern) each 
+      with five segments and (bottom row) Jewel 7x6 pattern, containing seven non-redundant 
+      patterns each with six segments.
+    </small>
+  </p>
+</center>
+
+<p>REFS</p>
+
+<p>
+  Taras, A. K., Piroscia, G., and Tuthill, P., “Jewel optics I: non-redundant fizeau beam combination without
+  the guilt,” Journal of Astronomical Telescopes, Instruments, and Systems 11 (Feb. 2025).
+</p>
+
+<p>
+  Lucas, M., Norris, B., Guyon, O., Bottom, M., Deo, V., Vievard, S., Lozi, J., Ahn, K., Ashcraft, J., Currie, T.,
+  Doelman, D., Kudo, T., Leboulleux, L., Lilley, L., Millar-Blanchaer, M., Safonov, B., Tuthill, P., Uyama, T., Walk, A., and Zhang, M., “Visible-light high-contrast imaging and polarimetry with SCExAO/VAMPIRES,”
+  Publ. Astron. Soc. Pac. 136, 114504 (Nov. 2024).
+  </p>
+
 <hr />
+
 
 <h2>Narrowband / Spectral Differential Imaging</h2>
 
